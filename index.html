@@ -1,176 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>AI & Crypto Weekly Brief</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI & Crypto Weekly Brief</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  margin: 0;
-  padding: 20px;
-  color: #1a1a1a;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f3;
+      color: #1d1d1f;
+      line-height: 1.6;
+      padding: 24px;
+    }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-}
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
 
-h1 {
-  margin-bottom: 10px;
-}
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 4px;
+    }
 
-.section {
-  margin-top: 30px;
-}
+    .date {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 6px;
+    }
 
-.card {
-  background: white;
-  padding: 16px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
+    h1 {
+      font-size: 38px;
+      line-height: 1.1;
+      margin: 0 0 24px;
+    }
 
-.badge {
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-weight: bold;
-}
+    h2 {
+      font-size: 24px;
+      margin: 0 0 18px;
+    }
 
-.high { background: #fde68a; }
-.med { background: #bfdbfe; }
-.watch { background: #e5e7eb; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 34px;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
+    .stat {
+      background: #ece9e2;
+      border-radius: 12px;
+      padding: 16px;
+    }
 
-.stat {
-  background: white;
-  padding: 12px;
-  border-radius: 10px;
-}
-</style>
+    .stat-label {
+      font-size: 14px;
+      color: #4b4b4b;
+      margin-bottom: 8px;
+    }
 
+    .stat-value {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .stat-sub {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .green {
+      color: #3e7d3e;
+    }
+
+    .red {
+      color: #b34a3c;
+    }
+
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .ai-title {
+      color: #7d71d8;
+    }
+
+    .crypto-title {
+      color: #2a9a68;
+    }
+
+    .story-list {
+      border-left: 2px solid #c9c2ff;
+      padding-left: 18px;
+    }
+
+    .crypto-list {
+      border-left: 2px solid #88d1ae;
+      padding-left: 18px;
+    }
+
+    .story {
+      padding: 0 0 20px;
+      margin-bottom: 22px;
+      border-bottom: 1px solid #ddd8d0;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .story:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .story-number {
+      min-width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3px;
+    }
+
+    .story-number.ai {
+      background: #ece9ff;
+      color: #6357c7;
+    }
+
+    .story-number.crypto {
+      background: #ddf4e8;
+      color: #1d8458;
+    }
+
+    .story h3 {
+      font-size: 18px;
+      line-height: 1.35;
+      margin: 0 0 6px;
+    }
+
+    .story p {
+      margin: 0;
+      color: #414141;
+      font-size: 15px;
+    }
+
+    .trend-box {
+      background: #f3dfe8;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 30px;
+    }
+
+    .trend-box .section-title {
+      color: #8d4660;
+      margin-bottom: 8px;
+    }
+
+    .trend-box h3 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+
+    .trend-box p {
+      margin: 0;
+      font-size: 16px;
+      color: #3d3340;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .panel {
+      background: #f7f5f0;
+      border: 1px solid #d6d2ca;
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .panel-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .panel-title.winners {
+      color: #5a8f31;
+    }
+
+    .panel-title.losers {
+      color: #c25545;
+    }
+
+    .panel ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .panel li {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .panel li:last-child {
+      margin-bottom: 0;
+    }
+
+    .watch-box {
+      background: #f7f5f0;
+      border: 1px solid #d6d2ca;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 30px;
+    }
+
+    .watch-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .watch-icon {
+      font-size: 22px;
+    }
+
+    .watch-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #666;
+      margin: 0;
+    }
+
+    .watch-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: #fff5dd;
+      border: 1px solid #f0d39a;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+
+    .watch-item.med {
+      background: #fff1d6;
+      border-color: #e6c987;
+    }
+
+    .watch-item.watch {
+      background: #ffe7c2;
+      border-color: #e5b96d;
+    }
+
+    .tag {
+      min-width: 64px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 6px 8px;
+      margin-top: 2px;
+    }
+
+    .tag.high {
+      background: #f4c56a;
+      color: #5d3b00;
+    }
+
+    .tag.med {
+      background: #f0b65c;
+      color: #5d3400;
+    }
+
+    .tag.watch {
+      background: #df9642;
+      color: white;
+    }
+
+    .watch-item p {
+      margin: 0;
+      font-size: 15px;
+      color: #3f3a33;
+    }
+
+    .macro-box {
+      background: #f7f5f0;
+      border: 1px solid #d6d2ca;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+    }
+
+    .macro-box p {
+      margin: 0 0 16px;
+      font-size: 16px;
+    }
+
+    .macro-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .sources {
+      font-size: 13px;
+      color: #777;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 860px) {
+      .stats-grid,
+      .two-col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .stats-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .story {
+        gap: 10px;
+      }
+
+      .tag {
+        min-width: 58px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <div class="eyebrow">Weekly Brief</div>
+    <div class="date">Apr 13–19, 2026</div>
+    <h1>AI &amp; Crypto intelligence report</h1>
 
-<div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-label">BTC price</div>
+        <div class="stat-value">~$77.5K</div>
+        <div class="stat-sub green">+4.7% this week</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Fear &amp; greed</div>
+        <div class="stat-value">21 / 100</div>
+        <div class="stat-sub red">Extreme fear</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">BTC market cap</div>
+        <div class="stat-value">$1.55T</div>
+        <div class="stat-sub">vs ETH at $233B</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">IBIT inflows (Apr 17)</div>
+        <div class="stat-value">$284M</div>
+        <div class="stat-sub">single day</div>
+      </div>
+    </div>
 
-<h1>AI & Crypto Intelligence Report</h1>
-<p>Apr 13–19, 2026</p>
+    <div class="section">
+      <div class="section-title ai-title">Top 5 AI stories</div>
+      <div class="story-list">
+        <div class="story">
+          <div class="story-number ai">1</div>
+          <div>
+            <h3>OpenAI launches GPT-Rosalind for drug discovery</h3>
+            <p>OpenAI's first purpose-built domain model, focused on biochemistry, genomics, and translational medicine. Available in research preview to Amgen and Moderna. Drug discovery AI investment hit $2.51B in 2026; total since 2019 is $17B with zero AI-developed drugs yet in large-scale trials. The real test: citation rate in peer-reviewed papers, not benchmarks.</p>
+          </div>
+        </div>
 
-<div class="grid">
-  <div class="stat"><strong>BTC</strong><br>$77.5K</div>
-  <div class="stat"><strong>Fear</strong><br>21/100</div>
-  <div class="stat"><strong>Market Cap</strong><br>$1.55T</div>
-  <div class="stat"><strong>IBIT</strong><br>$284M</div>
-</div>
+        <div class="story">
+          <div class="story-number ai">2</div>
+          <div>
+            <h3>Snap cuts 1,000 jobs (16%), directly citing AI</h3>
+            <p>CEO Evan Spiegel cited "rapid advancements in AI" enabling smaller teams. AI already generates 65%+ of Snap's new code. Expected to cut $500M+ in annualized costs by H2 2026. Stock jumped 7% on the news. This is the clearest corporate admission yet that AI is replacing headcount at scale — not augmenting it.</p>
+          </div>
+        </div>
 
-<div class="section">
-<h2>Top AI Stories</h2>
+        <div class="story">
+          <div class="story-number ai">3</div>
+          <div>
+            <h3>Anthropic's Mythos triggers Fed bank summit + White House access</h3>
+            <p>The Mythos model's capabilities triggered a Fed-led meeting of bank CEOs over systemic risk implications. Separately, reports emerged the White House is moving to grant US agencies access to Mythos. Anthropic also launched Claude Opus 4.7 as a "safer" alternative. This is the first time a model release has prompted a regulatory convening.</p>
+          </div>
+        </div>
 
-<div class="card">
-<strong>OpenAI launches GPT-Rosalind</strong>
-<p>Focused on drug discovery. Real test: real-world results, not benchmarks.</p>
-</div>
+        <div class="story">
+          <div class="story-number ai">4</div>
+          <div>
+            <h3>Stanford 2026 AI Index: insiders vs public = "a canyon"</h3>
+            <p>400+ page report reveals AI capabilities are accelerating dramatically on benchmarks, but public perception and trust are diverging sharply from what insiders see. Both OpenAI and Anthropic flagged as heading toward IPOs this year. Local US governments increasingly blocking data center construction over energy concerns.</p>
+          </div>
+        </div>
 
-<div class="card">
-<strong>Snap cuts 1,000 jobs citing AI</strong>
-<p>65% of code already AI-generated. Cost savings expected >$500M.</p>
-</div>
+        <div class="story">
+          <div class="story-number ai">5</div>
+          <div>
+            <h3>OpenAI's advertising pivot: $100B revenue target by 2030</h3>
+            <p>Early ad pilot generated $100M annualized in two months. Full projection: $2.5B in 2026 ad revenue, $100B by 2030. The bet is that conversational intent signals are more valuable than search. The risk: it poisons trust in AI assistants at the exact moment trust is their core moat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="card">
-<strong>Anthropic Mythos triggers Fed concern</strong>
-<p>First AI model prompting regulatory-level response.</p>
-</div>
+    <div class="section">
+      <div class="section-title crypto-title">Top 5 crypto stories</div>
+      <div class="crypto-list">
+        <div class="story">
+          <div class="story-number crypto">1</div>
+          <div>
+            <h3>Deutsche Börse buys $200M stake in Kraken at $13.3B valuation</h3>
+            <p>Frankfurt Stock Exchange operator takes 1.5% stake covering trading, custody, settlement, and tokenized assets. Kraken also filed a confidential IPO application with the SEC the same day. Key signal: valuation down from $20B in Nov 2025 — real price discovery, not hype. This is TradFi formally acquiring crypto infrastructure, not just experimenting with it.</p>
+          </div>
+        </div>
 
-<div class="card">
-<strong>Stanford AI Index 2026</strong>
-<p>Gap between insiders and public trust continues growing.</p>
-</div>
+        <div class="story">
+          <div class="story-number crypto">2</div>
+          <div>
+            <h3>CLARITY Act: White House signals deal is "holding" — barely</h3>
+            <p>White House crypto adviser Witt told CoinDesk TV the stablecoin yield compromise appears durable, but banks pushed back immediately. Senate returns from recess with a hard deadline: committee markup must finish by end of April to hit the July floor vote window before August recess. Miss that, and it slides past the 2026 midterms.</p>
+          </div>
+        </div>
 
-<div class="card">
-<strong>OpenAI ad pivot</strong>
-<p>$100B revenue target raises trust concerns.</p>
-</div>
+        <div class="story">
+          <div class="story-number crypto">3</div>
+          <div>
+            <h3>Bitcoin holds above $73K, whale wallets accumulating</h3>
+            <p>For only the second time in 2026, wallets holding 10,000+ BTC recorded net inflows. BlackRock's IBIT pulled $284M in single-day inflows on Apr 17. BTC now shows 84% correlation with S&amp;P 500 and 87% with gold — it's a macro asset now, whether crypto natives like it or not.</p>
+          </div>
+        </div>
 
-</div>
+        <div class="story">
+          <div class="story-number crypto">4</div>
+          <div>
+            <h3>Japan reclassifies crypto as financial instrument</h3>
+            <p>Japan's cabinet approved a bill treating digital assets as investment products, bringing insider trading bans, mandatory disclosures, and paving the way for bank holdings. A quiet but enormous move — one of the world's largest financial markets formally integrating crypto into its regulated framework, expected live by 2027.</p>
+          </div>
+        </div>
 
-<div class="section">
-<h2>Top Crypto Stories</h2>
+        <div class="story">
+          <div class="story-number crypto">5</div>
+          <div>
+            <h3>Anthropic's MCP crosses 97M installs — becomes crypto-adjacent infrastructure</h3>
+            <p>Every major AI provider now ships MCP-compatible tooling. The Linux Foundation announced it will take MCP under open governance. Increasingly, crypto protocols are building MCP connectors, making it the de facto agent-to-blockchain interface layer. This is the quiet infrastructure story of 2026.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="card">
-<strong>Kraken + Deutsche Börse</strong>
-<p>$200M investment. TradFi entering crypto infrastructure.</p>
-</div>
+    <div class="trend-box">
+      <div class="section-title">Key emerging trend</div>
+      <h3>Infrastructure convergence: AI agents are becoming crypto's killer app</h3>
+      <p>The MCP protocol hitting 97M installs while crypto protocols rush to build connectors isn't coincidental. AI agents need verifiable, programmable money rails — and crypto needs a reason for autonomous agents to touch it. Anthropic Mythos triggering a Fed bank summit signals that regulators are starting to think about AI + finance as a single risk category, not two separate ones. Deutsche Börse buying into Kraken is the same thesis from the TradFi side: financial infrastructure is merging, and compliance is becoming a competitive moat. The companies winning are the ones building at the intersection.</p>
+    </div>
 
-<div class="card">
-<strong>CLARITY Act stalled</strong>
-<p>Deadline pressure building in US Senate.</p>
-</div>
+    <div class="two-col">
+      <div class="panel">
+        <div class="panel-title winners">Winners</div>
+        <ul>
+          <li><strong>Kraken</strong> — IPO filing + $200M TradFi validation</li>
+          <li><strong>Anthropic</strong> — Mythos signals frontier leadership; MCP becomes infrastructure</li>
+          <li><strong>BlackRock / IBIT</strong> — $284M single-day BTC inflow</li>
+          <li><strong>Japan</strong> — Moves fast on crypto reclassification while US stalls</li>
+          <li><strong>Biotech / Pharma</strong> — GPT-Rosalind + Amazon Bio Discovery = real competition</li>
+        </ul>
+      </div>
 
-<div class="card">
-<strong>BTC whales accumulating</strong>
-<p>Macro asset behavior confirmed.</p>
-</div>
+      <div class="panel">
+        <div class="panel-title losers">Losers</div>
+        <ul>
+          <li><strong>Snap employees</strong> — 1,000 jobs gone; AI gets the credit line</li>
+          <li><strong>US Congress</strong> — CLARITY Act still deadlocked; window closing fast</li>
+          <li><strong>Kraken IPO bulls</strong> — Valuation down 33% from Nov 2025 ($20B → $13.3B)</li>
+          <li><strong>Traditional bank deposits</strong> — Stablecoin yield debate confirms the threat is real</li>
+          <li><strong>OpenAI's trust premium</strong> — Ad pivot risks the one asset that differentiates them</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="card">
-<strong>Japan reclassifies crypto</strong>
-<p>Major regulatory shift.</p>
-</div>
+    <div class="watch-box">
+      <div class="watch-header">
+        <div class="watch-icon">⚠️</div>
+        <p class="watch-title">What to watch next week</p>
+      </div>
 
-<div class="card">
-<strong>MCP reaches 97M installs</strong>
-<p>Becoming infrastructure layer.</p>
-</div>
+      <div class="watch-item">
+        <div class="tag high">HIGH</div>
+        <p><strong>Senate Banking Committee markup deadline</strong> — Does the CLARITY Act stablecoin compromise hold? If markup doesn't start by week's end, the July floor vote target dies. Watch Sen. Lummis and Sen. Moreno's statements specifically.</p>
+      </div>
 
-</div>
+      <div class="watch-item">
+        <div class="tag high">HIGH</div>
+        <p><strong>GPT-Rosalind early access feedback</strong> — Amgen and Moderna are the test cases. Any signal on whether it's actually useful in real workflows (not just benchmark scores) will move the life-sciences AI trade.</p>
+      </div>
 
-<div class="section">
-<h2>Key Trend</h2>
-<div class="card">
-AI + crypto convergence. Agents need programmable money. Infrastructure is merging.
-</div>
-</div>
+      <div class="watch-item med">
+        <div class="tag med">MED</div>
+        <p><strong>BTC resistance at $75K–$77.5K</strong> — Whales are accumulating, IBIT inflows strong. A confirmed breakout above $77.5K with volume changes the near-term narrative entirely. Watch on-chain data from Glassnode.</p>
+      </div>
 
-<div class="section">
-<h2>What to Watch</h2>
+      <div class="watch-item med">
+        <div class="tag med">MED</div>
+        <p><strong>Anthropic Mythos government rollout details</strong> — White House access to Mythos for federal agencies, if confirmed, is a massive procurement signal. Watch for GSA or DoD contract language.</p>
+      </div>
 
-<div class="card">
-<span class="badge high">HIGH</span>
-CLARITY Act deadline
-</div>
+      <div class="watch-item watch">
+        <div class="tag watch">WATCH</div>
+        <p><strong>Snap's AI cost-cutting template spreading</strong> — If other mid-size tech companies announce AI-justified layoffs this week, it confirms a new pattern. The ones to watch: companies where AI already generates 40%+ of code.</p>
+      </div>
+    </div>
 
-<div class="card">
-<span class="badge high">HIGH</span>
-GPT-Rosalind real-world results
-</div>
+    <div class="macro-box">
+      <p><strong>The single biggest macro takeaway this week:</strong> the AI-crypto convergence is moving from thesis to infrastructure. Anthropic's MCP at 97M installs is becoming the agent-to-blockchain interface layer. Deutsche Börse buying into Kraken is TradFi formally betting that compliant crypto infrastructure is the next exchange war. The Fed convening bank CEOs over a model release (Mythos) signals that regulators are collapsing the "AI risk" and "financial system risk" categories into one.</p>
 
-<div class="card">
-<span class="badge med">MED</span>
-BTC breakout above $77.5K
-</div>
+      <p><strong>The number that should scare you if you work in tech:</strong> Snap — 65% of new code written by AI, 1,000 humans gone, stock up 7%. The economics of that trade are now proven. Every board in tech saw that chart this week.</p>
 
-<div class="card">
-<span class="badge med">MED</span>
-Mythos government rollout
-</div>
+      <p><strong>The number that should give you pause on crypto:</strong> BTC's 84% correlation with the S&amp;P 500. The decoupling narrative is dead. It's a risk-on asset that happens to be borderless — which is still valuable, just different from the original pitch.</p>
+    </div>
 
-<div class="card">
-<span class="badge watch">WATCH</span>
-AI-driven layoffs trend
-</div>
-
-</div>
-
-</div>
-
+    <div class="sources">
+      Sources: CoinDesk, TechCrunch, Reuters, Stanford HAI, Intellectia, QZ, IEEE Spectrum — compiled Apr 19, 2026
+    </div>
+  </div>
 </body>
 </html>
