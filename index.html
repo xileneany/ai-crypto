@@ -1,147 +1,1054 @@
-<h2 class="sr-only" style="position:absolute;left:-9999px">Weekly brief: AI and crypto top stories, April 20–26 2026</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI & Crypto Weekly Brief — Apr 20–26, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<div style="padding: 1.5rem 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif;">
+  :root {
+    --navy: #0A1628;
+    --navy2: #111f35;
+    --navy3: #1a2e48;
+    --gold: #F0A500;
+    --gold2: #c47f00;
+    --teal: #0DB87F;
+    --teal2: #09916a;
+    --red: #E8404A;
+    --amber: #F5A623;
+    --blue: #2D7DD2;
+    --green: #1CB86A;
+    --purple: #7B6CF6;
+    --white: #FFFFFF;
+    --off: #f4f1ea;
+    --muted: #8FA0B8;
+    --light: #C8D6E8;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.14);
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+  }
 
-  <!-- HEADER -->
-  <div style="display:flex; align-items:baseline; gap: 12px; margin-bottom: 0.25rem;">
-    <span style="font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: #6B7280; text-transform: uppercase;">Weekly Brief</span>
-    <span style="font-size: 11px; color: #9CA3AF;">Apr 20–26, 2026</span>
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── GRAIN OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.45;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    position: relative;
+    z-index: 10;
+    padding: 0 2rem;
+    border-bottom: 1px solid var(--border2);
+  }
+
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 0;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .date-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    border: 1px solid var(--border2);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    z-index: 10;
+    padding: 5rem 2rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .hero-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  h1.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+
+  h1.hero-title span {
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 560px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ─── STAT STRIP ─── */
+  .stat-strip {
+    position: relative;
+    z-index: 10;
+    padding: 0 2rem 3.5rem;
+  }
+
+  .stat-strip-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--border2);
+    border: 1px solid var(--border2);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .stat {
+    background: var(--navy2);
+    padding: 1.5rem 1.75rem;
+    transition: background 0.2s;
+  }
+
+  .stat:hover { background: var(--navy3); }
+
+  .stat-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-sub {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .up { color: var(--teal); }
+  .down { color: var(--red); }
+  .neutral { color: var(--muted); }
+
+  /* ─── SECTION LAYOUT ─── */
+  .section {
+    position: relative;
+    z-index: 10;
+    padding: 0 2rem 4rem;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border2);
+  }
+
+  .section-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .tag-ai { background: rgba(123,108,246,0.15); color: var(--purple); border: 1px solid rgba(123,108,246,0.3); }
+  .tag-crypto { background: rgba(13,184,127,0.12); color: var(--teal); border: 1px solid rgba(13,184,127,0.25); }
+  .tag-trend { background: rgba(240,165,0,0.12); color: var(--gold); border: 1px solid rgba(240,165,0,0.25); }
+  .tag-watch { background: rgba(45,125,210,0.12); color: var(--blue); border: 1px solid rgba(45,125,210,0.25); }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  /* ─── NEWS CARDS ─── */
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border: 1px solid var(--border2);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .news-item {
+    background: var(--navy2);
+    padding: 1.75rem 2rem;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    transition: background 0.18s;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .news-item:last-child { border-bottom: none; }
+  .news-item:hover { background: var(--navy3); }
+
+  .news-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-top: 2px;
+  }
+
+  .ai-num { color: rgba(123,108,246,0.35); }
+  .crypto-num { color: rgba(13,184,127,0.3); }
+
+  .news-content { }
+
+  .news-headline {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+    line-height: 1.35;
+  }
+
+  .news-body {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  .news-body strong {
+    color: var(--light);
+    font-weight: 500;
+  }
+
+  .news-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.7rem;
+  }
+
+  .meta-pill {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 20px;
+  }
+
+  .pill-capital { background: rgba(240,165,0,0.12); color: var(--gold); }
+  .pill-model   { background: rgba(123,108,246,0.12); color: var(--purple); }
+  .pill-labor   { background: rgba(232,64,74,0.12); color: var(--red); }
+  .pill-reg     { background: rgba(45,125,210,0.12); color: var(--blue); }
+  .pill-open    { background: rgba(13,184,127,0.12); color: var(--teal); }
+  .pill-etf     { background: rgba(28,184,106,0.12); color: var(--green); }
+  .pill-stable  { background: rgba(245,166,35,0.12); color: var(--amber); }
+  .pill-quant   { background: rgba(232,64,74,0.12); color: var(--red); }
+  .pill-privacy { background: rgba(123,108,246,0.12); color: var(--purple); }
+  .pill-law     { background: rgba(45,125,210,0.12); color: var(--blue); }
+
+  /* ─── TREND SECTION ─── */
+  .trend-card {
+    background: linear-gradient(135deg, rgba(240,165,0,0.06) 0%, rgba(13,184,127,0.06) 100%);
+    border: 1px solid rgba(240,165,0,0.2);
+    border-radius: 16px;
+    padding: 2.5rem;
+  }
+
+  .trend-title {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+  }
+
+  .trend-body {
+    font-size: 15px;
+    color: var(--light);
+    line-height: 1.85;
+    font-weight: 300;
+    max-width: 860px;
+  }
+
+  .trend-body strong { color: var(--gold); font-weight: 500; }
+
+  /* ─── WIN/LOSE ─── */
+  .winlose-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .winlose-grid { grid-template-columns: 1fr; }
+  }
+
+  .wl-card {
+    background: var(--navy2);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border2);
+  }
+
+  .wl-header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .wl-win .wl-header { background: rgba(13,184,127,0.1); border-bottom: 1px solid rgba(13,184,127,0.2); }
+  .wl-lose .wl-header { background: rgba(232,64,74,0.08); border-bottom: 1px solid rgba(232,64,74,0.18); }
+
+  .wl-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .wl-win .wl-icon { background: rgba(13,184,127,0.2); }
+  .wl-lose .wl-icon { background: rgba(232,64,74,0.15); }
+
+  .wl-title {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .wl-win .wl-title { color: var(--teal); }
+  .wl-lose .wl-title { color: var(--red); }
+
+  .wl-list {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .wl-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .wl-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  .wl-win .wl-dot { background: var(--teal); }
+  .wl-lose .wl-dot { background: var(--red); }
+
+  .wl-item-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 2px;
+  }
+
+  .wl-item-reason {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  /* ─── WATCHLIST ─── */
+  .watch-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border: 1px solid var(--border2);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .watch-item {
+    background: var(--navy2);
+    padding: 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.18s;
+  }
+
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item:hover { background: var(--navy3); }
+
+  .watch-priority {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 3px;
+  }
+
+  .p-high { background: rgba(232,64,74,0.15); color: var(--red); border: 1px solid rgba(232,64,74,0.3); }
+  .p-med  { background: rgba(245,166,35,0.12); color: var(--amber); border: 1px solid rgba(245,166,35,0.3); }
+  .p-watch{ background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border2); }
+
+  .watch-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+  }
+
+  .watch-body {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .watch-body strong { color: var(--light); font-weight: 500; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    position: relative;
+    z-index: 10;
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--border2);
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-text {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .footer-sources {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: rgba(143,160,184,0.6);
+    letter-spacing: 0.04em;
+    max-width: 600px;
+    text-align: right;
+    line-height: 1.6;
+  }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border2);
+    margin: 0 auto 4rem;
+    max-width: 1100px;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero { animation: fadeUp 0.7s ease both; }
+  .stat-strip { animation: fadeUp 0.7s 0.1s ease both; }
+
+  .news-item {
+    opacity: 0;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .news-item:nth-child(1) { animation-delay: 0.05s; }
+  .news-item:nth-child(2) { animation-delay: 0.10s; }
+  .news-item:nth-child(3) { animation-delay: 0.15s; }
+  .news-item:nth-child(4) { animation-delay: 0.20s; }
+  .news-item:nth-child(5) { animation-delay: 0.25s; }
+
+  /* ─── ACCENT LINE ─── */
+  .accent-line {
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+    margin-bottom: 2rem;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 680px) {
+    h1.hero-title { font-size: 2.5rem; }
+    .news-item { grid-template-columns: 1.8rem 1fr; gap: 0.75rem; padding: 1.25rem; }
+    .news-num { font-size: 1.4rem; }
+    .hero { padding: 3rem 0 2.5rem; }
+    .watch-item { grid-template-columns: 1fr; }
+    .watch-priority { width: fit-content; }
+    .trend-card { padding: 1.5rem; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .footer-sources { text-align: left; }
+  }
+
+  /* ─── GLOW ACCENT behind hero ─── */
+  .hero-glow {
+    position: absolute;
+    top: -100px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240,165,0,0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-glow2 {
+    position: absolute;
+    top: 100px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(13,184,127,0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo">AI &amp; Crypto Weekly</div>
+    <div class="date-badge">Apr 20 – 26, 2026</div>
   </div>
-  <h1 style="font-size: 22px; font-weight: 600; margin: 0 0 1.5rem;">AI & Crypto intelligence report</h1>
+</header>
 
-  <!-- METRICS -->
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 2rem;">
-    <div style="background:#F9FAFB; border-radius:10px; padding:1rem;">
-      <div style="font-size:13px; color:#6B7280;">BTC price</div>
-      <div style="font-size:20px; font-weight:600;">~$77.5K</div>
-      <div style="font-size:12px; color:#16A34A;">8-day inflow streak</div>
-    </div>
-    <div style="background:#F9FAFB; border-radius:10px; padding:1rem;">
-      <div style="font-size:13px; color:#6B7280;">BTC ETF AUM</div>
-      <div style="font-size:20px; font-weight:600;">$105B</div>
-      <div style="font-size:12px; color:#16A34A;">+$4B this week</div>
-    </div>
-    <div style="background:#F9FAFB; border-radius:10px; padding:1rem;">
-      <div style="font-size:13px; color:#6B7280;">Anthropic valuation</div>
-      <div style="font-size:20px; font-weight:600;">$350B</div>
-      <div style="font-size:12px; color:#9CA3AF;">post Google deal</div>
-    </div>
-    <div style="background:#F9FAFB; border-radius:10px; padding:1rem;">
-      <div style="font-size:13px; color:#6B7280;">BTC dominance</div>
-      <div style="font-size:20px; font-weight:600;">60%+</div>
-      <div style="font-size:12px; color:#DC2626;">Altcoin index: 36</div>
-    </div>
-  </div>
-
-  <!-- AI -->
-  <div style="border-left:3px solid #7F77DD; padding-left:1rem; margin-bottom:2rem;">
-    <div style="font-size:11px; font-weight:600; color:#7F77DD; margin-bottom:1rem;">Top 5 AI stories</div>
-
-    <div style="margin-bottom:1.2rem;">
-      <b>1. Google invests $40B in Anthropic</b><br>
-      $65B raised in one week; $30B ARR already.<br>
-      <span style="color:#6B7280;">→ This isn’t funding. It’s compute dominance being locked in early.</span>
-    </div>
-
-    <div style="margin-bottom:1.2rem;">
-      <b>2. DeepSeek V4 resets pricing</b><br>
-      1.6T params, 6× cheaper than Claude, near frontier performance.<br>
-      <span style="color:#6B7280;">→ Efficiency just became a strategic weapon, not a tradeoff.</span>
-    </div>
-
-    <div style="margin-bottom:1.2rem;">
-      <b>3. GPT-5.5 launches under pressure</b><br>
-      Improved capabilities, but higher cost and no longer clear SOTA.<br>
-      <span style="color:#6B7280;">→ OpenAI is now defending margin, not just leading innovation.</span>
-    </div>
-
-    <div style="margin-bottom:1.2rem;">
-      <b>4. AI layoffs pass 100K in 2026</b><br>
-      Meta, Microsoft and others cut while doubling AI spend.<br>
-      <span style="color:#6B7280;">→ This is a structural labor reset, not a temporary cycle.</span>
-    </div>
-
-    <div>
-      <b>5. EU AI Act countdown begins</b><br>
-      100 days to compliance for HR AI systems.<br>
-      <span style="color:#6B7280;">→ Regulation is quietly favoring controllable, self-hosted models.</span>
-    </div>
-  </div>
-
-  <!-- CRYPTO -->
-  <div style="border-left:3px solid #1D9E75; padding-left:1rem; margin-bottom:2rem;">
-    <div style="font-size:11px; font-weight:600; color:#1D9E75; margin-bottom:1rem;">Top 5 crypto stories</div>
-
-    <div style="margin-bottom:1.2rem;">
-      <b>1. Bitcoin ETFs cross $105B</b><br>
-      $2B inflows across 8 days; dominance above 60%.<br>
-      <span style="color:#6B7280;">→ Institutions are absorbing volatility in real time.</span>
-    </div>
-
-    <div style="margin-bottom:1.2rem;">
-      <b>2. Morgan Stanley builds stablecoin rails</b><br>
-      Launches reserves fund aligned with regulation.<br>
-      <span style="color:#6B7280;">→ Wall Street is operationalizing crypto, not experimenting anymore.</span>
-    </div>
-
-    <div style="margin-bottom:1.2rem;">
-      <b>3. CLARITY Act advances</b><br>
-      SEC roundtable set for May 3.<br>
-      <span style="color:#6B7280;">→ This decides whether DeFi scales or stalls.</span>
-    </div>
-
-    <div style="margin-bottom:1.2rem;">
-      <b>4. Bitcoin quantum proposal (BIP-361)</b><br>
-      Could affect ~$74B in dormant BTC.<br>
-      <span style="color:#6B7280;">→ Security vs immutability becomes a real debate.</span>
-    </div>
-
-    <div>
-      <b>5. Stripe + Paradigm launch Zones</b><br>
-      Private + public blockchain hybrid layer.<br>
-      <span style="color:#6B7280;">→ Solves the confidentiality gap blocking enterprise adoption.</span>
-    </div>
-  </div>
-
-  <!-- TREND -->
-  <div style="background:#F9FAFB; border-radius:12px; padding:1.25rem; margin-bottom:2rem;">
-    <div style="font-size:11px; font-weight:600; color:#6B7280;">Key emerging trend</div>
-    <div style="font-size:16px; font-weight:600; margin:6px 0;">Compute vs efficiency war</div>
-    <div style="font-size:13px; color:#6B7280;">
-      Big Tech is locking compute at massive scale, while DeepSeek proves efficiency can rival it. Same split in crypto: ETFs dominate capital flows while new architectures challenge cost structures. Two systems are emerging — and both are scaling fast.
-    </div>
-  </div>
-
-  <!-- WINNERS LOSERS -->
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:2rem;">
-    <div>
-      <b>Winners</b><br><br>
-      <b>Anthropic</b><br><span style="color:#6B7280;">Owns the compute narrative</span><br><br>
-      <b>DeepSeek</b><br><span style="color:#6B7280;">Reset global cost expectations</span><br><br>
-      <b>BlackRock</b><br><span style="color:#6B7280;">ETF dominance</span>
-    </div>
-
-    <div>
-      <b>Losers</b><br><br>
-      <b>Entry-level workers</b><br><span style="color:#6B7280;">Hiring collapse accelerating</span><br><br>
-      <b>OpenAI pricing</b><br><span style="color:#6B7280;">Premium under pressure</span><br><br>
-      <b>Altcoins</b><br><span style="color:#6B7280;">Weak cycle vs BTC</span>
-    </div>
-  </div>
-
-  <!-- WATCH -->
-  <div style="border:1px solid #E5E7EB; border-radius:12px; padding:1.25rem;">
-    <b>What to watch next week</b><br><br>
-
-    <b>HIGH:</b> SEC CLARITY Act roundtable (May 3)<br>
-    <b>HIGH:</b> BTC at $80.5K breakout level<br>
-    <b>MED:</b> DeepSeek adoption speed<br>
-    <b>MED:</b> Anthropic IPO signals<br>
-    <b>WATCH:</b> Bitcoin governance debate
-  </div>
-
-  <div style="margin-top:1.5rem; font-size:13px;">
-    <b>The week in one sentence:</b> Anthropic raised $65B — and DeepSeek made pricing the real battlefield.
-  </div>
-
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <section class="hero">
+    <div class="hero-label">Weekly intelligence brief</div>
+    <h1 class="hero-title">The week<br><span>$65B moved</span><br>and open source<br>struck back.</h1>
+    <p class="hero-sub">Anthropic raised more in 7 days than most countries spend on tech infrastructure in a decade — then DeepSeek showed up Friday and repriced the entire AI market.</p>
+  </section>
 </div>
+
+<!-- STAT STRIP -->
+<div class="stat-strip">
+  <div class="stat-strip-inner">
+    <div class="stat">
+      <div class="stat-label">BTC price</div>
+      <div class="stat-value">$77.5K</div>
+      <div class="stat-sub up">8-day inflow streak</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">BTC ETF AUM</div>
+      <div class="stat-value">$105B</div>
+      <div class="stat-sub up">+$4B this week</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Anthropic valuation</div>
+      <div class="stat-value">$350B</div>
+      <div class="stat-sub neutral">post Google deal</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">BTC dominance</div>
+      <div class="stat-value">60%+</div>
+      <div class="stat-sub down">Altcoin index: 36</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">DeepSeek V4 price</div>
+      <div class="stat-value">1/6th</div>
+      <div class="stat-sub up">vs GPT-5.5 / Opus 4.7</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ AI NEWS ══════════════════════════════ -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag tag-ai">Artificial intelligence</span>
+      <h2 class="section-title">Top 5 AI stories</h2>
+    </div>
+
+    <div class="news-list">
+
+      <!-- 1 -->
+      <div class="news-item">
+        <div class="news-num ai-num">01</div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="meta-pill pill-capital">Capital</span>
+            <span class="meta-pill pill-model">Apr 24</span>
+          </div>
+          <div class="news-headline">Google invests up to $40B in Anthropic</div>
+          <div class="news-body">
+            <strong>$10B cash now</strong> at a $350B valuation; $30B more tied to performance milestones. Google Cloud commits 5GW of compute starting 2027. This follows Amazon's $5B injection announced Apr 20 — Anthropic secured <strong>$65B in funding commitments in a single week.</strong> Anthropic annualized revenue: $30B+ as of March, driven by Claude Code. A concurrent deal with CoreWeave adds data center capacity. The week's single biggest capital event in any industry. Anthropic is reportedly targeting an IPO as soon as October at an $800B+ valuation.
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="news-item">
+        <div class="news-num ai-num">02</div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="meta-pill pill-open">Open source</span>
+            <span class="meta-pill pill-model">Apr 24</span>
+          </div>
+          <div class="news-headline">DeepSeek V4: frontier-class AI at 1/6th the price</div>
+          <div class="news-body">
+            V4-Pro: <strong>1.6T parameters, 1M-token context, MIT licensed, $1.74/$3.48 per 1M tokens</strong> — 6× cheaper than Opus 4.7, 98% below GPT-5.5 Pro. Beats all open models on code benchmarks; trails GPT-5.4/Gemini-3.1-Pro by only 3–6 months. Crucially, trained partly on <strong>Huawei Ascend chips</strong>, bypassing US export restrictions. One CEO calculated: if Uber had used DeepSeek V4 instead of Claude, their 2026 AI budget would last 7 years instead of 4 months. Called by VentureBeat the "second DeepSeek moment."
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="news-item">
+        <div class="news-num ai-num">03</div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="meta-pill pill-model">Model release</span>
+            <span class="meta-pill pill-model">Apr 23</span>
+          </div>
+          <div class="news-headline">OpenAI launches GPT-5.5 — shadowed immediately by DeepSeek</div>
+          <div class="news-body">
+            GPT-5.5 rolls out to Plus/Pro/Business users with improved coding, deep research, and computer-use. At <strong>$5/$30 per 1M tokens, it's 2× more expensive than GPT-5.4.</strong> DeepSeek V4 dropped hours later on the same day and matches it on coding benchmarks at a fraction of the cost. OpenAI annualized revenue crossed $25B; IPO talk accelerating for late 2026. President Greg Brockman: "What is really special about this model is how much more it can do with less guidance." The market's reaction: muted, overshadowed by the Chinese open-source counterattack.
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="news-item">
+        <div class="news-num ai-num">04</div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="meta-pill pill-labor">Labor</span>
+            <span class="meta-pill pill-model">Week</span>
+          </div>
+          <div class="news-headline">AI layoff wave: 100K+ tech jobs gone in 2026 to date</div>
+          <div class="news-body">
+            UKG shed 950 citing AI (Apr 21). Meta confirmed <strong>8,000 layoffs (10% of staff)</strong> + 6,000 unfilled roles starting May 20, simultaneously doubling AI capex to $115–135B. Microsoft opened a "voluntary buyout" to ~8,750 US employees. WEF data cited by former UK PM Rishi Sunak: <strong>US entry-level job postings are down 35% in 18 months.</strong> Sunak told the BBC on Apr 22 and Apr 24 that graduates' fears about AI "flattening" entry-level hiring are "justified." Analysts project 300,000 tech job cuts by year-end. This is no longer a trend — it's structural.
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="news-item">
+        <div class="news-num ai-num">05</div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="meta-pill pill-reg">Regulation</span>
+            <span class="meta-pill pill-model">100 days</span>
+          </div>
+          <div class="news-headline">EU AI Act enforcement clock: 100 days to Aug 2 deadline</div>
+          <div class="news-body">
+            From Apr 25, companies have <strong>100 days</strong> until the EU AI Act begins enforcing on "high-risk" AI systems used in recruitment, performance management, and workforce monitoring. Requires quality management systems, technical docs, and conformity records. The compliance burden quietly <strong>favors self-hosted models like DeepSeek V4 Flash</strong> — controlling the data path simplifies Article 10 (data governance) and Article 14 (human oversight) audits. Closed-API solutions face harder audit trails. A slow-burn story that's about to get very loud for enterprise legal teams.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="padding: 0 2rem;"><div style="height:1px; background: rgba(255,255,255,0.07);"></div></div>
+
+<!-- ══════════════════════════════ CRYPTO NEWS ══════════════════════════════ -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag tag-crypto">Crypto &amp; Digital assets</span>
+      <h2 class="section-title">Top 5 crypto stories</h2>
+    </div>
+
+    <div class="news-list">
+
+      <!-- 1 -->
+      <div class="news-item">
+        <div class="news-num crypto-num">01</div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="meta-pill pill-etf">ETF flows</span>
+            <span class="meta-pill pill-model">Apr 24</span>
+          </div>
+          <div class="news-headline">Bitcoin ETF inflows hit $2B across 8 consecutive days</div>
+          <div class="news-body">
+            8-day positive streak beginning Apr 14; <strong>$223M net inflow on Apr 23 alone.</strong> Total BTC ETF AUM crossed <strong>$105B — up $4B this week.</strong> IBIT leads, ARKB close behind. BTC dominance pushed above 60% while the altcoin season index sits at 36 — institutional money is parking in safety, not speculating. CryptoQuant data: whale exchange inflows spiked to ~11,000 BTC/hour as price tested $76K, the highest since late December. The ETF bid is now large enough to absorb retail panic in real time.
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="news-item">
+        <div class="news-num crypto-num">02</div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="meta-pill pill-stable">Stablecoins</span>
+            <span class="meta-pill pill-model">Apr 24</span>
+          </div>
+          <div class="news-headline">Morgan Stanley launches Stablecoin Reserves Portfolio</div>
+          <div class="news-body">
+            A money-market fund designed to provide <strong>regulated, liquid reserves for stablecoin issuers,</strong> investing in US T-bills and explicitly aligned with GENIUS Act requirements. This follows MSBT — Morgan Stanley's spot Bitcoin ETF — reaching <strong>$100M in its first week</strong> at a 0.14% fee (cheapest in the market, undercutting BlackRock's IBIT at 0.25%). Goldman Sachs simultaneously filed for a Bitcoin Premium Income ETF. Wall Street isn't just buying crypto — it's building the operating infrastructure underneath it.
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="news-item">
+        <div class="news-num crypto-num">03</div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="meta-pill pill-law">Regulation</span>
+            <span class="meta-pill pill-model">May 3 ahead</span>
+          </div>
+          <div class="news-headline">CLARITY Act SEC roundtable confirmed for May 3</div>
+          <div class="news-body">
+            The SEC confirmed a formal CLARITY Act roundtable — the legislation that decides whether crypto assets are <strong>commodities (CFTC) or securities (SEC).</strong> Commodity framing = DeFi and tokenization green light. Securities framing = another 12+ months of ambiguity. Goldman Sachs survey: <strong>35% of institutions cite regulatory uncertainty</strong> as the top barrier to adoption; 71% plan to increase crypto exposure in the next 12 months. The midterm election window means H1 2026 is the only viable passage timeline. Miss it and the bill slides past November.
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="news-item">
+        <div class="news-num crypto-num">04</div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="meta-pill pill-quant">Protocol</span>
+            <span class="meta-pill pill-model">Apr 15</span>
+          </div>
+          <div class="news-headline">BIP-361: Bitcoin proposes freezing $74B in quantum-vulnerable coins</div>
+          <div class="news-body">
+            Jameson Lopp and five developers published BIP-361 — a 3-phase plan to migrate Bitcoin to quantum-resistant cryptography. Phase B (5 years post-activation) renders legacy ECDSA/Schnorr signatures completely invalid. At stake: <strong>~5.6M BTC that hasn't moved in 10+ years</strong>, plus Satoshi's estimated 1M BTC. Google's 2026 research suggests a future quantum machine could crack ECDSA in ~10 minutes. No such machine exists today — but <strong>Adam Back is already pushing back,</strong> proposing optional upgrades instead of forced freezes. The Bitcoin governance battle of the decade is opening.
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="news-item">
+        <div class="news-num crypto-num">05</div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="meta-pill pill-privacy">Infrastructure</span>
+            <span class="meta-pill pill-model">Week</span>
+          </div>
+          <div class="news-headline">Stripe + Paradigm launch "Zones" — enterprise blockchain privacy layer</div>
+          <div class="news-body">
+            Zones allows <strong>parallel private blockchains to connect to a public mainnet</strong> for sensitive corporate tasks — payroll, fund management — keeping internal transaction details confidential while allowing cryptographic verification. This directly addresses the "confidentiality gap" that has historically blocked large-scale corporate blockchain adoption. Backed by both the largest global payments processor and the most influential crypto-native VC. This got buried under the ETF headlines but may prove to be the most structurally important story of the week.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="padding: 0 2rem;"><div style="height:1px; background: rgba(255,255,255,0.07);"></div></div>
+
+<!-- ══════════════════════════════ TREND ══════════════════════════════ -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag tag-trend">Key trend</span>
+      <h2 class="section-title">The great bifurcation</h2>
+    </div>
+
+    <div class="trend-card">
+      <div class="trend-title">Compute kings vs. efficiency insurgents</div>
+      <div class="trend-body">
+        This week crystallized the defining battle of 2026. On one side: <strong>Anthropic pulling in $65B in a week</strong>, Google and Amazon racing to lock up 5GW of compute, OpenAI building a $20B Cerebras deal — raw compute as competitive moat. On the other: <strong>DeepSeek V4 delivering near-frontier AI at 1/6th the cost</strong> by being architecturally smarter, trained on domestic chips, open-sourced under MIT, and priced below even small Western models.
+        <br><br>
+        The crypto parallel is exact. <strong>Bitcoin ETFs represent institutional capital capturing value through established rails</strong> — the compute kings play. DeepSeek is the decentralized insurgent that US export restrictions inadvertently created. The chip ban, designed to slow China, forced DeepSeek to build a more efficient architecture. It produced the opposite of its intended effect.
+        <br><br>
+        The EU AI Act clock adds a regulatory dimension: <strong>self-hosted open models like V4 Flash have compliance advantages</strong> that closed APIs can't easily match — you control the data path, which simplifies GDPR and Article 10/14 audit trails. The trillion-dollar question is whether raw compute dominance holds, or whether the efficiency insurgency commoditizes the frontier entirely — the same question crypto answered with Bitcoin in 2009.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="padding: 0 2rem;"><div style="height:1px; background: rgba(255,255,255,0.07);"></div></div>
+
+<!-- ══════════════════════════════ WIN / LOSE ══════════════════════════════ -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag tag-trend">Scorecard</span>
+      <h2 class="section-title">Winners &amp; losers</h2>
+    </div>
+
+    <div class="winlose-grid">
+
+      <div class="wl-card wl-win">
+        <div class="wl-header">
+          <div class="wl-icon">↑</div>
+          <div class="wl-title">Winners</div>
+        </div>
+        <div class="wl-list">
+          <div class="wl-item">
+            <div class="wl-dot"></div>
+            <div>
+              <div class="wl-item-name">Anthropic</div>
+              <div class="wl-item-reason">$65B in commitments in one week; $30B ARR; IPO targeting Oct 2026 at $800B+</div>
+            </div>
+          </div>
+          <div class="wl-item">
+            <div class="wl-dot"></div>
+            <div>
+              <div class="wl-item-name">DeepSeek</div>
+              <div class="wl-item-reason">V4 resets global cost economics; raising $300M at $20B valuation</div>
+            </div>
+          </div>
+          <div class="wl-item">
+            <div class="wl-dot"></div>
+            <div>
+              <div class="wl-item-name">BlackRock / IBIT</div>
+              <div class="wl-item-reason">8-day inflow streak; $105B AUM; structural institutional bid now dominant</div>
+            </div>
+          </div>
+          <div class="wl-item">
+            <div class="wl-dot"></div>
+            <div>
+              <div class="wl-item-name">Morgan Stanley</div>
+              <div class="wl-item-reason">MSBT + stablecoin reserves fund = full-stack crypto infrastructure layer</div>
+            </div>
+          </div>
+          <div class="wl-item">
+            <div class="wl-dot"></div>
+            <div>
+              <div class="wl-item-name">China / Huawei</div>
+              <div class="wl-item-reason">US chip ban backfired — domestic silicon now trains frontier-class AI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wl-card wl-lose">
+        <div class="wl-header">
+          <div class="wl-icon">↓</div>
+          <div class="wl-title">Losers</div>
+        </div>
+        <div class="wl-list">
+          <div class="wl-item">
+            <div class="wl-dot"></div>
+            <div>
+              <div class="wl-item-name">Entry-level knowledge workers</div>
+              <div class="wl-item-reason">35% fewer US postings in 18 months; WEF + Sunak confirm the data officially</div>
+            </div>
+          </div>
+          <div class="wl-item">
+            <div class="wl-dot"></div>
+            <div>
+              <div class="wl-item-name">OpenAI's pricing premium</div>
+              <div class="wl-item-reason">GPT-5.5 costs 2× more than GPT-5.4 and DeepSeek matches it on coding</div>
+            </div>
+          </div>
+          <div class="wl-item">
+            <div class="wl-dot"></div>
+            <div>
+              <div class="wl-item-name">Altcoins</div>
+              <div class="wl-item-reason">Altcoin season index at 36; BTC dominance 60%+ — risk-off rotation ongoing</div>
+            </div>
+          </div>
+          <div class="wl-item">
+            <div class="wl-dot"></div>
+            <div>
+              <div class="wl-item-name">US chip export policy</div>
+              <div class="wl-item-reason">Didn't slow DeepSeek — instead forced an efficient architecture that undercuts US models</div>
+            </div>
+          </div>
+          <div class="wl-item">
+            <div class="wl-dot"></div>
+            <div>
+              <div class="wl-item-name">Satoshi's coins (potentially)</div>
+              <div class="wl-item-reason">BIP-361 could freeze ~1M BTC permanently if unresponsive to quantum migration</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="padding: 0 2rem;"><div style="height:1px; background: rgba(255,255,255,0.07);"></div></div>
+
+<!-- ══════════════════════════════ WATCHLIST ══════════════════════════════ -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag tag-watch">Forward look</span>
+      <h2 class="section-title">What to watch next week</h2>
+    </div>
+
+    <div class="watch-grid">
+
+      <div class="watch-item">
+        <div>
+          <div class="watch-priority p-high">HIGH</div>
+        </div>
+        <div>
+          <div class="watch-title">SEC CLARITY Act roundtable — May 3</div>
+          <div class="watch-body">The most important US crypto regulatory event in months. Watch whether the SEC frames digital assets as <strong>commodities or securities</strong>. Commodity framing = DeFi and tokenization green light. Specific signal to track: does SEC Chair Atkins publicly reference the "innovation exemption" concept? Fail to start markup by end of week and the bill likely misses the midterm window entirely.</div>
+        </div>
+      </div>
+
+      <div class="watch-item">
+        <div>
+          <div class="watch-priority p-high">HIGH</div>
+        </div>
+        <div>
+          <div class="watch-title">BTC breakout or rejection at $80.5K</div>
+          <div class="watch-body">Analysts have a clean binary: above <strong>$80.5K with volume = leg toward $85K</strong>; failure to hold $76.5K = pullback toward low $70Ks. CryptoQuant data shows whale exchange inflows spiking — distribution or accumulation? The 8-day inflow streak sets up the bullish case. On-chain data from Glassnode will give the earliest signal mid-week.</div>
+        </div>
+      </div>
+
+      <div class="watch-item">
+        <div>
+          <div class="watch-priority p-med">MED</div>
+        </div>
+        <div>
+          <div class="watch-title">DeepSeek V4 enterprise adoption speed</div>
+          <div class="watch-body">V4 just launched as a preview. The key signal next week: how quickly developer toolchains — <strong>Cursor, Cline, Claude Code rivals</strong> — integrate V4-Flash. The Uber cost comparison will circulate boardrooms. Watch for enterprise switching announcements or corporate AI budget memos that reference open-source alternatives. First mover companies in this switch gain a multi-year cost advantage.</div>
+        </div>
+      </div>
+
+      <div class="watch-item">
+        <div>
+          <div class="watch-priority p-med">MED</div>
+        </div>
+        <div>
+          <div class="watch-title">Anthropic IPO timeline signals</div>
+          <div class="watch-body">With $65B in fresh commitments and $30B ARR, Bloomberg reports investors are pushing for an <strong>$800B+ valuation and an October IPO</strong>. Any SEC registration filing or banker mandate announcement next week would be the biggest tech IPO signal since 2021. Also watch: can Anthropic resolve the Claude use-limit complaints that have been circulating, given capacity is the stated bottleneck?</div>
+        </div>
+      </div>
+
+      <div class="watch-item">
+        <div>
+          <div class="watch-priority p-watch">WATCH</div>
+        </div>
+        <div>
+          <div class="watch-title">BIP-361 Bitcoin community response</div>
+          <div class="watch-body">Adam Back is already publicly pushing back on the forced-freeze approach, proposing optional upgrades instead. If the Bitcoin developer community fractures on BIP-361, the <strong>governance story becomes the market story.</strong> Watch the bitcoin-dev mailing list and statements from key developers specifically on the Satoshi coin question — freezing those 1M BTC is the most politically explosive aspect of the proposal.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-text">AI &amp; Crypto Weekly Brief &mdash; Apr 20–26, 2026</div>
+    <div class="footer-sources">Sources: Bloomberg, TechCrunch, CNBC, VentureBeat, CoinDesk, CoinMarketCap, Decrypt, ai-supremacy.com, DataCamp, The Market Periodical, Fortune, BanklessTimes, WebProNews</div>
+  </div>
+</footer>
+
+</body>
+</html>
