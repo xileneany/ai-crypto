@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crypto Weekly Intelligence — Apr 27 – May 3, 2026</title>
+<title>Crypto Weekly Intelligence — May 4–10, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -14,9 +14,7 @@
     --navy:    #0A1628;
     --navy2:   #111f35;
     --navy3:   #1a2e48;
-    --navy4:   #0d1e33;
     --gold:    #F0A500;
-    --gold2:   #c47f00;
     --teal:    #0DB87F;
     --teal2:   #09916a;
     --red:     #E8404A;
@@ -25,7 +23,6 @@
     --green:   #1CB86A;
     --purple:  #7B6CF6;
     --white:   #FFFFFF;
-    --off:     #f4f1ea;
     --muted:   #8FA0B8;
     --light:   #C8D6E8;
     --border:  rgba(255,255,255,0.07);
@@ -46,7 +43,6 @@
     overflow-x: hidden;
   }
 
-  /* ── GRAIN ── */
   body::after {
     content: '';
     position: fixed;
@@ -63,6 +59,7 @@
     z-index: 100;
     background: rgba(10,22,40,0.92);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border2);
     padding: 0 2rem;
   }
@@ -95,15 +92,15 @@
   /* ── HERO ── */
   .hero-wrap { position: relative; overflow: hidden; }
   .glow-a {
-    position: absolute; top: -120px; right: -180px;
-    width: 580px; height: 580px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(240,165,0,0.07) 0%, transparent 68%);
+    position: absolute; top: -100px; right: -160px;
+    width: 540px; height: 540px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(13,184,127,0.08) 0%, transparent 68%);
     pointer-events: none;
   }
   .glow-b {
-    position: absolute; bottom: -60px; left: -120px;
-    width: 460px; height: 460px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(13,184,127,0.06) 0%, transparent 68%);
+    position: absolute; bottom: -40px; left: -100px;
+    width: 420px; height: 420px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(240,165,0,0.06) 0%, transparent 68%);
     pointer-events: none;
   }
   .hero {
@@ -141,12 +138,13 @@
     letter-spacing: -0.02em;
     margin-bottom: 1.4rem;
   }
-  h1.hero-title em { color: var(--gold); font-style: normal; }
+  h1.hero-title em { color: var(--teal); font-style: normal; }
+  h1.hero-title .gold { color: var(--gold); }
   .hero-sub {
     font-size: 15px;
     color: var(--muted);
-    max-width: 520px;
-    line-height: 1.75;
+    max-width: 540px;
+    line-height: 1.78;
     font-weight: 300;
   }
 
@@ -166,7 +164,7 @@
     border-radius: 14px;
     overflow: hidden;
   }
-  @media (max-width: 780px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 800px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px) { .stat-grid { grid-template-columns: 1fr; } }
   .stat-cell {
     background: var(--navy2);
@@ -194,8 +192,9 @@
   .up   { color: var(--teal); }
   .down { color: var(--red); }
   .neu  { color: var(--muted); }
+  .gold { color: var(--gold); }
 
-  /* ── LAYOUT ── */
+  /* ── PAGE WRAPPER ── */
   .page { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
 
   /* ── SECTION HEADER ── */
@@ -218,9 +217,9 @@
     font-weight: 500;
   }
   .tag-crypto { background: rgba(13,184,127,0.12); color: var(--teal); border: 1px solid rgba(13,184,127,0.25); }
-  .tag-trend  { background: rgba(240,165,0,0.12); color: var(--gold); border: 1px solid rgba(240,165,0,0.25); }
-  .tag-score  { background: rgba(45,125,210,0.12); color: var(--blue); border: 1px solid rgba(45,125,210,0.25); }
-  .tag-watch  { background: rgba(123,108,246,0.12); color: var(--purple); border: 1px solid rgba(123,108,246,0.25); }
+  .tag-tension { background: rgba(245,166,35,0.12); color: var(--amber); border: 1px solid rgba(245,166,35,0.25); }
+  .tag-score   { background: rgba(45,125,210,0.12); color: var(--blue); border: 1px solid rgba(45,125,210,0.25); }
+  .tag-watch   { background: rgba(123,108,246,0.12); color: var(--purple); border: 1px solid rgba(123,108,246,0.25); }
   .sec-title {
     font-family: var(--font-display);
     font-size: 1.45rem;
@@ -278,12 +277,12 @@
     padding: 2px 8px;
     border-radius: 20px;
   }
-  .p-payments { background: rgba(13,184,127,0.12); color: var(--teal); }
-  .p-etf      { background: rgba(28,184,106,0.12); color: var(--green); }
-  .p-security { background: rgba(232,64,74,0.12); color: var(--red); }
-  .p-market   { background: rgba(245,166,35,0.12); color: var(--amber); }
-  .p-reg      { background: rgba(45,125,210,0.12); color: var(--blue); }
-  .p-date     { background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border2); }
+  .p-btc     { background: rgba(240,165,0,0.13); color: var(--gold); }
+  .p-conf    { background: rgba(13,184,127,0.12); color: var(--teal); }
+  .p-vc      { background: rgba(123,108,246,0.12); color: var(--purple); }
+  .p-ma      { background: rgba(45,125,210,0.12); color: var(--blue); }
+  .p-legal   { background: rgba(232,64,74,0.12); color: var(--red); }
+  .p-date    { background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border2); }
   .news-headline {
     font-family: var(--font-display);
     font-size: 1.05rem;
@@ -309,29 +308,54 @@
     background: var(--border2);
   }
 
-  /* ── TREND CARD ── */
-  .trend-card {
-    background: linear-gradient(135deg, rgba(240,165,0,0.05) 0%, rgba(13,184,127,0.05) 100%);
-    border: 1px solid rgba(240,165,0,0.18);
+  /* ── TENSION CARD ── */
+  .tension-card {
+    background: linear-gradient(135deg, rgba(13,184,127,0.06) 0%, rgba(240,165,0,0.05) 100%);
+    border: 1px solid rgba(13,184,127,0.2);
     border-radius: 16px;
     padding: 2.5rem;
+    margin-bottom: 1.5rem;
   }
-  .trend-title {
+  .tension-title {
     font-family: var(--font-display);
-    font-size: 1.55rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--white);
     margin-bottom: 1.2rem;
     line-height: 1.25;
   }
-  .trend-body {
+  .tension-body {
     font-size: 14.5px;
     color: var(--light);
     line-height: 1.85;
     font-weight: 300;
     max-width: 860px;
   }
-  .trend-body strong { color: var(--gold); font-weight: 500; }
+  .tension-body strong { color: var(--teal); font-weight: 500; }
+
+  /* ── INSIGHT BOX ── */
+  .insight-box {
+    background: rgba(13,184,127,0.05);
+    border: 1px solid rgba(13,184,127,0.18);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 10px 10px 0;
+    padding: 1.5rem 1.75rem;
+  }
+  .insight-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.6rem;
+  }
+  .insight-text {
+    font-size: 14px;
+    color: var(--light);
+    line-height: 1.82;
+    font-weight: 300;
+  }
+  .insight-text strong { color: var(--teal); font-weight: 500; }
 
   /* ── WIN / LOSE ── */
   .wl-grid {
@@ -352,8 +376,8 @@
     align-items: center;
     gap: 10px;
   }
-  .win .wl-head { background: rgba(13,184,127,0.09); border-bottom: 1px solid rgba(13,184,127,0.18); }
-  .lose .wl-head { background: rgba(232,64,74,0.07); border-bottom: 1px solid rgba(232,64,74,0.16); }
+  .win  .wl-head { background: rgba(13,184,127,0.09); border-bottom: 1px solid rgba(13,184,127,0.18); }
+  .lose .wl-head { background: rgba(232,64,74,0.07);  border-bottom: 1px solid rgba(232,64,74,0.16); }
   .wl-icon {
     width: 26px; height: 26px;
     border-radius: 50%;
@@ -362,23 +386,23 @@
     font-size: 14px; font-weight: 700;
   }
   .win  .wl-icon { background: rgba(13,184,127,0.18); color: var(--teal); }
-  .lose .wl-icon { background: rgba(232,64,74,0.14); color: var(--red); }
+  .lose .wl-icon { background: rgba(232,64,74,0.14);  color: var(--red);  }
   .wl-htitle {
     font-family: var(--font-display);
     font-size: 13px; font-weight: 700;
     letter-spacing: 0.06em; text-transform: uppercase;
   }
   .win  .wl-htitle { color: var(--teal); }
-  .lose .wl-htitle { color: var(--red); }
+  .lose .wl-htitle { color: var(--red);  }
   .wl-items { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
-  .wl-row { display: flex; gap: 10px; align-items: flex-start; }
+  .wl-row   { display: flex; gap: 10px; align-items: flex-start; }
   .wl-dot {
     width: 6px; height: 6px; border-radius: 50%;
     margin-top: 7px; flex-shrink: 0;
   }
   .win  .wl-dot { background: var(--teal); }
-  .lose .wl-dot { background: var(--red); }
-  .wl-name { font-size: 13.5px; font-weight: 500; color: var(--white); margin-bottom: 2px; }
+  .lose .wl-dot { background: var(--red);  }
+  .wl-name   { font-size: 13.5px; font-weight: 500; color: var(--white); margin-bottom: 2px; }
   .wl-reason { font-size: 12.5px; color: var(--muted); font-weight: 300; line-height: 1.5; }
 
   /* ── WATCHLIST ── */
@@ -410,7 +434,7 @@
     padding: 4px 8px; border-radius: 5px;
     text-align: center; margin-top: 3px;
   }
-  .b-high  { background: rgba(232,64,74,0.14); color: var(--red); border: 1px solid rgba(232,64,74,0.28); }
+  .b-high  { background: rgba(232,64,74,0.14);  color: var(--red);   border: 1px solid rgba(232,64,74,0.28); }
   .b-med   { background: rgba(245,166,35,0.12); color: var(--amber); border: 1px solid rgba(245,166,35,0.28); }
   .b-watch { background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border2); }
   .w-title {
@@ -423,27 +447,6 @@
     line-height: 1.72; font-weight: 300;
   }
   .w-body strong { color: var(--light); font-weight: 500; }
-
-  /* ── INSIGHT BOX ── */
-  .insight-box {
-    background: rgba(240,165,0,0.05);
-    border: 1px solid rgba(240,165,0,0.2);
-    border-left: 3px solid var(--gold);
-    border-radius: 0 10px 10px 0;
-    padding: 1.5rem 1.75rem;
-    margin-bottom: 2rem;
-  }
-  .insight-label {
-    font-family: var(--font-mono);
-    font-size: 10px; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--gold);
-    margin-bottom: 0.6rem;
-  }
-  .insight-text {
-    font-size: 14px; color: var(--light);
-    line-height: 1.8; font-weight: 300;
-  }
-  .insight-text strong { color: var(--gold); font-weight: 500; }
 
   /* ── FOOTER ── */
   footer {
@@ -465,7 +468,7 @@
     font-family: var(--font-mono);
     font-size: 10px; color: rgba(143,160,184,0.55);
     letter-spacing: 0.04em; line-height: 1.6;
-    text-align: right; max-width: 560px;
+    text-align: right; max-width: 580px;
   }
   @media (max-width: 600px) {
     .footer-src { text-align: left; max-width: 100%; }
@@ -478,19 +481,27 @@
     to   { opacity: 1; transform: translateY(0); }
   }
   .section { animation: fadeUp 0.6s 0.15s ease both; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 680px) {
+    .news-item { grid-template-columns: 1.8rem 1fr; gap: 0.75rem; padding: 1.25rem; }
+    .news-num  { font-size: 1.4rem; }
+    .hero      { padding: 3rem 0 2.5rem; }
+    .tension-card { padding: 1.5rem; }
+  }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ── HEADER ── -->
 <header>
   <div class="header-inner">
     <div class="logo">AI &amp; Crypto Weekly</div>
-    <div class="date-pill">Apr 27 – May 3, 2026</div>
+    <div class="date-pill">May 4–10, 2026</div>
   </div>
 </header>
 
-<!-- HERO -->
+<!-- ── HERO ── -->
 <div class="hero-wrap">
   <div class="glow-a"></div>
   <div class="glow-b"></div>
@@ -498,38 +509,43 @@
     <div class="hero-eyebrow">
       <span class="eyebrow-text">Crypto weekly intelligence</span>
     </div>
-    <h1 class="hero-title">The week<br><em>legacy finance</em><br>went on-chain.</h1>
-    <p class="hero-sub">Western Union replaced SWIFT with Solana. Morgan Stanley launched a stablecoin fund. April closed as the strongest institutional ETF month of 2026 — then the ETF flows turned negative the same week.</p>
+    <h1 class="hero-title">
+      The week<br>
+      <em>$80K broke</em><br>
+      and whales bought<br>
+      <span class="gold">everything retail sold.</span>
+    </h1>
+    <p class="hero-sub">Bitcoin cleared $81,000 for the first time since January. Spot demand finally confirmed the move. ETF inflows hit a 2026 weekly record. And while 245,000 retail wallets exited, institutions quietly accumulated 270,000 BTC — the largest 30-day grab since 2013.</p>
   </div>
 </div>
 
-<!-- STAT STRIP -->
+<!-- ── STAT STRIP ── -->
 <div class="stat-strip">
   <div class="stat-grid">
     <div class="stat-cell">
-      <div class="stat-label">BTC (May 1)</div>
-      <div class="stat-val">$76,688</div>
-      <div class="stat-note up">+12.7% in April</div>
+      <div class="stat-label">BTC (May 10)</div>
+      <div class="stat-val">$80,832</div>
+      <div class="stat-note up">+5.4% on the week</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">April ETF inflows</div>
-      <div class="stat-val">$1.97B</div>
-      <div class="stat-note neu">Strongest since Oct '25</div>
+      <div class="stat-label">Week ETF inflows</div>
+      <div class="stat-val">$1.63B</div>
+      <div class="stat-note up">Strongest week of 2026</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">Week ETF flows</div>
-      <div class="stat-val">–$79M</div>
-      <div class="stat-note down">1st neg. week in 3 mo</div>
+      <div class="stat-label">May 4 inflows</div>
+      <div class="stat-val">$532M</div>
+      <div class="stat-note up">Single-day high</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">April hacks</div>
-      <div class="stat-val">$651M</div>
-      <div class="stat-note down">Worst since Mar '22</div>
+      <div class="stat-label">Whale accumulation</div>
+      <div class="stat-val">270K BTC</div>
+      <div class="stat-note up">Biggest 30-day since 2013</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">Crypto VC (April)</div>
-      <div class="stat-val">$660M</div>
-      <div class="stat-note down">–75% YoY · 62 deals</div>
+      <div class="stat-label">a16z Fund V</div>
+      <div class="stat-val">$2.2B</div>
+      <div class="stat-note neu">Raised this week</div>
     </div>
   </div>
 </div>
@@ -549,12 +565,12 @@
       <div class="news-num">01</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-payments">Payments</span>
-          <span class="meta-pill p-date">Apr 27</span>
+          <span class="meta-pill p-btc">BTC breakout</span>
+          <span class="meta-pill p-date">May 5</span>
         </div>
-        <div class="news-headline">Western Union confirms USDPT stablecoin launching in May on Solana</div>
+        <div class="news-headline">Bitcoin clears $81K for the first time since January — spot demand finally confirms</div>
         <div class="news-body">
-          CEO Devin McGranahan confirmed on the Q1 earnings call that USDPT — a dollar-backed stablecoin issued by federally chartered <strong>Anchorage Digital Bank</strong> — hits final readiness in May. It will not launch as a consumer product: it <strong>replaces SWIFT for B2B settlement</strong> between Western Union's 360,000 global payment agents across 200 countries. SWIFT settlement takes 2–3 days and is closed on weekends; Solana clears in seconds for fractions of a cent. A consumer-facing <strong>Digital Asset Network (DAN)</strong> goes live simultaneously — the first partner activated the week of Apr 27. A USD Stable Card follows later in 2026. The stablecoin market now exceeds $300B. Watch for agent onboarding velocity — that's the only metric that matters.
+          BTC opened May 4 at $78,951 and by May 5 had broken through $81,000 — a level last seen on January 31. Critically, the move was not another futures-only squeeze: <strong>ETF inflows on May 4 alone hit $532M</strong>, led by BlackRock IBIT ($284M) and Fidelity FBTC ($213M). The week's total of <strong>$1.63B was the strongest single week of 2026</strong>, reversing the prior week's $79M net outflow. Santiment flagged that Bitcoin's holder count fell by <strong>245,000 wallets in 5 days</strong> — the fastest retail exit rate since summer 2024 — while whales bought 270,000 BTC in 30 days, the most since 2013. Three on-chain signals confirmed the move simultaneously: BTC cleared its true market mean, broke above short-term holder cost basis, and <strong>futures funding rates flipped neutral from negative</strong>. Tom Lee at Consensus Miami said if BTC closes May above $76K, the bear market is officially over. Standard Chartered maintains a $150K year-end target.
         </div>
       </div>
     </div>
@@ -564,12 +580,12 @@
       <div class="news-num">02</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-etf">ETF flows</span>
-          <span class="meta-pill p-date">Apr 27 – May 2</span>
+          <span class="meta-pill p-conf">Consensus Miami</span>
+          <span class="meta-pill p-date">May 6–8</span>
         </div>
-        <div class="news-headline">BTC ETFs post first net-negative week in 3 months — but April closes as best institutional month since Oct '25</div>
+        <div class="news-headline">Consensus 2026: CLARITY Act summer passage backed, AI agents declared crypto's next killer app</div>
         <div class="news-body">
-          The week ending May 2 recorded net outflows for the first time since late January: <strong>$651.9M out across Apr 27–30</strong>, partially offset by $731M in on May 1. FBTC, ARKB, and GBTC drove redemptions; IBIT held zero net flow on Apr 27 despite $1.93B in volume — a rebalancing signal, not capitulation. <strong>IBIT now holds ~810,000 BTC valued at ~$62B</strong>, roughly 49–62% of total spot BTC ETF AUM of $100.5B. April total was <strong>$1.97B net inflow</strong> — nearly double March's $1.32B. Morgan Stanley's MSBT (0.14% fee vs. IBIT's 0.25%) hit $100M with zero outflow days since inception — fee competition is real and Morgan Stanley is winning it.
+          The industry's flagship conference in Miami dominated the week's narrative. Key signals: <strong>Senator Gillibrand maintained optimism that the CLARITY Act clears Congress this summer.</strong> Coinbase CLO Paul Grewal endorsed the Tillis-Alsobrooks stablecoin compromise — activity-based yields preserved, idle balance yields restricted — and publicly told banks to "accept yes for the answer and move on." PayPal and Google Cloud reps declared that <strong>agentic commerce will run on crypto rails</strong>, requiring open payment protocols and multi-party custody at scale. SEC Chair Atkins signaled new rules linking AI-driven finance to on-chain market infrastructure. Joseph Lubin (Consensys) declared "the world's entire economy will be tokenized." Jito Foundation + Solana Company announced an institutional-grade APAC infrastructure partnership. <strong>BlackRock filed to expand its tokenized fund lineup</strong> as real-world assets grew 200% year over year. CME Group announced bitcoin volatility futures launching June 1 pending regulatory approval. Dealers are short gamma around $80,600 — any sustained close above it brings CME data into play.
         </div>
       </div>
     </div>
@@ -579,12 +595,12 @@
       <div class="news-num">03</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-security">Security</span>
-          <span class="meta-pill p-date">Apr 30</span>
+          <span class="meta-pill p-vc">VC</span>
+          <span class="meta-pill p-date">May 5</span>
         </div>
-        <div class="news-headline">April hacks: $651M lost — worst month since March 2022 (excluding Bybit)</div>
+        <div class="news-headline">a16z crypto raises $2.2B Fund V — the same day Coinbase lays off 14% of its workforce</div>
         <div class="news-body">
-          CertiK confirmed <strong>29 incidents in April</strong> — roughly one per day, an 81% jump from January's record of 16. Total losses: $651M, a <strong>10× spike from March's $28.8M</strong>. Two exploits account for the majority: <strong>KelpDAO ($292M)</strong> and <strong>Drift Protocol ($285M)</strong>, both now in the top-10 crypto hacks since 2021. A single social-engineering attack on an elderly Bitcoin holder cost $330M alone. The Arbitrum DAO is voting on whether to redirect 30,766 frozen ETH from the Kelp exploit toward DeFi United, a recovery fund backed by Aave. Crypto VC funding simultaneously collapsed to $660M in April — down from $2.6B in March. Record hacks + VC pullback is the clearest risk-off signal of the quarter.
+          Andreessen Horowitz closed its fifth crypto fund at $2.2B this week, promoting CTO Eddy Lazzarin to GP alongside Chris Dixon, Ali Yahya, and Guy Wuollet. The firm has backed Coinbase, Kalshi, and the Solana Foundation. a16z's partners acknowledged "we're at one of those quieter moments now" in their investor letter — yet raised into that quiet. The timing was pointed: <strong>the same day Coinbase announced 14% workforce cuts</strong>, citing the slowest trading-volume month since November 2023. Q1 2026 crypto VC: $5B total, down from $6B in Q1 2025. The contradiction is the entire story: smart money raises into weakness while operators cut into the same weakness. <strong>The firms that survive the cost cycle will be disproportionately positioned for the next leg.</strong> a16z also backed the CFTC's position against state-by-state prediction market rules, signaling continued conviction in regulated on-chain finance.
         </div>
       </div>
     </div>
@@ -594,12 +610,12 @@
       <div class="news-num">04</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-market">Market structure</span>
-          <span class="meta-pill p-date">Week</span>
+          <span class="meta-pill p-ma">M&amp;A</span>
+          <span class="meta-pill p-date">May 5</span>
         </div>
-        <div class="news-headline">Bitcoin's April rally was futures-driven — CryptoQuant flags structural vulnerability</div>
+        <div class="news-headline">MoonPay acquires DFlow for $100M all-stock — Solana's dominant trading router processed $12B in Q1</div>
         <div class="news-body">
-          CryptoQuant head of research Julio Moreno published data showing perpetual futures were the <strong>"sole driver"</strong> of BTC's 12.7% April gain — spot demand actually contracted. The <strong>30-day funding rate on Binance sits at –5%</strong> vs. a historical norm of +8%. BTC long/short ratio: 47.5% longs vs. 52.5% shorts — a rare short majority for Bitcoin specifically (vs. ETH at 67.6% long and SOL at 75.1% long). <strong>$7.3B in BTC open interest</strong> on Binance means a short squeeze is structurally possible if price breaks $80.5K with volume. Moreno: "Rallies built on this structure tend to be self-limiting." The same pattern appeared at the start of the 2022 bear market — the key difference this cycle is institutional ETF presence.
+          MoonPay acquired DFlow — Solana's leading trading router — for $100M in stock, its sixth acquisition in 18 months. DFlow <strong>routed 60% of Solana-based trades on Coinbase</strong> in the prior week and processed $12B+ in Q1 2026 volume. Coinbase had just named DFlow its primary Solana router; Jito will use it for its new consumer trading app. Former acting CFTC Chair Caroline Pham now leads MoonPay's new institutional business unit. CEO Soto-Wright: "DFlow is the missing piece that turns MoonPay into the operating system for value." The deal <strong>cements Solana's position as the chain of choice for high-throughput payment and trading infrastructure</strong> — in the same week Jito-Solana Company announced an APAC institutional expansion and OnRe raised $5M for on-chain reinsurance on Solana. Three separate infrastructure bets on the same chain in seven days is a directional signal.
         </div>
       </div>
     </div>
@@ -609,12 +625,12 @@
       <div class="news-num">05</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-reg">Regulation + Adoption</span>
+          <span class="meta-pill p-legal">Legal &amp; Governance</span>
           <span class="meta-pill p-date">Week</span>
         </div>
-        <div class="news-headline">Vietnam launches first regulated crypto market + TRUMP coin collapses to $2.27 + Japan eyes Bitcoin ETFs by 2027</div>
+        <div class="news-headline">LayerZero admits fault on $292M Kelp exploit, judge clears $71M ETH to Aave, Trump Media posts $406M Q1 loss</div>
         <div class="news-body">
-          Three stories that together define global crypto's contradictions this week. <strong>Vietnam</strong> is launching its first regulated exchange via a 5-year pilot; CAEX (backed by OKX Ventures and HashKey Capital) is raising <strong>10T dong ($380M)</strong> to be first in. <strong>Japan's FSA</strong> confirmed it is evaluating Bitcoin ETF approvals for 2027 — a market with $3.4T in household savings historically channeled into gold ETFs. Meanwhile, <strong>TRUMP coin collapsed from $50 to $2.27</strong>, erasing $5B+ in market cap — Trump family controls 70%+ of supply and Justin Sun's lawsuit against World Liberty Financial escalated. Vietnam + Japan are the real signal: <strong>regulated crypto infrastructure is expanding globally</strong> regardless of US political chaos.
+          Three governance and legal events that shaped DeFi risk perception. LayerZero published a post-mortem on the $292M Kelp exploit, stating it <strong>"owns" the decision to use its own verifier for high-value transfers</strong> — a critical admission that architecture, not a developer bug, caused the loss. Judge Margaret Garnett cleared Arbitrum to move 30,766 frozen ETH (~$71M) to Aave; the legal freeze follows the assets as terrorism plaintiffs continue their claim. Separately, <strong>Trump Media reported a Q1 loss of $406M</strong> — primarily $244M in unrealized losses on crypto holdings and $108M in investment losses — a reminder that corporate Bitcoin treasuries carry real mark-to-market exposure. Kraken's parent Payward also applied for an OCC national trust charter, seeking to become a federally regulated crypto bank alongside its existing Wyoming bank charter and Fed master account. Full-stack regulatory positioning is now the competitive moat.
         </div>
       </div>
     </div>
@@ -629,22 +645,25 @@
 <div class="page">
 <section class="section">
   <div class="sec-header">
-    <span class="sec-tag tag-trend">Key tension</span>
-    <h2 class="sec-title">Best institutional month — on the weakest spot demand of the rally</h2>
+    <span class="sec-tag tag-tension">Key tension</span>
+    <h2 class="sec-title">Spot demand confirmed — but retail sold the exact breakout institutions bought</h2>
   </div>
 
-  <div class="insight-box">
-    <div class="insight-label">The core contradiction</div>
-    <div class="insight-text">
-      April delivered <strong>$1.97B in ETF inflows and +12.7% price gain</strong>. Western Union is replacing SWIFT with Solana. Vietnam and Japan are building regulated infrastructure. All constructive. And yet: futures are the sole price driver, spot demand contracted, the Fear &amp; Greed index hit 26, VC funding cratered 80%, hacks hit $651M, and BTC twice failed to break $80K. The structural narrative and the on-chain reality are pointing in <strong>opposite directions</strong>. The resolution is binary: spot demand re-accelerates and $80K breaks cleanly — or futures positioning unwinds and the correction happens first.
+  <div class="tension-card">
+    <div class="tension-title">The structural read on the $80K break</div>
+    <div class="tension-body">
+      This was the week last week's prediction activated. BTC broke $80.5K with spot demand confirmation, ETF inflows hit a 2026 weekly record, three on-chain signals confirmed simultaneously, and whale accumulation reached a 13-year high. The bull scenario played out almost exactly as outlined.
+      <br><br>
+      The catch: <strong>245,000 retail wallets exited Bitcoin in five days</strong> — the fastest holder-count decline since summer 2024. That means the $80K+ print is being sold by retail and absorbed by institutions. If institutional demand stays ahead of retail supply, this is the start of the next leg. If retail capitulation accelerates and ETF flows moderate, the move stalls at the resistance zone between $80,600 and $82,228 (the 200-day moving average).
+      <br><br>
+      The next two weeks are the determining window. Standard Chartered holds a $150K year-end target. Tom Lee says a monthly close above $76K ends the bear market. <strong>Dealers are short gamma around $80,600</strong> — which means any sustained close above it triggers forced covering and accelerates the move in whichever direction leads. Watch the Coinbase premium index daily.
     </div>
   </div>
 
-  <div class="trend-card">
-    <div class="trend-title">The structural signal everyone is missing</div>
-    <div class="trend-body">
-      The ETF bid is real and large — IBIT alone holds 810,000 BTC worth $62B. But CryptoQuant's data reveals the same institutions buying ETFs are shorting futures for carry trades or hedging. This means the "institutional bid" is partially <strong>offsetting itself</strong> in the derivatives market. The net directional exposure is smaller than headlines suggest. <br><br>
-      What this means for the week: <strong>do not chase the rally until spot buyers confirm participation</strong>. The Coinbase premium index — which tracks US-based spot demand relative to Binance — is the single clearest leading indicator. When it turns positive and holds, spot buyers have re-entered. Until then, every price rally is a potential distribution event by leveraged futures holders exiting into institutional ETF buying. Patient positioning between $74K–$76.5K offers the best risk-adjusted entry if the base case consolidation plays out.
+  <div class="insight-box">
+    <div class="insight-label">Sharp observation</div>
+    <div class="insight-text">
+      a16z raised a $2.2B crypto fund the same day Coinbase cut 14% of its workforce. That's not a contradiction — it's the anatomy of every market cycle. <strong>The people with long time horizons buy when operators with short time horizons are cutting costs.</strong> The firms that survive the contraction will have an asymmetric advantage entering the next expansion. The question is whether you're positioned with the buyers or the sellers.
     </div>
   </div>
 </section>
@@ -671,35 +690,35 @@
           <div class="wl-dot"></div>
           <div>
             <div class="wl-name">Solana</div>
-            <div class="wl-reason">Western Union + OKX agent protocol + Visa USDC ($7B/yr) all settling on SOL rails this week</div>
+            <div class="wl-reason">MoonPay/DFlow $100M deal + Jito APAC expansion + OnRe reinsurance $5M raise — three infrastructure wins in seven days</div>
           </div>
         </div>
         <div class="wl-row">
           <div class="wl-dot"></div>
           <div>
-            <div class="wl-name">Morgan Stanley MSBT</div>
-            <div class="wl-reason">$100M in 3 weeks, 0 outflow days, cheapest fee in market at 0.14% — undercutting BlackRock IBIT (0.25%)</div>
+            <div class="wl-name">BlackRock / IBIT</div>
+            <div class="wl-reason">$284M on May 4 alone; simultaneously filing to expand tokenized fund lineup with RWA market up 200% YoY</div>
           </div>
         </div>
         <div class="wl-row">
           <div class="wl-dot"></div>
           <div>
-            <div class="wl-name">Vietnam + Japan</div>
-            <div class="wl-reason">Regulated frameworks advancing independently of US political chaos — Asia now 51% of global spot volume</div>
+            <div class="wl-name">a16z crypto</div>
+            <div class="wl-reason">$2.2B Fund V closed into market weakness — historically their best entry timing across four prior funds</div>
           </div>
         </div>
         <div class="wl-row">
           <div class="wl-dot"></div>
           <div>
-            <div class="wl-name">BTC institutional holders</div>
-            <div class="wl-reason">Whale wallets +142 addresses in 6 months; exchange reserves at 7-year lows — silent accumulation</div>
+            <div class="wl-name">Bitcoin whales</div>
+            <div class="wl-reason">270,000 BTC accumulated in 30 days — largest monthly grab since 2013; they bought the fear and are now in profit</div>
           </div>
         </div>
         <div class="wl-row">
           <div class="wl-dot"></div>
           <div>
-            <div class="wl-name">Prediction markets</div>
-            <div class="wl-reason">Polymarket monthly volume $20B+ in early 2026, up from $1.2B in 2025 — becoming real price discovery</div>
+            <div class="wl-name">Kraken</div>
+            <div class="wl-reason">OCC trust charter application + Wyoming bank charter + Fed master account = most complete regulatory stack of any crypto exchange</div>
           </div>
         </div>
       </div>
@@ -714,36 +733,36 @@
         <div class="wl-row">
           <div class="wl-dot"></div>
           <div>
-            <div class="wl-name">TRUMP coin holders</div>
-            <div class="wl-reason">$50 → $2.27, $5B+ wiped; insiders sold, family controls 70% of supply, Justin Sun lawsuit active</div>
+            <div class="wl-name">Coinbase employees</div>
+            <div class="wl-reason">14% workforce cut the same day a16z raised $2.2B; the gap between long-horizon investors and short-horizon operators is real</div>
           </div>
         </div>
         <div class="wl-row">
           <div class="wl-dot"></div>
           <div>
-            <div class="wl-name">KelpDAO / Drift users</div>
-            <div class="wl-reason">$292M + $285M gone in April — two of the biggest exploits since 2021, both in the same month</div>
+            <div class="wl-name">Retail Bitcoin holders</div>
+            <div class="wl-reason">245K wallets exited at exactly $80K — sold their position into the hands of the largest institutional accumulation in 13 years</div>
           </div>
         </div>
         <div class="wl-row">
           <div class="wl-dot"></div>
           <div>
-            <div class="wl-name">Crypto VC LPs</div>
-            <div class="wl-reason">$660M in April vs $2.6B in March — earliest-stage funding essentially frozen, risk-off confirmed</div>
+            <div class="wl-name">Trump Media</div>
+            <div class="wl-reason">$406M Q1 loss — $244M from unrealized crypto losses; corporate BTC treasury strategies carry real mark-to-market pain</div>
           </div>
         </div>
         <div class="wl-row">
           <div class="wl-dot"></div>
           <div>
-            <div class="wl-name">SWIFT (long term)</div>
-            <div class="wl-reason">Western Union replacing it + 12 European banks building fiat tokens H2 2026 — rails are shifting</div>
+            <div class="wl-name">LayerZero</div>
+            <div class="wl-reason">Admitted the $292M Kelp exploit was an architectural decision, not a bug — a credibility hit that will follow the protocol for years</div>
           </div>
         </div>
         <div class="wl-row">
           <div class="wl-dot"></div>
           <div>
-            <div class="wl-name">Altcoin traders</div>
-            <div class="wl-reason">Altcoin season index stuck at 39; BTC dominance at 58% — institutional rotation to safety, not risk</div>
+            <div class="wl-name">Banks on stablecoin yield</div>
+            <div class="wl-reason">Coinbase CLO publicly told banks to stop blocking the CLARITY Act or risk losing the entire negotiation — the tone shifted this week</div>
           </div>
         </div>
       </div>
@@ -759,7 +778,7 @@
 <section class="section">
   <div class="sec-header">
     <span class="sec-tag tag-watch">Forward look</span>
-    <h2 class="sec-title">What to watch this week (May 3–9)</h2>
+    <h2 class="sec-title">What to watch next week (May 11–17)</h2>
   </div>
 
   <div class="watch-list">
@@ -767,40 +786,40 @@
     <div class="watch-item">
       <div><span class="w-badge b-high">HIGH</span></div>
       <div>
-        <div class="w-title">SEC CLARITY Act roundtable — May 3 (today)</div>
-        <div class="w-body">The most consequential US crypto regulatory event in months. The binary outcome: <strong>commodity framing (CFTC) = DeFi green light</strong>; securities framing (SEC) = 12+ months more ambiguity. Watch SEC Chair Atkins' language on an "innovation exemption" specifically. Any signal that committee markup will follow within the week is a major bullish catalyst for DeFi tokens and tokenized assets. Miss the pre-midterm window and the bill slides past November.</div>
+        <div class="w-title">Can BTC hold above $80K on volume?</div>
+        <div class="w-body">The breakout is confirmed but not yet sustained. Three technical signals (market mean cleared, short-term holder cost basis broken, funding rates neutral) are bullish — but <strong>dealers are short gamma around $80,600</strong> and the 200-day moving average sits at $82,228. Watch whether the Coinbase premium stays positive — US spot demand holding above Asian-driven flows is the difference between a sustained leg to $85K+ and a rejection back toward $76K. IBIT daily flows are the clearest institutional signal: two consecutive days above $200M = bid is back on.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-high">HIGH</span></div>
       <div>
-        <div class="w-title">BTC $80.5K breakout or rejection</div>
-        <div class="w-body">Bitcoin has tested $80K twice and failed. CryptoQuant's short squeeze setup ($7.3B BTC OI on Binance, majority short) means a <strong>confirmed close above $80.5K with volume</strong> could trigger a cascade to $83K–$87K. Failure to hold $76.5K = leg to low-$70Ks. Watch the <strong>Coinbase premium index</strong> — US demand signal is the key differentiator from Asian-driven moves. IBIT flow resumption post-May 1 is institutional confirmation.</div>
+        <div class="w-title">Powell's Fed chair term ends May 15 — Trump names successor</div>
+        <div class="w-body">Jerome Powell's term as Fed chair ends May 15. Trump will name a replacement. A rate-dovish pick signals crypto-positive monetary conditions; a hawkish or market-unsettling choice triggers risk-off. <strong>BTC trades at 84% correlation with the S&P 500</strong> — this is a macro event as much as a political one. Rates are currently held at 3.75% with four internal Fed dissents. Any forward guidance shift moves all risk assets. Watch Senate confirmation signals and the DXY dollar index reaction simultaneously.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-med">MED</span></div>
       <div>
-        <div class="w-title">Western Union USDPT first live transaction</div>
-        <div class="w-body">USDPT is in "final stages of readiness" with May as the go-live window. The first agent-to-agent settlement on Solana <strong>replacing a SWIFT wire</strong> will be the signal this isn't vaporware. Watch Solana's stablecoin volume data on Dune Analytics — a visible USDPT address appearing on Solana mainnet is the earliest indicator. A successful first transaction is net bullish for SOL's enterprise adoption narrative.</div>
+        <div class="w-title">CLARITY Act Senate markup window — committee date announcement</div>
+        <div class="w-body">Coinbase CLO said "this summer" at Consensus. The bill needs to clear Senate Banking Committee markup before August recess or it slips past the midterms. <strong>Any committee date announcement next week is a major catalyst</strong> for DeFi tokens, Circle, Tether, and Coinbase specifically. The Tillis-Alsobrooks stablecoin compromise already has Coinbase's endorsement. The question is whether banking trade groups hold firm or accept the deal. Watch Senators Tillis, Alsobrooks, Lummis, and Gillibrand's public statements for timing signals.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-med">MED</span></div>
       <div>
-        <div class="w-title">Arbitrum DAO vote on frozen Kelp ETH</div>
-        <div class="w-body"><strong>30,766 ETH (~$70M)</strong> sits frozen post-exploit. The vote to redirect it to DeFi United (Aave-backed recovery fund) has early strong support. If it passes, it becomes a governance template for how DeFi handles large hacks — watch affected rsETH holders' reaction and whether Aave endorses the mechanism publicly. A clean resolution is net bullish for DeFi sentiment which has been depressed by the $651M April hack total.</div>
+        <div class="w-title">Western Union USDPT — first live settlement on Solana mainnet</div>
+        <div class="w-body">Still in "final stages of readiness." Any week now. Watch Dune Analytics for a <strong>USDPT address activating on Solana mainnet</strong>. The first B2B settlement replacing a SWIFT wire is a structural signal for enterprise stablecoin adoption. With MoonPay/DFlow now routing 60% of Solana's Coinbase volume, the Solana payment infrastructure layer is being completed from multiple directions simultaneously. First live transaction is a direct SOL price catalyst and a stablecoin market structure proof point.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-watch">WATCH</span></div>
       <div>
-        <div class="w-title">Vietnam CAEX fundraise close + Japan FSA ETF announcement</div>
-        <div class="w-body">Two of the most strategically important non-US crypto moves are maturing simultaneously. Vietnam's CAEX is closing a <strong>$380M raise</strong>; Japan's FSA is finalizing its ETF framework language. Either market going live with regulated crypto product creates a new institutional on-ramp that doesn't depend on the US political calendar. <strong>Asia-based exchanges have gone from 35% to 51% of global spot volume</strong> since 2024 — this accelerates that trend regardless of CLARITY Act outcome.</div>
+        <div class="w-title">BAYC NFT recovery + altcoin season index creep</div>
+        <div class="w-body">Bored Ape floor prices doubled in a month — historically one of the first indicators of risk appetite returning beyond BTC. If the <strong>altcoin season index moves from 39 toward 50+</strong> next week, a rotation from BTC into ETH/SOL and high-beta positions is beginning. ETH sits at $2,274 with 67.6% long in futures — better positioned than BTC for a squeeze. SOL near $88, also showing strength. Watch the BTC dominance ratio — if it drops from 60% toward 55%, the rotation has started.</div>
       </div>
     </div>
 
@@ -808,11 +827,11 @@
 </section>
 </div>
 
-<!-- FOOTER -->
+<!-- ── FOOTER ── -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">AI &amp; Crypto Weekly Intelligence &mdash; Apr 27–May 3, 2026</div>
-    <div class="footer-src">Sources: CoinDesk · CryptoQuant · CryptoTimes · BanklessTimes · CNBC · SpotedCrypto · FX Leaders · CertiKAlert · CryptoRank · Cryptopolitan</div>
+    <div class="footer-brand">AI &amp; Crypto Weekly Intelligence &mdash; May 4–10, 2026</div>
+    <div class="footer-src">Sources: Yahoo Finance · CoinDesk · Fortune · TechCrunch · The Block · Cryptopolitan · Santiment · CoinShares · Pickaxe · Cryptonews · Bitcoin Foundation</div>
   </div>
 </footer>
 
