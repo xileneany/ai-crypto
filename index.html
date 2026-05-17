@@ -3,634 +3,275 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crypto Weekly Intelligence — May 4–10, 2026</title>
+<title>Crypto Weekly Intelligence — May 11–17, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --navy:#0A1628;--navy2:#111f35;--navy3:#1a2e48;
+    --gold:#F0A500;--teal:#0DB87F;--red:#E8404A;
+    --amber:#F5A623;--blue:#2D7DD2;--green:#1CB86A;--purple:#7B6CF6;
+    --white:#FFFFFF;--muted:#8FA0B8;--light:#C8D6E8;
+    --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);
+    --font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'DM Mono',monospace;
+  }
+  html{scroll-behavior:smooth}
+  body{background:var(--navy);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.65;overflow-x:hidden}
+  body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:999}
 
-  :root {
-    --navy:    #0A1628;
-    --navy2:   #111f35;
-    --navy3:   #1a2e48;
-    --gold:    #F0A500;
-    --teal:    #0DB87F;
-    --teal2:   #09916a;
-    --red:     #E8404A;
-    --amber:   #F5A623;
-    --blue:    #2D7DD2;
-    --green:   #1CB86A;
-    --purple:  #7B6CF6;
-    --white:   #FFFFFF;
-    --muted:   #8FA0B8;
-    --light:   #C8D6E8;
-    --border:  rgba(255,255,255,0.07);
-    --border2: rgba(255,255,255,0.13);
-    --font-display: 'Syne', sans-serif;
-    --font-body:    'DM Sans', sans-serif;
-    --font-mono:    'DM Mono', monospace;
-  }
+  /* HEADER */
+  header{position:sticky;top:0;z-index:100;background:rgba(10,22,40,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:0 2rem}
+  .header-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+  .logo{font-family:var(--font-display);font-size:12px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)}
+  .date-pill{font-family:var(--font-mono);font-size:11px;color:var(--muted);border:1px solid var(--border2);padding:4px 14px;border-radius:20px;letter-spacing:0.06em}
 
-  html { scroll-behavior: smooth; }
+  /* HERO */
+  .hero-wrap{position:relative;overflow:hidden}
+  .glow-a{position:absolute;top:-100px;right:-160px;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(232,64,74,0.07) 0%,transparent 68%);pointer-events:none}
+  .glow-b{position:absolute;bottom:-40px;left:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(45,125,210,0.06) 0%,transparent 68%);pointer-events:none}
+  .hero{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:5rem 2rem 3.5rem;animation:fadeUp 0.7s ease both}
+  .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:1.4rem}
+  .hero-eyebrow::before{content:'';display:block;width:28px;height:1.5px;background:var(--blue)}
+  .eyebrow-text{font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--blue)}
+  h1.hero-title{font-family:var(--font-display);font-size:clamp(2.6rem,5.5vw,5rem);font-weight:800;line-height:1.02;letter-spacing:-0.02em;margin-bottom:1.4rem}
+  h1.hero-title em{color:var(--red);font-style:normal}
+  h1.hero-title .g{color:var(--gold)}
+  h1.hero-title .b{color:var(--blue)}
+  .hero-sub{font-size:15px;color:var(--muted);max-width:540px;line-height:1.78;font-weight:300}
 
-  body {
-    background: var(--navy);
-    color: var(--white);
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.65;
-    overflow-x: hidden;
-  }
+  /* STAT STRIP */
+  .stat-strip{padding:0 2rem 3.5rem;animation:fadeUp 0.7s 0.1s ease both}
+  .stat-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border2);border:1px solid var(--border2);border-radius:14px;overflow:hidden}
+  @media(max-width:800px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.stat-grid{grid-template-columns:1fr}}
+  .stat-cell{background:var(--navy2);padding:1.4rem 1.6rem;transition:background 0.2s}
+  .stat-cell:hover{background:var(--navy3)}
+  .stat-label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.45rem}
+  .stat-val{font-family:var(--font-display);font-size:1.85rem;font-weight:700;line-height:1;color:var(--white);margin-bottom:0.25rem}
+  .stat-note{font-size:12px;font-weight:300}
+  .up{color:var(--teal)}.down{color:var(--red)}.neu{color:var(--muted)}.warn{color:var(--amber)}
 
-  body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 999;
-  }
+  /* PAGE */
+  .page{max-width:1080px;margin:0 auto;padding:0 2rem}
+  .section{padding-bottom:4rem;animation:fadeUp 0.6s 0.15s ease both}
+  .sec-header{display:flex;align-items:center;gap:14px;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--border2)}
+  .sec-tag{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;padding:4px 10px;border-radius:20px;font-weight:500}
+  .tag-crypto{background:rgba(13,184,127,0.12);color:var(--teal);border:1px solid rgba(13,184,127,0.25)}
+  .tag-reg{background:rgba(45,125,210,0.12);color:var(--blue);border:1px solid rgba(45,125,210,0.25)}
+  .tag-tension{background:rgba(232,64,74,0.12);color:var(--red);border:1px solid rgba(232,64,74,0.25)}
+  .tag-score{background:rgba(240,165,0,0.12);color:var(--gold);border:1px solid rgba(240,165,0,0.25)}
+  .tag-watch{background:rgba(123,108,246,0.12);color:var(--purple);border:1px solid rgba(123,108,246,0.25)}
+  .sec-title{font-family:var(--font-display);font-size:1.45rem;font-weight:700;color:var(--white)}
 
-  /* ── HEADER ── */
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(10,22,40,0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border2);
-    padding: 0 2rem;
-  }
-  .header-inner {
-    max-width: 1080px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0;
-  }
-  .logo {
-    font-family: var(--font-display);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-  }
-  .date-pill {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--muted);
-    border: 1px solid var(--border2);
-    padding: 4px 14px;
-    border-radius: 20px;
-    letter-spacing: 0.06em;
-  }
+  /* NEWS LIST */
+  .news-list{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border2);border-radius:14px;overflow:hidden}
+  .news-item{background:var(--navy2);padding:1.75rem 2rem;display:grid;grid-template-columns:2.8rem 1fr;gap:1.25rem;border-bottom:1px solid var(--border);transition:background 0.16s;opacity:0;animation:fadeUp 0.5s ease both}
+  .news-item:last-child{border-bottom:none}
+  .news-item:hover{background:var(--navy3)}
+  .news-item:nth-child(1){animation-delay:.08s}.news-item:nth-child(2){animation-delay:.14s}.news-item:nth-child(3){animation-delay:.2s}.news-item:nth-child(4){animation-delay:.26s}.news-item:nth-child(5){animation-delay:.32s}
+  .news-num{font-family:var(--font-display);font-size:2.1rem;font-weight:800;line-height:1;margin-top:3px;color:rgba(45,125,210,0.3)}
+  .news-meta{display:flex;align-items:center;gap:8px;margin-bottom:0.6rem;flex-wrap:wrap}
+  .meta-pill{font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;border-radius:20px}
+  .p-reg{background:rgba(45,125,210,0.12);color:var(--blue)}
+  .p-macro{background:rgba(245,166,35,0.12);color:var(--amber)}
+  .p-hack{background:rgba(232,64,74,0.12);color:var(--red)}
+  .p-etf{background:rgba(13,184,127,0.12);color:var(--teal)}
+  .p-stbl{background:rgba(123,108,246,0.12);color:var(--purple)}
+  .p-date{background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid var(--border2)}
+  .news-headline{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:0.65rem;line-height:1.35}
+  .news-body{font-size:13.5px;color:var(--muted);line-height:1.78;font-weight:300}
+  .news-body strong{color:var(--light);font-weight:500}
 
-  /* ── HERO ── */
-  .hero-wrap { position: relative; overflow: hidden; }
-  .glow-a {
-    position: absolute; top: -100px; right: -160px;
-    width: 540px; height: 540px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(13,184,127,0.08) 0%, transparent 68%);
-    pointer-events: none;
-  }
-  .glow-b {
-    position: absolute; bottom: -40px; left: -100px;
-    width: 420px; height: 420px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(240,165,0,0.06) 0%, transparent 68%);
-    pointer-events: none;
-  }
-  .hero {
-    position: relative;
-    z-index: 2;
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 5rem 2rem 3.5rem;
-    animation: fadeUp 0.7s ease both;
-  }
-  .hero-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1.4rem;
-  }
-  .hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 28px; height: 1.5px;
-    background: var(--teal);
-  }
-  .eyebrow-text {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--teal);
-  }
-  h1.hero-title {
-    font-family: var(--font-display);
-    font-size: clamp(2.6rem, 5.5vw, 5rem);
-    font-weight: 800;
-    line-height: 1.02;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.4rem;
-  }
-  h1.hero-title em { color: var(--teal); font-style: normal; }
-  h1.hero-title .gold { color: var(--gold); }
-  .hero-sub {
-    font-size: 15px;
-    color: var(--muted);
-    max-width: 540px;
-    line-height: 1.78;
-    font-weight: 300;
-  }
+  /* DIVIDER */
+  .divider{max-width:1080px;margin:0 auto 4rem;padding:0 2rem;height:1px;background:var(--border2)}
 
-  /* ── STAT STRIP ── */
-  .stat-strip {
-    padding: 0 2rem 3.5rem;
-    animation: fadeUp 0.7s 0.1s ease both;
-  }
-  .stat-grid {
-    max-width: 1080px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1px;
-    background: var(--border2);
-    border: 1px solid var(--border2);
-    border-radius: 14px;
-    overflow: hidden;
-  }
-  @media (max-width: 800px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 480px) { .stat-grid { grid-template-columns: 1fr; } }
-  .stat-cell {
-    background: var(--navy2);
-    padding: 1.4rem 1.6rem;
-    transition: background 0.2s;
-  }
-  .stat-cell:hover { background: var(--navy3); }
-  .stat-label {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 0.45rem;
-  }
-  .stat-val {
-    font-family: var(--font-display);
-    font-size: 1.85rem;
-    font-weight: 700;
-    line-height: 1;
-    color: var(--white);
-    margin-bottom: 0.25rem;
-  }
-  .stat-note { font-size: 12px; font-weight: 300; }
-  .up   { color: var(--teal); }
-  .down { color: var(--red); }
-  .neu  { color: var(--muted); }
-  .gold { color: var(--gold); }
+  /* TENSION */
+  .tension-card{background:linear-gradient(135deg,rgba(232,64,74,0.05) 0%,rgba(45,125,210,0.05) 100%);border:1px solid rgba(232,64,74,0.18);border-radius:16px;padding:2.5rem;margin-bottom:1.5rem}
+  .tension-title{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:1.2rem;line-height:1.25}
+  .tension-body{font-size:14.5px;color:var(--light);line-height:1.85;font-weight:300;max-width:860px}
+  .tension-body strong{color:var(--red);font-weight:500}
 
-  /* ── PAGE WRAPPER ── */
-  .page { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+  /* INSIGHT BOX */
+  .insight-box{background:rgba(45,125,210,0.05);border:1px solid rgba(45,125,210,0.18);border-left:3px solid var(--blue);border-radius:0 10px 10px 0;padding:1.5rem 1.75rem}
+  .insight-label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);margin-bottom:0.6rem}
+  .insight-text{font-size:14px;color:var(--light);line-height:1.82;font-weight:300}
+  .insight-text strong{color:var(--blue);font-weight:500}
 
-  /* ── SECTION HEADER ── */
-  .section { padding-bottom: 4rem; }
-  .sec-header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border2);
-  }
-  .sec-tag {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-weight: 500;
-  }
-  .tag-crypto { background: rgba(13,184,127,0.12); color: var(--teal); border: 1px solid rgba(13,184,127,0.25); }
-  .tag-tension { background: rgba(245,166,35,0.12); color: var(--amber); border: 1px solid rgba(245,166,35,0.25); }
-  .tag-score   { background: rgba(45,125,210,0.12); color: var(--blue); border: 1px solid rgba(45,125,210,0.25); }
-  .tag-watch   { background: rgba(123,108,246,0.12); color: var(--purple); border: 1px solid rgba(123,108,246,0.25); }
-  .sec-title {
-    font-family: var(--font-display);
-    font-size: 1.45rem;
-    font-weight: 700;
-    color: var(--white);
-  }
+  /* WIN/LOSE */
+  .wl-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:600px){.wl-grid{grid-template-columns:1fr}}
+  .wl-card{background:var(--navy2);border-radius:14px;overflow:hidden;border:1px solid var(--border2)}
+  .wl-head{padding:1rem 1.5rem;display:flex;align-items:center;gap:10px}
+  .win .wl-head{background:rgba(13,184,127,0.09);border-bottom:1px solid rgba(13,184,127,0.18)}
+  .lose .wl-head{background:rgba(232,64,74,0.07);border-bottom:1px solid rgba(232,64,74,0.16)}
+  .wl-icon{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:14px;font-weight:700}
+  .win .wl-icon{background:rgba(13,184,127,0.18);color:var(--teal)}
+  .lose .wl-icon{background:rgba(232,64,74,0.14);color:var(--red)}
+  .wl-htitle{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
+  .win .wl-htitle{color:var(--teal)}.lose .wl-htitle{color:var(--red)}
+  .wl-items{padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:1rem}
+  .wl-row{display:flex;gap:10px;align-items:flex-start}
+  .wl-dot{width:6px;height:6px;border-radius:50%;margin-top:7px;flex-shrink:0}
+  .win .wl-dot{background:var(--teal)}.lose .wl-dot{background:var(--red)}
+  .wl-name{font-size:13.5px;font-weight:500;color:var(--white);margin-bottom:2px}
+  .wl-reason{font-size:12.5px;color:var(--muted);font-weight:300;line-height:1.5}
 
-  /* ── NEWS LIST ── */
-  .news-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    border: 1px solid var(--border2);
-    border-radius: 14px;
-    overflow: hidden;
-  }
-  .news-item {
-    background: var(--navy2);
-    padding: 1.75rem 2rem;
-    display: grid;
-    grid-template-columns: 2.8rem 1fr;
-    gap: 1.25rem;
-    border-bottom: 1px solid var(--border);
-    transition: background 0.16s;
-    opacity: 0;
-    animation: fadeUp 0.5s ease both;
-  }
-  .news-item:last-child { border-bottom: none; }
-  .news-item:hover { background: var(--navy3); }
-  .news-item:nth-child(1) { animation-delay: 0.08s; }
-  .news-item:nth-child(2) { animation-delay: 0.14s; }
-  .news-item:nth-child(3) { animation-delay: 0.20s; }
-  .news-item:nth-child(4) { animation-delay: 0.26s; }
-  .news-item:nth-child(5) { animation-delay: 0.32s; }
-  .news-num {
-    font-family: var(--font-display);
-    font-size: 2.1rem;
-    font-weight: 800;
-    line-height: 1;
-    margin-top: 3px;
-    color: rgba(13,184,127,0.28);
-  }
-  .news-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 0.6rem;
-    flex-wrap: wrap;
-  }
-  .meta-pill {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 2px 8px;
-    border-radius: 20px;
-  }
-  .p-btc     { background: rgba(240,165,0,0.13); color: var(--gold); }
-  .p-conf    { background: rgba(13,184,127,0.12); color: var(--teal); }
-  .p-vc      { background: rgba(123,108,246,0.12); color: var(--purple); }
-  .p-ma      { background: rgba(45,125,210,0.12); color: var(--blue); }
-  .p-legal   { background: rgba(232,64,74,0.12); color: var(--red); }
-  .p-date    { background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border2); }
-  .news-headline {
-    font-family: var(--font-display);
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 0.65rem;
-    line-height: 1.35;
-  }
-  .news-body {
-    font-size: 13.5px;
-    color: var(--muted);
-    line-height: 1.78;
-    font-weight: 300;
-  }
-  .news-body strong { color: var(--light); font-weight: 500; }
+  /* WATCHLIST */
+  .watch-list{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border2);border-radius:14px;overflow:hidden}
+  .watch-item{background:var(--navy2);padding:1.4rem 1.75rem;display:grid;grid-template-columns:68px 1fr;gap:1.25rem;align-items:start;border-bottom:1px solid var(--border);transition:background 0.16s}
+  .watch-item:last-child{border-bottom:none}
+  .watch-item:hover{background:var(--navy3)}
+  @media(max-width:560px){.watch-item{grid-template-columns:1fr}}
+  .w-badge{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:4px 8px;border-radius:5px;text-align:center;margin-top:3px}
+  .b-high{background:rgba(232,64,74,0.14);color:var(--red);border:1px solid rgba(232,64,74,0.28)}
+  .b-med{background:rgba(245,166,35,0.12);color:var(--amber);border:1px solid rgba(245,166,35,0.28)}
+  .b-watch{background:rgba(255,255,255,0.04);color:var(--muted);border:1px solid var(--border2)}
+  .w-title{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:0.35rem}
+  .w-body{font-size:13.5px;color:var(--muted);line-height:1.72;font-weight:300}
+  .w-body strong{color:var(--light);font-weight:500}
 
-  /* ── DIVIDER ── */
-  .divider {
-    max-width: 1080px;
-    margin: 0 auto 4rem;
-    padding: 0 2rem;
-    height: 1px;
-    background: var(--border2);
-  }
+  /* FOOTER */
+  footer{border-top:1px solid var(--border2);padding:2.5rem 2rem;margin-top:2rem}
+  .footer-inner{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+  .footer-brand{font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:0.07em}
+  .footer-src{font-family:var(--font-mono);font-size:10px;color:rgba(143,160,184,0.55);letter-spacing:0.04em;line-height:1.6;text-align:right;max-width:580px}
+  @media(max-width:600px){.footer-src{text-align:left;max-width:100%}.footer-inner{flex-direction:column;align-items:flex-start}}
 
-  /* ── TENSION CARD ── */
-  .tension-card {
-    background: linear-gradient(135deg, rgba(13,184,127,0.06) 0%, rgba(240,165,0,0.05) 100%);
-    border: 1px solid rgba(13,184,127,0.2);
-    border-radius: 16px;
-    padding: 2.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .tension-title {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 1.2rem;
-    line-height: 1.25;
-  }
-  .tension-body {
-    font-size: 14.5px;
-    color: var(--light);
-    line-height: 1.85;
-    font-weight: 300;
-    max-width: 860px;
-  }
-  .tension-body strong { color: var(--teal); font-weight: 500; }
-
-  /* ── INSIGHT BOX ── */
-  .insight-box {
-    background: rgba(13,184,127,0.05);
-    border: 1px solid rgba(13,184,127,0.18);
-    border-left: 3px solid var(--teal);
-    border-radius: 0 10px 10px 0;
-    padding: 1.5rem 1.75rem;
-  }
-  .insight-label {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--teal);
-    margin-bottom: 0.6rem;
-  }
-  .insight-text {
-    font-size: 14px;
-    color: var(--light);
-    line-height: 1.82;
-    font-weight: 300;
-  }
-  .insight-text strong { color: var(--teal); font-weight: 500; }
-
-  /* ── WIN / LOSE ── */
-  .wl-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-  @media (max-width: 600px) { .wl-grid { grid-template-columns: 1fr; } }
-  .wl-card {
-    background: var(--navy2);
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid var(--border2);
-  }
-  .wl-head {
-    padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .win  .wl-head { background: rgba(13,184,127,0.09); border-bottom: 1px solid rgba(13,184,127,0.18); }
-  .lose .wl-head { background: rgba(232,64,74,0.07);  border-bottom: 1px solid rgba(232,64,74,0.16); }
-  .wl-icon {
-    width: 26px; height: 26px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-display);
-    font-size: 14px; font-weight: 700;
-  }
-  .win  .wl-icon { background: rgba(13,184,127,0.18); color: var(--teal); }
-  .lose .wl-icon { background: rgba(232,64,74,0.14);  color: var(--red);  }
-  .wl-htitle {
-    font-family: var(--font-display);
-    font-size: 13px; font-weight: 700;
-    letter-spacing: 0.06em; text-transform: uppercase;
-  }
-  .win  .wl-htitle { color: var(--teal); }
-  .lose .wl-htitle { color: var(--red);  }
-  .wl-items { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
-  .wl-row   { display: flex; gap: 10px; align-items: flex-start; }
-  .wl-dot {
-    width: 6px; height: 6px; border-radius: 50%;
-    margin-top: 7px; flex-shrink: 0;
-  }
-  .win  .wl-dot { background: var(--teal); }
-  .lose .wl-dot { background: var(--red);  }
-  .wl-name   { font-size: 13.5px; font-weight: 500; color: var(--white); margin-bottom: 2px; }
-  .wl-reason { font-size: 12.5px; color: var(--muted); font-weight: 300; line-height: 1.5; }
-
-  /* ── WATCHLIST ── */
-  .watch-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    border: 1px solid var(--border2);
-    border-radius: 14px;
-    overflow: hidden;
-  }
-  .watch-item {
-    background: var(--navy2);
-    padding: 1.4rem 1.75rem;
-    display: grid;
-    grid-template-columns: 68px 1fr;
-    gap: 1.25rem;
-    align-items: start;
-    border-bottom: 1px solid var(--border);
-    transition: background 0.16s;
-  }
-  .watch-item:last-child { border-bottom: none; }
-  .watch-item:hover { background: var(--navy3); }
-  @media (max-width: 560px) { .watch-item { grid-template-columns: 1fr; } }
-  .w-badge {
-    font-family: var(--font-mono);
-    font-size: 10px; font-weight: 500;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    padding: 4px 8px; border-radius: 5px;
-    text-align: center; margin-top: 3px;
-  }
-  .b-high  { background: rgba(232,64,74,0.14);  color: var(--red);   border: 1px solid rgba(232,64,74,0.28); }
-  .b-med   { background: rgba(245,166,35,0.12); color: var(--amber); border: 1px solid rgba(245,166,35,0.28); }
-  .b-watch { background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border2); }
-  .w-title {
-    font-family: var(--font-display);
-    font-size: 1rem; font-weight: 700;
-    color: var(--white); margin-bottom: 0.35rem;
-  }
-  .w-body {
-    font-size: 13.5px; color: var(--muted);
-    line-height: 1.72; font-weight: 300;
-  }
-  .w-body strong { color: var(--light); font-weight: 500; }
-
-  /* ── FOOTER ── */
-  footer {
-    border-top: 1px solid var(--border2);
-    padding: 2.5rem 2rem;
-    margin-top: 2rem;
-  }
-  .footer-inner {
-    max-width: 1080px; margin: 0 auto;
-    display: flex; justify-content: space-between;
-    align-items: center; flex-wrap: wrap; gap: 1rem;
-  }
-  .footer-brand {
-    font-family: var(--font-mono);
-    font-size: 11px; color: var(--muted);
-    letter-spacing: 0.07em;
-  }
-  .footer-src {
-    font-family: var(--font-mono);
-    font-size: 10px; color: rgba(143,160,184,0.55);
-    letter-spacing: 0.04em; line-height: 1.6;
-    text-align: right; max-width: 580px;
-  }
-  @media (max-width: 600px) {
-    .footer-src { text-align: left; max-width: 100%; }
-    .footer-inner { flex-direction: column; align-items: flex-start; }
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(18px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .section { animation: fadeUp 0.6s 0.15s ease both; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 680px) {
-    .news-item { grid-template-columns: 1.8rem 1fr; gap: 0.75rem; padding: 1.25rem; }
-    .news-num  { font-size: 1.4rem; }
-    .hero      { padding: 3rem 0 2.5rem; }
-    .tension-card { padding: 1.5rem; }
-  }
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  @media(max-width:680px){.news-item{grid-template-columns:1.8rem 1fr;gap:.75rem;padding:1.25rem}.news-num{font-size:1.4rem}.hero{padding:3rem 0 2.5rem}.tension-card{padding:1.5rem}}
 </style>
 </head>
 <body>
 
-<!-- ── HEADER ── -->
 <header>
   <div class="header-inner">
     <div class="logo">AI &amp; Crypto Weekly</div>
-    <div class="date-pill">May 4–10, 2026</div>
+    <div class="date-pill">May 11–17, 2026</div>
   </div>
 </header>
 
-<!-- ── HERO ── -->
 <div class="hero-wrap">
   <div class="glow-a"></div>
   <div class="glow-b"></div>
   <div class="hero page">
-    <div class="hero-eyebrow">
-      <span class="eyebrow-text">Crypto weekly intelligence</span>
-    </div>
+    <div class="hero-eyebrow"><span class="eyebrow-text">Crypto weekly intelligence</span></div>
     <h1 class="hero-title">
-      The week<br>
-      <em>$80K broke</em><br>
-      and whales bought<br>
-      <span class="gold">everything retail sold.</span>
+      The week the<br>
+      <em>rally stalled</em>,<br>
+      the <span class="b">CLARITY Act</span><br>
+      <span class="g">advanced</span>.
     </h1>
-    <p class="hero-sub">Bitcoin cleared $81,000 for the first time since January. Spot demand finally confirmed the move. ETF inflows hit a 2026 weekly record. And while 245,000 retail wallets exited, institutions quietly accumulated 270,000 BTC — the largest 30-day grab since 2013.</p>
+    <p class="hero-sub">Bitcoin hit $82K on Monday then retreated below $79K by Friday. ETFs bled $1B in outflows — snapping a six-week streak — as 30-year Treasury yields hit 5% for the first time since 2007 and inflation data refused to cooperate. Meanwhile, the CLARITY Act cleared committee 15–9 and Kevin Warsh was confirmed as Fed Chair.</p>
   </div>
 </div>
 
-<!-- ── STAT STRIP ── -->
 <div class="stat-strip">
   <div class="stat-grid">
     <div class="stat-cell">
-      <div class="stat-label">BTC (May 10)</div>
-      <div class="stat-val">$80,832</div>
-      <div class="stat-note up">+5.4% on the week</div>
+      <div class="stat-label">BTC (May 17)</div>
+      <div class="stat-val">$78,225</div>
+      <div class="stat-note down">–4.3% on the week</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">Week ETF inflows</div>
-      <div class="stat-val">$1.63B</div>
-      <div class="stat-note up">Strongest week of 2026</div>
+      <div class="stat-label">ETF week outflows</div>
+      <div class="stat-val">–$1.0B</div>
+      <div class="stat-note down">6-week inflow streak broken</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">May 4 inflows</div>
-      <div class="stat-val">$532M</div>
-      <div class="stat-note up">Single-day high</div>
+      <div class="stat-label">30-yr Treasury yield</div>
+      <div class="stat-val">5.0%</div>
+      <div class="stat-note down">Highest since 2007</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">Whale accumulation</div>
-      <div class="stat-val">270K BTC</div>
-      <div class="stat-note up">Biggest 30-day since 2013</div>
+      <div class="stat-label">CLARITY Act</div>
+      <div class="stat-val">15–9</div>
+      <div class="stat-note warn">Senate committee approved</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">a16z Fund V</div>
-      <div class="stat-val">$2.2B</div>
-      <div class="stat-note neu">Raised this week</div>
+      <div class="stat-label">Warsh confirmed</div>
+      <div class="stat-val">Fed Chair</div>
+      <div class="stat-note warn">First statements pending</div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════ TOP 5 STORIES ══════════════════ -->
+<!-- TOP 5 STORIES -->
 <div class="page">
 <section class="section">
   <div class="sec-header">
     <span class="sec-tag tag-crypto">Crypto &amp; Digital assets</span>
     <h2 class="sec-title">Top 5 stories</h2>
   </div>
-
   <div class="news-list">
 
-    <!-- 1 -->
     <div class="news-item">
       <div class="news-num">01</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-btc">BTC breakout</span>
-          <span class="meta-pill p-date">May 5</span>
+          <span class="meta-pill p-reg">CLARITY Act</span>
+          <span class="meta-pill p-date">May 14</span>
         </div>
-        <div class="news-headline">Bitcoin clears $81K for the first time since January — spot demand finally confirms</div>
+        <div class="news-headline">CLARITY Act clears Senate Banking Committee 15–9 — two Democrats cross the aisle</div>
         <div class="news-body">
-          BTC opened May 4 at $78,951 and by May 5 had broken through $81,000 — a level last seen on January 31. Critically, the move was not another futures-only squeeze: <strong>ETF inflows on May 4 alone hit $532M</strong>, led by BlackRock IBIT ($284M) and Fidelity FBTC ($213M). The week's total of <strong>$1.63B was the strongest single week of 2026</strong>, reversing the prior week's $79M net outflow. Santiment flagged that Bitcoin's holder count fell by <strong>245,000 wallets in 5 days</strong> — the fastest retail exit rate since summer 2024 — while whales bought 270,000 BTC in 30 days, the most since 2013. Three on-chain signals confirmed the move simultaneously: BTC cleared its true market mean, broke above short-term holder cost basis, and <strong>futures funding rates flipped neutral from negative</strong>. Tom Lee at Consensus Miami said if BTC closes May above $76K, the bear market is officially over. Standard Chartered maintains a $150K year-end target.
+          After months of negotiation, the Digital Asset Market Clarity Act passed out of the Senate Banking Committee in a <strong>15–9 bipartisan vote on May 14</strong> — a historic first for US crypto legislation. Two Democrats voted in favor, making the committee result more durable than the party-line 13–11 that advanced Warsh. Full CLARITY Act text was released at midnight May 12 by Chairman Tim Scott: <strong>309 pages covering token classification, trading platform oversight, stablecoin rules, DeFi protocol accountability, and Treasury-CFTC co-rulemaking authority.</strong> Key compromises: fan tokens reclassified as digital collectibles, DeFi developers receive legal protections, and stablecoin yield is banned if "functionally equivalent" to bank deposits (but activity-based rewards are permitted). Senator Elizabeth Warren led opposition, filing <strong>40+ of the 100+ amendments</strong> expected before the Senate floor vote. The ethics provision — limiting government officials from profiting on crypto — remains unresolved. The CLARITY Act now heads to the full Senate. If the 60-vote threshold holds, it reaches Trump's desk this summer.
         </div>
       </div>
     </div>
 
-    <!-- 2 -->
     <div class="news-item">
       <div class="news-num">02</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-conf">Consensus Miami</span>
-          <span class="meta-pill p-date">May 6–8</span>
+          <span class="meta-pill p-macro">Macro</span>
+          <span class="meta-pill p-date">May 13–15</span>
         </div>
-        <div class="news-headline">Consensus 2026: CLARITY Act summer passage backed, AI agents declared crypto's next killer app</div>
+        <div class="news-headline">Treasury yields hit multi-year highs as inflation data stalls — Bitcoin retreats from $82K to $78K</div>
         <div class="news-body">
-          The industry's flagship conference in Miami dominated the week's narrative. Key signals: <strong>Senator Gillibrand maintained optimism that the CLARITY Act clears Congress this summer.</strong> Coinbase CLO Paul Grewal endorsed the Tillis-Alsobrooks stablecoin compromise — activity-based yields preserved, idle balance yields restricted — and publicly told banks to "accept yes for the answer and move on." PayPal and Google Cloud reps declared that <strong>agentic commerce will run on crypto rails</strong>, requiring open payment protocols and multi-party custody at scale. SEC Chair Atkins signaled new rules linking AI-driven finance to on-chain market infrastructure. Joseph Lubin (Consensys) declared "the world's entire economy will be tokenized." Jito Foundation + Solana Company announced an institutional-grade APAC infrastructure partnership. <strong>BlackRock filed to expand its tokenized fund lineup</strong> as real-world assets grew 200% year over year. CME Group announced bitcoin volatility futures launching June 1 pending regulatory approval. Dealers are short gamma around $80,600 — any sustained close above it brings CME data into play.
+          The week's defining market dynamic: <strong>the 2-year Treasury yield hit a 12-month high above 4.05%</strong>, the 10-year broke above 4.55%, and the <strong>30-year sold at a 5% yield for the first time since 2007</strong>. The trigger was hotter-than-expected inflation data, combined with markets repricing the Fed path under incoming Chair Warsh. The move created a classic risk-off cascade: Bitcoin opened Monday at <strong>$82,164 — the strongest opening since January 31</strong> — then retreated steadily throughout the week to close near $78,225 by Friday. ETF investors treated rising yields as a sell signal: <strong>spot Bitcoin ETFs shed over $1 billion in net outflows across the week</strong>, ending a six-week inflow streak as BlackRock, Fidelity, and Grayscale all recorded significant redemptions. The inverse head-and-shoulders pattern in 2-year yields signals further upside pressure ahead. BTC now absorbs ETF buying at 10:1 demand-to-supply ratio (4,500–5,000 BTC/day vs 450 mined), but that structural support weakened meaningfully this week.
         </div>
       </div>
     </div>
 
-    <!-- 3 -->
     <div class="news-item">
       <div class="news-num">03</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-vc">VC</span>
-          <span class="meta-pill p-date">May 5</span>
+          <span class="meta-pill p-macro">Fed</span>
+          <span class="meta-pill p-date">May 14</span>
         </div>
-        <div class="news-headline">a16z crypto raises $2.2B Fund V — the same day Coinbase lays off 14% of its workforce</div>
+        <div class="news-headline">Kevin Warsh confirmed as Fed Chair — crypto's most literate central banker takes the helm May 15</div>
         <div class="news-body">
-          Andreessen Horowitz closed its fifth crypto fund at $2.2B this week, promoting CTO Eddy Lazzarin to GP alongside Chris Dixon, Ali Yahya, and Guy Wuollet. The firm has backed Coinbase, Kalshi, and the Solana Foundation. a16z's partners acknowledged "we're at one of those quieter moments now" in their investor letter — yet raised into that quiet. The timing was pointed: <strong>the same day Coinbase announced 14% workforce cuts</strong>, citing the slowest trading-volume month since November 2023. Q1 2026 crypto VC: $5B total, down from $6B in Q1 2025. The contradiction is the entire story: smart money raises into weakness while operators cut into the same weakness. <strong>The firms that survive the cost cycle will be disproportionately positioned for the next leg.</strong> a16z also backed the CFTC's position against state-by-state prediction market rules, signaling continued conviction in regulated on-chain finance.
+          The US Senate confirmed Kevin Warsh as Fed Chair on May 14 after the Banking Committee's 13–11 party-line vote on April 29. <strong>Senator Fetterman crossed the aisle</strong> to provide bipartisan cover on the floor vote. Warsh officially replaced Powell on May 15. His profile is unprecedented for a sitting Fed Chair: called Bitcoin <strong>"new gold for people under 40,"</strong> described digital assets as "already part of the fabric of our financial services industry," and has personal investment history including stakes in Bitwise, Electric Capital, Polychain Capital, and Polymarket (all of which he must divest). His first FOMC meeting is June 16–17. Trump has publicly stated he would be "disappointed" if Warsh doesn't cut in June. But Warsh's own record is hawkish: he called the 2022 inflation surge the Fed's "biggest policy mistake in 40–50 years." The market's immediate read: higher yields, not rate-cut euphoria. J.P. Morgan maintains Warsh will push for cuts <em>faster</em> than Powell — but the data must cooperate first. Historical pattern: BTC has corrected for 2–3 months after each Fed Chair transition before rallying.
         </div>
       </div>
     </div>
 
-    <!-- 4 -->
     <div class="news-item">
       <div class="news-num">04</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-ma">M&amp;A</span>
-          <span class="meta-pill p-date">May 5</span>
+          <span class="meta-pill p-hack">Security</span>
+          <span class="meta-pill p-date">May 16</span>
         </div>
-        <div class="news-headline">MoonPay acquires DFlow for $100M all-stock — Solana's dominant trading router processed $12B in Q1</div>
+        <div class="news-headline">THORChain exploited for $10.7M across four chains — RUNE drops 12%, protocol halts trading</div>
         <div class="news-body">
-          MoonPay acquired DFlow — Solana's leading trading router — for $100M in stock, its sixth acquisition in 18 months. DFlow <strong>routed 60% of Solana-based trades on Coinbase</strong> in the prior week and processed $12B+ in Q1 2026 volume. Coinbase had just named DFlow its primary Solana router; Jito will use it for its new consumer trading app. Former acting CFTC Chair Caroline Pham now leads MoonPay's new institutional business unit. CEO Soto-Wright: "DFlow is the missing piece that turns MoonPay into the operating system for value." The deal <strong>cements Solana's position as the chain of choice for high-throughput payment and trading infrastructure</strong> — in the same week Jito-Solana Company announced an APAC institutional expansion and OnRe raised $5M for on-chain reinsurance on Solana. Three separate infrastructure bets on the same chain in seven days is a directional signal.
+          ZachXBT flagged a <strong>$10.7M exploit on THORChain spanning four separate chains</strong> on May 16. The cross-chain liquidity protocol responded by halting all trading and posting a chain halt. RUNE dropped <strong>12% within hours</strong> of the announcement. This is THORChain's second significant security incident in 12 months. Separately, Binance Research released its 2026 illicit finance report: <strong>$75 billion in illicit funds sat on-chain in 2025, up 28% year-on-year</strong> — yet still under 1% of total crypto volume. The report found stablecoins now drive 84% of illicit transactions, while Bitcoin's share has fallen to just 7%. On the hardware side, Ledger and Trezor jointly announced support for Ethereum's new Clear Signing standard — a direct response to the blind-signing scam epidemic. The week also saw Bitwise list <strong>BHYP on the NYSE</strong>, the first US ETF offering direct exposure to Hyperliquid's HYPE token with built-in staking yield (0.67% fee, custodied by Anchorage Digital).
         </div>
       </div>
     </div>
 
-    <!-- 5 -->
     <div class="news-item">
       <div class="news-num">05</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-legal">Legal &amp; Governance</span>
-          <span class="meta-pill p-date">Week</span>
+          <span class="meta-pill p-stbl">Stablecoins</span>
+          <span class="meta-pill p-date">May 17</span>
         </div>
-        <div class="news-headline">LayerZero admits fault on $292M Kelp exploit, judge clears $71M ETH to Aave, Trump Media posts $406M Q1 loss</div>
+        <div class="news-headline">A major bank moves stablecoin reserves into Wall Street's repo market — 67M Americans now hold crypto</div>
         <div class="news-body">
-          Three governance and legal events that shaped DeFi risk perception. LayerZero published a post-mortem on the $292M Kelp exploit, stating it <strong>"owns" the decision to use its own verifier for high-value transfers</strong> — a critical admission that architecture, not a developer bug, caused the loss. Judge Margaret Garnett cleared Arbitrum to move 30,766 frozen ETH (~$71M) to Aave; the legal freeze follows the assets as terrorism plaintiffs continue their claim. Separately, <strong>Trump Media reported a Q1 loss of $406M</strong> — primarily $244M in unrealized losses on crypto holdings and $108M in investment losses — a reminder that corporate Bitcoin treasuries carry real mark-to-market exposure. Kraken's parent Payward also applied for an OCC national trust charter, seeking to become a federally regulated crypto bank alongside its existing Wyoming bank charter and Fed master account. Full-stack regulatory positioning is now the competitive moat.
+          CryptoSlate reported on May 17 that <strong>a major unnamed US bank moved its stablecoin reserve strategy into the repo market</strong> — Wall Street's $10T-a-day short-term financing machine — using T-bills as the collateral layer. This is stablecoin infrastructure embedding itself directly into traditional financial plumbing, enabled by CLARITY Act momentum. Separately, the National Cryptocurrency Association's 2026 State of Crypto Holders Report found <strong>67 million Americans now own digital assets</strong> — up 12 million in a year, meaning <strong>1 in 4 US adults participates in the crypto economy</strong>. Among 2025–2026 new buyers: 42% are female, 26% are Gen X, and 13% are Boomers. Four in 10 holders now actively use crypto in daily transactions. Strategic Bitcoin Reserve: officials confirmed a "major announcement coming within weeks" — 13F filings on May 15 showed which institutions bought crypto-linked securities in Q1, with multiple new institutional names appearing for the first time.
         </div>
       </div>
     </div>
@@ -641,29 +282,29 @@
 
 <div class="divider"></div>
 
-<!-- ══════════════════ KEY TENSION ══════════════════ -->
+<!-- KEY TENSION -->
 <div class="page">
 <section class="section">
   <div class="sec-header">
     <span class="sec-tag tag-tension">Key tension</span>
-    <h2 class="sec-title">Spot demand confirmed — but retail sold the exact breakout institutions bought</h2>
+    <h2 class="sec-title">The most important week for US crypto policy — and Bitcoin still fell</h2>
   </div>
 
   <div class="tension-card">
-    <div class="tension-title">The structural read on the $80K break</div>
+    <div class="tension-title">The CLARITY Act paradox: best regulatory news in years, worst price week in six</div>
     <div class="tension-body">
-      This was the week last week's prediction activated. BTC broke $80.5K with spot demand confirmation, ETF inflows hit a 2026 weekly record, three on-chain signals confirmed simultaneously, and whale accumulation reached a 13-year high. The bull scenario played out almost exactly as outlined.
+      For months, markets closely watched five catalysts: the CLARITY Act, Warsh's nomination, Iran tensions, inflation data, and ETF flows. This week, three of the five broke in Bitcoin's favor — CLARITY Act advanced, Warsh was confirmed, Iran-US talks didn't collapse. And <strong>BTC still fell 4.3%</strong> from $82K to $78K while ETFs bled $1B.
       <br><br>
-      The catch: <strong>245,000 retail wallets exited Bitcoin in five days</strong> — the fastest holder-count decline since summer 2024. That means the $80K+ print is being sold by retail and absorbed by institutions. If institutional demand stays ahead of retail supply, this is the start of the next leg. If retail capitulation accelerates and ETF flows moderate, the move stalls at the resistance zone between $80,600 and $82,228 (the 200-day moving average).
+      The macro overrode everything. <strong>Rising Treasury yields — especially the 30-year hitting 5% for the first time since 2007 — are doing more damage than regulatory progress can offset in the short term.</strong> Higher yields make bonds competitive with risk assets. They signal inflation persistence. They reduce the expected probability and timing of Fed cuts. And BTC trades at 84% correlation with the S&P 500 — it cannot escape the macro gravity field, regardless of what happens in Washington.
       <br><br>
-      The next two weeks are the determining window. Standard Chartered holds a $150K year-end target. Tom Lee says a monthly close above $76K ends the bear market. <strong>Dealers are short gamma around $80,600</strong> — which means any sustained close above it triggers forced covering and accelerates the move in whichever direction leads. Watch the Coinbase premium index daily.
+      The honest read: the regulatory thesis is intact and strengthening. The price thesis requires lower yields and/or a macro catalyst that reduces bond attractiveness. <strong>Warsh's June 16–17 FOMC is the next scheduled catalyst.</strong> If he cuts — under political pressure from Trump — rates fall and the dollar weakens. That's the unlock. If he holds or sounds hawkish, the $76,500 support gets tested before anything else.
     </div>
   </div>
 
   <div class="insight-box">
-    <div class="insight-label">Sharp observation</div>
+    <div class="insight-label">The signal inside the noise</div>
     <div class="insight-text">
-      a16z raised a $2.2B crypto fund the same day Coinbase cut 14% of its workforce. That's not a contradiction — it's the anatomy of every market cycle. <strong>The people with long time horizons buy when operators with short time horizons are cutting costs.</strong> The firms that survive the contraction will have an asymmetric advantage entering the next expansion. The question is whether you're positioned with the buyers or the sellers.
+      Despite $1B in ETF outflows, <strong>Bitcoin ETFs are still absorbing 4,500–5,000 BTC per day against only 450 mined daily — a 10:1 demand-to-supply ratio.</strong> This week's outflows represent profit-taking and yield-chasing, not structural institutional abandonment. The 67M American crypto holders figure and 13F filings showing new institutional entrants confirm the adoption story is still running. The price weakness is a macro side-effect, not a crypto-specific rejection.
     </div>
   </div>
 </section>
@@ -671,100 +312,62 @@
 
 <div class="divider"></div>
 
-<!-- ══════════════════ WINNERS / LOSERS ══════════════════ -->
+<!-- WINNERS / LOSERS -->
 <div class="page">
 <section class="section">
   <div class="sec-header">
     <span class="sec-tag tag-score">Scorecard</span>
     <h2 class="sec-title">Winners &amp; losers</h2>
   </div>
-
   <div class="wl-grid">
     <div class="wl-card win">
-      <div class="wl-head">
-        <div class="wl-icon">↑</div>
-        <div class="wl-htitle">Winners</div>
-      </div>
+      <div class="wl-head"><div class="wl-icon">↑</div><div class="wl-htitle">Winners</div></div>
       <div class="wl-items">
-        <div class="wl-row">
-          <div class="wl-dot"></div>
-          <div>
-            <div class="wl-name">Solana</div>
-            <div class="wl-reason">MoonPay/DFlow $100M deal + Jito APAC expansion + OnRe reinsurance $5M raise — three infrastructure wins in seven days</div>
-          </div>
-        </div>
-        <div class="wl-row">
-          <div class="wl-dot"></div>
-          <div>
-            <div class="wl-name">BlackRock / IBIT</div>
-            <div class="wl-reason">$284M on May 4 alone; simultaneously filing to expand tokenized fund lineup with RWA market up 200% YoY</div>
-          </div>
-        </div>
-        <div class="wl-row">
-          <div class="wl-dot"></div>
-          <div>
-            <div class="wl-name">a16z crypto</div>
-            <div class="wl-reason">$2.2B Fund V closed into market weakness — historically their best entry timing across four prior funds</div>
-          </div>
-        </div>
-        <div class="wl-row">
-          <div class="wl-dot"></div>
-          <div>
-            <div class="wl-name">Bitcoin whales</div>
-            <div class="wl-reason">270,000 BTC accumulated in 30 days — largest monthly grab since 2013; they bought the fear and are now in profit</div>
-          </div>
-        </div>
-        <div class="wl-row">
-          <div class="wl-dot"></div>
-          <div>
-            <div class="wl-name">Kraken</div>
-            <div class="wl-reason">OCC trust charter application + Wyoming bank charter + Fed master account = most complete regulatory stack of any crypto exchange</div>
-          </div>
-        </div>
+        <div class="wl-row"><div class="wl-dot"></div><div>
+          <div class="wl-name">CLARITY Act / US crypto industry</div>
+          <div class="wl-reason">15–9 bipartisan committee vote is the most significant US crypto legislative advance ever — 309 pages of regulatory clarity now heading to the Senate floor</div>
+        </div></div>
+        <div class="wl-row"><div class="wl-dot"></div><div>
+          <div class="wl-name">DeFi protocols (long term)</div>
+          <div class="wl-reason">CLARITY Act includes legal protections for DeFi developers — the framework they've needed for 4 years to attract institutional capital</div>
+        </div></div>
+        <div class="wl-row"><div class="wl-dot"></div><div>
+          <div class="wl-name">Coinbase, Circle, Stablecoin issuers</div>
+          <div class="wl-reason">Activity-based stablecoin rewards preserved in the CLARITY Act text — the core business model survives intact</div>
+        </div></div>
+        <div class="wl-row"><div class="wl-dot"></div><div>
+          <div class="wl-name">Bitwise / Anchorage Digital</div>
+          <div class="wl-reason">BHYP ETF listed on NYSE — first regulated Hyperliquid exposure with staking yield. Product innovation continues regardless of price</div>
+        </div></div>
+        <div class="wl-row"><div class="wl-dot"></div><div>
+          <div class="wl-name">Long-term BTC holders</div>
+          <div class="wl-reason">67M Americans now in crypto, 13F filings showing new institutional entrants — the structural accumulation story didn't change this week</div>
+        </div></div>
       </div>
     </div>
-
     <div class="wl-card lose">
-      <div class="wl-head">
-        <div class="wl-icon">↓</div>
-        <div class="wl-htitle">Losers</div>
-      </div>
+      <div class="wl-head"><div class="wl-icon">↓</div><div class="wl-htitle">Losers</div></div>
       <div class="wl-items">
-        <div class="wl-row">
-          <div class="wl-dot"></div>
-          <div>
-            <div class="wl-name">Coinbase employees</div>
-            <div class="wl-reason">14% workforce cut the same day a16z raised $2.2B; the gap between long-horizon investors and short-horizon operators is real</div>
-          </div>
-        </div>
-        <div class="wl-row">
-          <div class="wl-dot"></div>
-          <div>
-            <div class="wl-name">Retail Bitcoin holders</div>
-            <div class="wl-reason">245K wallets exited at exactly $80K — sold their position into the hands of the largest institutional accumulation in 13 years</div>
-          </div>
-        </div>
-        <div class="wl-row">
-          <div class="wl-dot"></div>
-          <div>
-            <div class="wl-name">Trump Media</div>
-            <div class="wl-reason">$406M Q1 loss — $244M from unrealized crypto losses; corporate BTC treasury strategies carry real mark-to-market pain</div>
-          </div>
-        </div>
-        <div class="wl-row">
-          <div class="wl-dot"></div>
-          <div>
-            <div class="wl-name">LayerZero</div>
-            <div class="wl-reason">Admitted the $292M Kelp exploit was an architectural decision, not a bug — a credibility hit that will follow the protocol for years</div>
-          </div>
-        </div>
-        <div class="wl-row">
-          <div class="wl-dot"></div>
-          <div>
-            <div class="wl-name">Banks on stablecoin yield</div>
-            <div class="wl-reason">Coinbase CLO publicly told banks to stop blocking the CLARITY Act or risk losing the entire negotiation — the tone shifted this week</div>
-          </div>
-        </div>
+        <div class="wl-row"><div class="wl-dot"></div><div>
+          <div class="wl-name">BTC ETF inflow streak</div>
+          <div class="wl-reason">$1B in outflows ended six consecutive weeks of net inflows — BlackRock, Fidelity, and Grayscale all hit. Yield-chasing, not structural exit</div>
+        </div></div>
+        <div class="wl-row"><div class="wl-dot"></div><div>
+          <div class="wl-name">THORChain (RUNE)</div>
+          <div class="wl-reason">$10.7M cross-chain exploit across four chains, 12% RUNE price drop, trading halt — second major incident in 12 months damages credibility</div>
+        </div></div>
+        <div class="wl-row"><div class="wl-dot"></div><div>
+          <div class="wl-name">Rate-cut bulls</div>
+          <div class="wl-reason">30-year yield at 5% (2007 high), 2-year at 12-month high of 4.05% — the market is repricing rate-cut probability lower, not higher</div>
+        </div></div>
+        <div class="wl-row"><div class="wl-dot"></div><div>
+          <div class="wl-name">$80K bulls (short term)</div>
+          <div class="wl-reason">BTC opened at $82K Monday and closed the week at $78K — the 200-DMA at $82,228 remains uncrossed for the third consecutive attempt</div>
+        </div></div>
+        <div class="wl-row"><div class="wl-dot"></div><div>
+          <div class="wl-name">CLARITY Act timeline (Senate floor)</div>
+          <div class="wl-reason">100+ amendments pending, ethics provision unresolved, 60-vote threshold uncertain — committee passage is necessary but not sufficient</div>
+        </div></div>
       </div>
     </div>
   </div>
@@ -773,53 +376,52 @@
 
 <div class="divider"></div>
 
-<!-- ══════════════════ WATCHLIST ══════════════════ -->
+<!-- WATCHLIST -->
 <div class="page">
 <section class="section">
   <div class="sec-header">
     <span class="sec-tag tag-watch">Forward look</span>
-    <h2 class="sec-title">What to watch next week (May 11–17)</h2>
+    <h2 class="sec-title">What to watch next week (May 18–24)</h2>
   </div>
-
   <div class="watch-list">
 
     <div class="watch-item">
       <div><span class="w-badge b-high">HIGH</span></div>
       <div>
-        <div class="w-title">Can BTC hold above $80K on volume?</div>
-        <div class="w-body">The breakout is confirmed but not yet sustained. Three technical signals (market mean cleared, short-term holder cost basis broken, funding rates neutral) are bullish — but <strong>dealers are short gamma around $80,600</strong> and the 200-day moving average sits at $82,228. Watch whether the Coinbase premium stays positive — US spot demand holding above Asian-driven flows is the difference between a sustained leg to $85K+ and a rejection back toward $76K. IBIT daily flows are the clearest institutional signal: two consecutive days above $200M = bid is back on.</div>
+        <div class="w-title">Warsh's first public statement as Fed Chair</div>
+        <div class="w-body">Warsh took the helm May 15. His first press conference or major speech as Chair is the most market-moving event of next week. <strong>Dovish tone (productivity dividend, rate-cut openness) = dollar weakens, BTC bid returns.</strong> Hawkish tone (inflation discipline first) = yields extend, BTC retests $76,500. Trump has publicly said he expects a June cut — watch whether Warsh signals agreement or pushes back. The June 16–17 FOMC is the next scheduled decision point.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-high">HIGH</span></div>
       <div>
-        <div class="w-title">Powell's Fed chair term ends May 15 — Trump names successor</div>
-        <div class="w-body">Jerome Powell's term as Fed chair ends May 15. Trump will name a replacement. A rate-dovish pick signals crypto-positive monetary conditions; a hawkish or market-unsettling choice triggers risk-off. <strong>BTC trades at 84% correlation with the S&P 500</strong> — this is a macro event as much as a political one. Rates are currently held at 3.75% with four internal Fed dissents. Any forward guidance shift moves all risk assets. Watch Senate confirmation signals and the DXY dollar index reaction simultaneously.</div>
+        <div class="w-title">$76,500 BTC support — does it hold?</div>
+        <div class="w-body">BTC closed the week at $78,225, within striking distance of the critical $76,500 Coinbase premium inflection point. <strong>A close below $76,500 with a negative Coinbase premium activates the bear scenario</strong> toward $73K–$75K. Strategy's average buy price ($75,537) sits just below — their buying would be a structural floor. Watch daily IBIT flows for the institutional signal: two consecutive outflow days above $200M = risk escalation; two positive days above $150M = bid has returned.</div>
+      </div>
+    </div>
+
+    <div class="watch-item">
+      <div><span class="w-badge b-high">HIGH</span></div>
+      <div>
+        <div class="w-title">UCL Final — May 30 (Budapest) with PSG confirmed</div>
+        <div class="w-body">The UEFA Champions League Final is May 30 — just 13 days away and 12 days before the World Cup kickoff. <strong>PSG ($PSG) is confirmed in the final</strong>. Arsenal ($AFC) or Atlético Madrid ($ATM) will be the opponent. At least one Chiliz fan token club is guaranteed the trophy. PSG winning = PSG fan token spike + CHZ volume surge + World Cup narrative reaches peak intensity. Watch CHZ price action Monday through Wednesday for pre-final accumulation signals.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-med">MED</span></div>
       <div>
-        <div class="w-title">CLARITY Act Senate markup window — committee date announcement</div>
-        <div class="w-body">Coinbase CLO said "this summer" at Consensus. The bill needs to clear Senate Banking Committee markup before August recess or it slips past the midterms. <strong>Any committee date announcement next week is a major catalyst</strong> for DeFi tokens, Circle, Tether, and Coinbase specifically. The Tillis-Alsobrooks stablecoin compromise already has Coinbase's endorsement. The question is whether banking trade groups hold firm or accept the deal. Watch Senators Tillis, Alsobrooks, Lummis, and Gillibrand's public statements for timing signals.</div>
-      </div>
-    </div>
-
-    <div class="watch-item">
-      <div><span class="w-badge b-med">MED</span></div>
-      <div>
-        <div class="w-title">Western Union USDPT — first live settlement on Solana mainnet</div>
-        <div class="w-body">Still in "final stages of readiness." Any week now. Watch Dune Analytics for a <strong>USDPT address activating on Solana mainnet</strong>. The first B2B settlement replacing a SWIFT wire is a structural signal for enterprise stablecoin adoption. With MoonPay/DFlow now routing 60% of Solana's Coinbase volume, the Solana payment infrastructure layer is being completed from multiple directions simultaneously. First live transaction is a direct SOL price catalyst and a stablecoin market structure proof point.</div>
+        <div class="w-title">CLARITY Act Senate floor schedule — 60-vote math</div>
+        <div class="w-body">Committee passage is historic. Floor passage is a different fight. <strong>The bill needs 60 votes to clear the filibuster.</strong> Ethics provision (conflict-of-interest for government officials including Trump) is the sticking point — Democrats won't move without it, White House won't accept language that targets a specific officeholder. Watch for whip counts and whether Senator Gillibrand's floor timeline ("this summer") gets any firmer. Any floor vote date announcement moves DeFi tokens, XRP, ETH, and Coinbase stock.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-watch">WATCH</span></div>
       <div>
-        <div class="w-title">BAYC NFT recovery + altcoin season index creep</div>
-        <div class="w-body">Bored Ape floor prices doubled in a month — historically one of the first indicators of risk appetite returning beyond BTC. If the <strong>altcoin season index moves from 39 toward 50+</strong> next week, a rotation from BTC into ETH/SOL and high-beta positions is beginning. ETH sits at $2,274 with 67.6% long in futures — better positioned than BTC for a squeeze. SOL near $88, also showing strength. Watch the BTC dominance ratio — if it drops from 60% toward 55%, the rotation has started.</div>
+        <div class="w-title">Strategic Bitcoin Reserve update — "within weeks"</div>
+        <div class="w-body">White House officials said a major SBR announcement is coming "within weeks" as of mid-May. Any confirmed government BTC purchase or reserve framework announcement would be the largest single bullish catalyst possible for Bitcoin. <strong>13F filings on May 15 already showed new institutional entrants</strong>. If the SBR announcement lands during a week when yields are also stabilizing, the price impact could be significant and fast. Watch Trump social media and Treasury Department statements specifically.</div>
       </div>
     </div>
 
@@ -827,13 +429,11 @@
 </section>
 </div>
 
-<!-- ── FOOTER ── -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">AI &amp; Crypto Weekly Intelligence &mdash; May 4–10, 2026</div>
-    <div class="footer-src">Sources: Yahoo Finance · CoinDesk · Fortune · TechCrunch · The Block · Cryptopolitan · Santiment · CoinShares · Pickaxe · Cryptonews · Bitcoin Foundation</div>
+    <div class="footer-brand">AI &amp; Crypto Weekly Intelligence &mdash; May 11–17, 2026</div>
+    <div class="footer-src">Sources: CoinDesk · BanklessTimes · CryptoSlate · CoinCentral · CryptoTimes · Yahoo Finance · Fortune · Intellectia · Investing.com · CoinMarketCap</div>
   </div>
 </footer>
-
 </body>
 </html>
