@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crypto Weekly Intelligence — May 11–17, 2026</title>
+<title>Crypto Weekly Intelligence — May 18–24, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -21,27 +21,24 @@
   body{background:var(--navy);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.65;overflow-x:hidden}
   body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:999}
 
-  /* HEADER */
   header{position:sticky;top:0;z-index:100;background:rgba(10,22,40,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:0 2rem}
   .header-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
   .logo{font-family:var(--font-display);font-size:12px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)}
   .date-pill{font-family:var(--font-mono);font-size:11px;color:var(--muted);border:1px solid var(--border2);padding:4px 14px;border-radius:20px;letter-spacing:0.06em}
 
-  /* HERO */
   .hero-wrap{position:relative;overflow:hidden}
-  .glow-a{position:absolute;top:-100px;right:-160px;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(232,64,74,0.07) 0%,transparent 68%);pointer-events:none}
-  .glow-b{position:absolute;bottom:-40px;left:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(45,125,210,0.06) 0%,transparent 68%);pointer-events:none}
+  .glow-a{position:absolute;top:-100px;right:-160px;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(232,64,74,0.08) 0%,transparent 68%);pointer-events:none}
+  .glow-b{position:absolute;bottom:-40px;left:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(13,184,127,0.06) 0%,transparent 68%);pointer-events:none}
   .hero{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:5rem 2rem 3.5rem;animation:fadeUp 0.7s ease both}
   .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:1.4rem}
-  .hero-eyebrow::before{content:'';display:block;width:28px;height:1.5px;background:var(--blue)}
-  .eyebrow-text{font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--blue)}
+  .hero-eyebrow::before{content:'';display:block;width:28px;height:1.5px;background:var(--amber)}
+  .eyebrow-text{font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber)}
   h1.hero-title{font-family:var(--font-display);font-size:clamp(2.6rem,5.5vw,5rem);font-weight:800;line-height:1.02;letter-spacing:-0.02em;margin-bottom:1.4rem}
   h1.hero-title em{color:var(--red);font-style:normal}
-  h1.hero-title .g{color:var(--gold)}
-  h1.hero-title .b{color:var(--blue)}
-  .hero-sub{font-size:15px;color:var(--muted);max-width:540px;line-height:1.78;font-weight:300}
+  h1.hero-title .g{color:var(--teal)}
+  h1.hero-title .gold{color:var(--gold)}
+  .hero-sub{font-size:15px;color:var(--muted);max-width:560px;line-height:1.78;font-weight:300}
 
-  /* STAT STRIP */
   .stat-strip{padding:0 2rem 3.5rem;animation:fadeUp 0.7s 0.1s ease both}
   .stat-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border2);border:1px solid var(--border2);border-radius:14px;overflow:hidden}
   @media(max-width:800px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
@@ -51,55 +48,49 @@
   .stat-label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.45rem}
   .stat-val{font-family:var(--font-display);font-size:1.85rem;font-weight:700;line-height:1;color:var(--white);margin-bottom:0.25rem}
   .stat-note{font-size:12px;font-weight:300}
-  .up{color:var(--teal)}.down{color:var(--red)}.neu{color:var(--muted)}.warn{color:var(--amber)}
+  .up{color:var(--teal)}.down{color:var(--red)}.neu{color:var(--muted)}.warn{color:var(--amber)}.gold{color:var(--gold)}
 
-  /* PAGE */
   .page{max-width:1080px;margin:0 auto;padding:0 2rem}
   .section{padding-bottom:4rem;animation:fadeUp 0.6s 0.15s ease both}
   .sec-header{display:flex;align-items:center;gap:14px;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--border2)}
   .sec-tag{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;padding:4px 10px;border-radius:20px;font-weight:500}
   .tag-crypto{background:rgba(13,184,127,0.12);color:var(--teal);border:1px solid rgba(13,184,127,0.25)}
-  .tag-reg{background:rgba(45,125,210,0.12);color:var(--blue);border:1px solid rgba(45,125,210,0.25)}
-  .tag-tension{background:rgba(232,64,74,0.12);color:var(--red);border:1px solid rgba(232,64,74,0.25)}
+  .tag-macro{background:rgba(232,64,74,0.12);color:var(--red);border:1px solid rgba(232,64,74,0.25)}
   .tag-score{background:rgba(240,165,0,0.12);color:var(--gold);border:1px solid rgba(240,165,0,0.25)}
   .tag-watch{background:rgba(123,108,246,0.12);color:var(--purple);border:1px solid rgba(123,108,246,0.25)}
+  .tag-tension{background:rgba(245,166,35,0.12);color:var(--amber);border:1px solid rgba(245,166,35,0.25)}
   .sec-title{font-family:var(--font-display);font-size:1.45rem;font-weight:700;color:var(--white)}
 
-  /* NEWS LIST */
   .news-list{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border2);border-radius:14px;overflow:hidden}
   .news-item{background:var(--navy2);padding:1.75rem 2rem;display:grid;grid-template-columns:2.8rem 1fr;gap:1.25rem;border-bottom:1px solid var(--border);transition:background 0.16s;opacity:0;animation:fadeUp 0.5s ease both}
   .news-item:last-child{border-bottom:none}
   .news-item:hover{background:var(--navy3)}
-  .news-item:nth-child(1){animation-delay:.08s}.news-item:nth-child(2){animation-delay:.14s}.news-item:nth-child(3){animation-delay:.2s}.news-item:nth-child(4){animation-delay:.26s}.news-item:nth-child(5){animation-delay:.32s}
-  .news-num{font-family:var(--font-display);font-size:2.1rem;font-weight:800;line-height:1;margin-top:3px;color:rgba(45,125,210,0.3)}
+  .news-item:nth-child(1){animation-delay:.08s}.news-item:nth-child(2){animation-delay:.14s}.news-item:nth-child(3){animation-delay:.20s}.news-item:nth-child(4){animation-delay:.26s}.news-item:nth-child(5){animation-delay:.32s}
+  .news-num{font-family:var(--font-display);font-size:2.1rem;font-weight:800;line-height:1;margin-top:3px;color:rgba(232,64,74,0.28)}
   .news-meta{display:flex;align-items:center;gap:8px;margin-bottom:0.6rem;flex-wrap:wrap}
   .meta-pill{font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;border-radius:20px}
-  .p-reg{background:rgba(45,125,210,0.12);color:var(--blue)}
-  .p-macro{background:rgba(245,166,35,0.12);color:var(--amber)}
-  .p-hack{background:rgba(232,64,74,0.12);color:var(--red)}
+  .p-macro{background:rgba(232,64,74,0.12);color:var(--red)}
   .p-etf{background:rgba(13,184,127,0.12);color:var(--teal)}
-  .p-stbl{background:rgba(123,108,246,0.12);color:var(--purple)}
+  .p-geo{background:rgba(240,165,0,0.12);color:var(--gold)}
+  .p-reg{background:rgba(45,125,210,0.12);color:var(--blue)}
+  .p-mkt{background:rgba(123,108,246,0.12);color:var(--purple)}
   .p-date{background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid var(--border2)}
   .news-headline{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:0.65rem;line-height:1.35}
   .news-body{font-size:13.5px;color:var(--muted);line-height:1.78;font-weight:300}
   .news-body strong{color:var(--light);font-weight:500}
 
-  /* DIVIDER */
   .divider{max-width:1080px;margin:0 auto 4rem;padding:0 2rem;height:1px;background:var(--border2)}
 
-  /* TENSION */
-  .tension-card{background:linear-gradient(135deg,rgba(232,64,74,0.05) 0%,rgba(45,125,210,0.05) 100%);border:1px solid rgba(232,64,74,0.18);border-radius:16px;padding:2.5rem;margin-bottom:1.5rem}
+  .tension-card{background:linear-gradient(135deg,rgba(245,166,35,0.06) 0%,rgba(13,184,127,0.05) 100%);border:1px solid rgba(245,166,35,0.2);border-radius:16px;padding:2.5rem;margin-bottom:1.5rem}
   .tension-title{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:1.2rem;line-height:1.25}
   .tension-body{font-size:14.5px;color:var(--light);line-height:1.85;font-weight:300;max-width:860px}
-  .tension-body strong{color:var(--red);font-weight:500}
+  .tension-body strong{color:var(--amber);font-weight:500}
 
-  /* INSIGHT BOX */
-  .insight-box{background:rgba(45,125,210,0.05);border:1px solid rgba(45,125,210,0.18);border-left:3px solid var(--blue);border-radius:0 10px 10px 0;padding:1.5rem 1.75rem}
-  .insight-label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);margin-bottom:0.6rem}
+  .insight-box{background:rgba(13,184,127,0.05);border:1px solid rgba(13,184,127,0.18);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;padding:1.5rem 1.75rem}
+  .insight-label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:0.6rem}
   .insight-text{font-size:14px;color:var(--light);line-height:1.82;font-weight:300}
-  .insight-text strong{color:var(--blue);font-weight:500}
+  .insight-text strong{color:var(--teal);font-weight:500}
 
-  /* WIN/LOSE */
   .wl-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   @media(max-width:600px){.wl-grid{grid-template-columns:1fr}}
   .wl-card{background:var(--navy2);border-radius:14px;overflow:hidden;border:1px solid var(--border2)}
@@ -118,7 +109,6 @@
   .wl-name{font-size:13.5px;font-weight:500;color:var(--white);margin-bottom:2px}
   .wl-reason{font-size:12.5px;color:var(--muted);font-weight:300;line-height:1.5}
 
-  /* WATCHLIST */
   .watch-list{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border2);border-radius:14px;overflow:hidden}
   .watch-item{background:var(--navy2);padding:1.4rem 1.75rem;display:grid;grid-template-columns:68px 1fr;gap:1.25rem;align-items:start;border-bottom:1px solid var(--border);transition:background 0.16s}
   .watch-item:last-child{border-bottom:none}
@@ -132,13 +122,11 @@
   .w-body{font-size:13.5px;color:var(--muted);line-height:1.72;font-weight:300}
   .w-body strong{color:var(--light);font-weight:500}
 
-  /* FOOTER */
   footer{border-top:1px solid var(--border2);padding:2.5rem 2rem;margin-top:2rem}
   .footer-inner{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
   .footer-brand{font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:0.07em}
   .footer-src{font-family:var(--font-mono);font-size:10px;color:rgba(143,160,184,0.55);letter-spacing:0.04em;line-height:1.6;text-align:right;max-width:580px}
   @media(max-width:600px){.footer-src{text-align:left;max-width:100%}.footer-inner{flex-direction:column;align-items:flex-start}}
-
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
   @media(max-width:680px){.news-item{grid-template-columns:1.8rem 1fr;gap:.75rem;padding:1.25rem}.news-num{font-size:1.4rem}.hero{padding:3rem 0 2.5rem}.tension-card{padding:1.5rem}}
 </style>
@@ -148,7 +136,7 @@
 <header>
   <div class="header-inner">
     <div class="logo">AI &amp; Crypto Weekly</div>
-    <div class="date-pill">May 11–17, 2026</div>
+    <div class="date-pill">May 18–24, 2026</div>
   </div>
 </header>
 
@@ -158,41 +146,41 @@
   <div class="hero page">
     <div class="hero-eyebrow"><span class="eyebrow-text">Crypto weekly intelligence</span></div>
     <h1 class="hero-title">
-      The week the<br>
-      <em>rally stalled</em>,<br>
-      the <span class="b">CLARITY Act</span><br>
-      <span class="g">advanced</span>.
+      BTC hit <em>$74,300</em>.<br>
+      Then Iran blinked.<br>
+      <span class="g">$75B recovered</span><br>
+      in one afternoon.
     </h1>
-    <p class="hero-sub">Bitcoin hit $82K on Monday then retreated below $79K by Friday. ETFs bled $1B in outflows — snapping a six-week streak — as 30-year Treasury yields hit 5% for the first time since 2007 and inflation data refused to cooperate. Meanwhile, the CLARITY Act cleared committee 15–9 and Kevin Warsh was confirmed as Fed Chair.</p>
+    <p class="hero-sub">The worst two-week ETF outflow streak since January ($2.26B out). A historic Moody's US credit downgrade. Bitcoin's lowest price since April. Then Trump announced a largely-negotiated Iran peace deal on Saturday and crypto recovered $75B in market cap within hours.</p>
   </div>
 </div>
 
 <div class="stat-strip">
   <div class="stat-grid">
     <div class="stat-cell">
-      <div class="stat-label">BTC (May 17)</div>
-      <div class="stat-val">$78,225</div>
-      <div class="stat-note down">–4.3% on the week</div>
+      <div class="stat-label">BTC low (May 23)</div>
+      <div class="stat-val">$74,192</div>
+      <div class="stat-note down">Lowest since April 20</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">ETF week outflows</div>
-      <div class="stat-val">–$1.0B</div>
-      <div class="stat-note down">6-week inflow streak broken</div>
+      <div class="stat-label">BTC recovery (May 23)</div>
+      <div class="stat-val">$77,000+</div>
+      <div class="stat-note up">Iran deal bounce</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">30-yr Treasury yield</div>
-      <div class="stat-val">5.0%</div>
-      <div class="stat-note down">Highest since 2007</div>
+      <div class="stat-label">2-week ETF outflows</div>
+      <div class="stat-val">–$2.26B</div>
+      <div class="stat-note down">Worst since Jan 2026</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">CLARITY Act</div>
-      <div class="stat-val">15–9</div>
-      <div class="stat-note warn">Senate committee approved</div>
+      <div class="stat-label">Moody's US rating</div>
+      <div class="stat-val">Aa1</div>
+      <div class="stat-note down">First downgrade since 1917</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">Warsh confirmed</div>
-      <div class="stat-val">Fed Chair</div>
-      <div class="stat-note warn">First statements pending</div>
+      <div class="stat-label">Iran peace odds</div>
+      <div class="stat-val">62%</div>
+      <div class="stat-note warn">Polymarket May 31 contract</div>
     </div>
   </div>
 </div>
@@ -210,12 +198,12 @@
       <div class="news-num">01</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-reg">CLARITY Act</span>
-          <span class="meta-pill p-date">May 14</span>
+          <span class="meta-pill p-macro">Macro shock</span>
+          <span class="meta-pill p-date">May 16–18</span>
         </div>
-        <div class="news-headline">CLARITY Act clears Senate Banking Committee 15–9 — two Democrats cross the aisle</div>
+        <div class="news-headline">Moody's strips the US of its last Aaa rating — BTC and ETH face $563M in liquidations on Monday open</div>
         <div class="news-body">
-          After months of negotiation, the Digital Asset Market Clarity Act passed out of the Senate Banking Committee in a <strong>15–9 bipartisan vote on May 14</strong> — a historic first for US crypto legislation. Two Democrats voted in favor, making the committee result more durable than the party-line 13–11 that advanced Warsh. Full CLARITY Act text was released at midnight May 12 by Chairman Tim Scott: <strong>309 pages covering token classification, trading platform oversight, stablecoin rules, DeFi protocol accountability, and Treasury-CFTC co-rulemaking authority.</strong> Key compromises: fan tokens reclassified as digital collectibles, DeFi developers receive legal protections, and stablecoin yield is banned if "functionally equivalent" to bank deposits (but activity-based rewards are permitted). Senator Elizabeth Warren led opposition, filing <strong>40+ of the 100+ amendments</strong> expected before the Senate floor vote. The ethics provision — limiting government officials from profiting on crypto — remains unresolved. The CLARITY Act now heads to the full Senate. If the 60-vote threshold holds, it reaches Trump's desk this summer.
+          Moody's delivered a historic blow on May 16, downgrading the US long-term credit rating from <strong>Aaa to Aa1 — the first such downgrade in the agency's 109-year history of rating US debt</strong>, following S&P in 2011 and Fitch in 2023. The rationale: US federal debt projected to reach <strong>134% of GDP by 2035</strong>, driven by increased spending, reduced tax revenues, and escalating debt servicing costs. Bitcoin opened May 18 at $77,414 — its <strong>lowest opening since early May</strong> — and by Monday morning had slid to $76,803. The combination of Moody's downgrade and persistent inflation fears triggered <strong>$563M in crypto liquidations on May 18 alone</strong>, with Bitcoin and Ether experiencing the heaviest losses. The 30-year Treasury yield held above 5% (2007 high); the 2-year broke above 4.05% in a technical breakout pattern. The paradox: a US credit downgrade is fundamentally bullish for Bitcoin's "digital gold" narrative long-term but created immediate risk-off selling pressure in the short term because BTC correlates 84% with the S&P 500.
         </div>
       </div>
     </div>
@@ -224,12 +212,12 @@
       <div class="news-num">02</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-macro">Macro</span>
-          <span class="meta-pill p-date">May 13–15</span>
+          <span class="meta-pill p-etf">ETF flows</span>
+          <span class="meta-pill p-date">May 18–23</span>
         </div>
-        <div class="news-headline">Treasury yields hit multi-year highs as inflation data stalls — Bitcoin retreats from $82K to $78K</div>
+        <div class="news-headline">Bitcoin ETFs bleed $1.26B this week — $2.26B in two weeks, worst outflow streak since January</div>
         <div class="news-body">
-          The week's defining market dynamic: <strong>the 2-year Treasury yield hit a 12-month high above 4.05%</strong>, the 10-year broke above 4.55%, and the <strong>30-year sold at a 5% yield for the first time since 2007</strong>. The trigger was hotter-than-expected inflation data, combined with markets repricing the Fed path under incoming Chair Warsh. The move created a classic risk-off cascade: Bitcoin opened Monday at <strong>$82,164 — the strongest opening since January 31</strong> — then retreated steadily throughout the week to close near $78,225 by Friday. ETF investors treated rising yields as a sell signal: <strong>spot Bitcoin ETFs shed over $1 billion in net outflows across the week</strong>, ending a six-week inflow streak as BlackRock, Fidelity, and Grayscale all recorded significant redemptions. The inverse head-and-shoulders pattern in 2-year yields signals further upside pressure ahead. BTC now absorbs ETF buying at 10:1 demand-to-supply ratio (4,500–5,000 BTC/day vs 450 mined), but that structural support weakened meaningfully this week.
+          US spot Bitcoin ETFs recorded <strong>$1.26B in net outflows this week</strong> — the largest single-week withdrawal since late January — following the prior week's $1B outflow. The two-week total of <strong>$2.26B represents the most severe outflow stretch since the February 2026 bear market trough</strong>. BlackRock's IBIT shed over $2.1B in the past five weeks; Fidelity's FBTC lost more than $954M. <strong>Six consecutive sessions of negative flows</strong> marked the longest such streak of 2026. Aggregate cumulative volume delta on Bitcoin's spot order books ran negative for <strong>nine consecutive sessions through May 19</strong> — the longest sustained net-selling stretch of the year. Despite the carnage, ETF fundamentals remain intact: total net assets across all 12 funds sit at <strong>$98.9B with $57.1B in cumulative net inflows since launch</strong>. IBIT alone holds 4% of Bitcoin's entire circulating supply. Critically, <strong>only Morgan Stanley's MSBT showed modest inflows</strong> throughout the outflow storm — its low-fee structure (0.14%) proving its defensiveness.
         </div>
       </div>
     </div>
@@ -238,12 +226,12 @@
       <div class="news-num">03</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-macro">Fed</span>
-          <span class="meta-pill p-date">May 14</span>
+          <span class="meta-pill p-geo">Geopolitics</span>
+          <span class="meta-pill p-date">May 23</span>
         </div>
-        <div class="news-headline">Kevin Warsh confirmed as Fed Chair — crypto's most literate central banker takes the helm May 15</div>
+        <div class="news-headline">Bitcoin hits $74,192 intraday low, then Trump announces Iran peace deal — $75B recovered in hours</div>
         <div class="news-body">
-          The US Senate confirmed Kevin Warsh as Fed Chair on May 14 after the Banking Committee's 13–11 party-line vote on April 29. <strong>Senator Fetterman crossed the aisle</strong> to provide bipartisan cover on the floor vote. Warsh officially replaced Powell on May 15. His profile is unprecedented for a sitting Fed Chair: called Bitcoin <strong>"new gold for people under 40,"</strong> described digital assets as "already part of the fabric of our financial services industry," and has personal investment history including stakes in Bitwise, Electric Capital, Polychain Capital, and Polymarket (all of which he must divest). His first FOMC meeting is June 16–17. Trump has publicly stated he would be "disappointed" if Warsh doesn't cut in June. But Warsh's own record is hawkish: he called the 2022 inflation surge the Fed's "biggest policy mistake in 40–50 years." The market's immediate read: higher yields, not rate-cut euphoria. J.P. Morgan maintains Warsh will push for cuts <em>faster</em> than Powell — but the data must cooperate first. Historical pattern: BTC has corrected for 2–3 months after each Fed Chair transition before rallying.
+          The week's most dramatic moment came Saturday May 23. <strong>BTC fell to a weekly low of $74,192</strong> — its lowest level since April 20 — as rising Treasury yields, ETF outflows, and geopolitical anxiety combined. Then at 4:30 p.m. ET, Trump posted to Truth Social: <strong>"An Agreement has been largely negotiated, subject to finalization between the United States of America, the Islamic Republic of Iran, and the various other Countries."</strong> Part of the deal: the Strait of Hormuz will be reopened. BTC spiked from $74,192 to <strong>$77,303 on Bitstamp within the hour</strong>, triggering <strong>$180M in short liquidations</strong>. Total crypto market cap recovered <strong>approximately $75B in a single afternoon</strong>. Polymarket's Iran peace market hit <strong>$154M in total volume</strong>, with the December 31, 2026 contract priced at 91% odds of resolution and the May 31 contract at 62%. Trump described the decision as "50/50" earlier in the day — triggering emergency calls with Vance, Hegseth, and Gen. Caine before the announcement.
         </div>
       </div>
     </div>
@@ -252,12 +240,12 @@
       <div class="news-num">04</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-hack">Security</span>
-          <span class="meta-pill p-date">May 16</span>
+          <span class="meta-pill p-mkt">Markets</span>
+          <span class="meta-pill p-date">May 19–21</span>
         </div>
-        <div class="news-headline">THORChain exploited for $10.7M across four chains — RUNE drops 12%, protocol halts trading</div>
+        <div class="news-headline">SpaceX S-1 filed for June 12 Nasdaq listing — Bitcoin holdings disclosed, capital competing with crypto</div>
         <div class="news-body">
-          ZachXBT flagged a <strong>$10.7M exploit on THORChain spanning four separate chains</strong> on May 16. The cross-chain liquidity protocol responded by halting all trading and posting a chain halt. RUNE dropped <strong>12% within hours</strong> of the announcement. This is THORChain's second significant security incident in 12 months. Separately, Binance Research released its 2026 illicit finance report: <strong>$75 billion in illicit funds sat on-chain in 2025, up 28% year-on-year</strong> — yet still under 1% of total crypto volume. The report found stablecoins now drive 84% of illicit transactions, while Bitcoin's share has fallen to just 7%. On the hardware side, Ledger and Trezor jointly announced support for Ethereum's new Clear Signing standard — a direct response to the blind-signing scam epidemic. The week also saw Bitwise list <strong>BHYP on the NYSE</strong>, the first US ETF offering direct exposure to Hyperliquid's HYPE token with built-in staking yield (0.67% fee, custodied by Anchorage Digital).
+          SpaceX filed its S-1 registration with a <strong>June 12 Nasdaq listing targeted at the ticker "S"</strong>, valuing the company between <strong>$1.75T and $2T</strong>. Two direct impacts on crypto: First, SpaceX disclosed <strong>Bitcoin holdings</strong> on its balance sheet in the S-1, adding to the corporate treasury narrative. Second, analysts and CoinDesk cited the SpaceX IPO as a competing capital destination — <strong>speculative capital that might otherwise have flowed into BTC is being redirected toward blockchain-based pre-market SpaceX derivatives</strong>, with millions in trading volume recorded on-chain. Bitcoin formed a <strong>double-bottom pattern on its weekly chart around $64,000–$66,000</strong> from February–April, with the $80,000 level as the neckline resistance — a technically bullish formation that remains unresolved. Nine consecutive sessions of negative spot order book delta suggest the double-bottom retest may not be over.
         </div>
       </div>
     </div>
@@ -266,12 +254,12 @@
       <div class="news-num">05</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-stbl">Stablecoins</span>
-          <span class="meta-pill p-date">May 17</span>
+          <span class="meta-pill p-reg">Regulation</span>
+          <span class="meta-pill p-date">May 20–22</span>
         </div>
-        <div class="news-headline">A major bank moves stablecoin reserves into Wall Street's repo market — 67M Americans now hold crypto</div>
+        <div class="news-headline">SEC greenlights Nasdaq Bitcoin options, Robinhood COO exits, Galaxy 50/50 on CLARITY Act odds</div>
         <div class="news-body">
-          CryptoSlate reported on May 17 that <strong>a major unnamed US bank moved its stablecoin reserve strategy into the repo market</strong> — Wall Street's $10T-a-day short-term financing machine — using T-bills as the collateral layer. This is stablecoin infrastructure embedding itself directly into traditional financial plumbing, enabled by CLARITY Act momentum. Separately, the National Cryptocurrency Association's 2026 State of Crypto Holders Report found <strong>67 million Americans now own digital assets</strong> — up 12 million in a year, meaning <strong>1 in 4 US adults participates in the crypto economy</strong>. Among 2025–2026 new buyers: 42% are female, 26% are Gen X, and 13% are Boomers. Four in 10 holders now actively use crypto in daily transactions. Strategic Bitcoin Reserve: officials confirmed a "major announcement coming within weeks" — 13F filings on May 15 showed which institutions bought crypto-linked securities in Q1, with multiple new institutional names appearing for the first time.
+          Three regulatory and market structure stories defined the week. First: the SEC <strong>greenlighted Nasdaq-listed Bitcoin options</strong> — pending final CFTC sign-off (routine, under BTC's commodity classification). This expands the institutional derivatives toolkit for BTC exposure in regulated accounts. Second: <strong>Robinhood Crypto COO Tanya Denisova left the firm</strong> amid sharp crypto revenue declines and the platform's effort to reduce dependence on digital asset market cycles — a bellwether for mid-size crypto operator financial health. Third: Galaxy published a research note placing the <strong>CLARITY Act odds at "roughly 50-50, and possibly lower"</strong> for 2026 enactment — noting the brutal Senate calendar (recess in August, midterms in November, roughly 12 working weeks remaining). The bill still needs: Senate Agriculture Committee text merger, floor scheduling, 60-vote filibuster clearance, and Trump signature. The June-to-July window is the last viable path.
         </div>
       </div>
     </div>
@@ -287,24 +275,26 @@
 <section class="section">
   <div class="sec-header">
     <span class="sec-tag tag-tension">Key tension</span>
-    <h2 class="sec-title">The most important week for US crypto policy — and Bitcoin still fell</h2>
+    <h2 class="sec-title">The week macro won — then diplomacy intervened at the last second</h2>
   </div>
 
   <div class="tension-card">
-    <div class="tension-title">The CLARITY Act paradox: best regulatory news in years, worst price week in six</div>
+    <div class="tension-title">Bitcoin's structural bull case vs. the macro pressure cooker</div>
     <div class="tension-body">
-      For months, markets closely watched five catalysts: the CLARITY Act, Warsh's nomination, Iran tensions, inflation data, and ETF flows. This week, three of the five broke in Bitcoin's favor — CLARITY Act advanced, Warsh was confirmed, Iran-US talks didn't collapse. And <strong>BTC still fell 4.3%</strong> from $82K to $78K while ETFs bled $1B.
+      Everything the bears needed happened this week. <strong>Moody's stripped the US of its last perfect credit rating.</strong> ETFs bled $2.26B in two weeks. BTC broke to its lowest price in over a month. Nine consecutive negative spot sessions. SpaceX IPO competing for speculative capital. Treasury yields at 2007 highs. The market looked like it was setting up for a genuine correction toward $65K–$68K.
       <br><br>
-      The macro overrode everything. <strong>Rising Treasury yields — especially the 30-year hitting 5% for the first time since 2007 — are doing more damage than regulatory progress can offset in the short term.</strong> Higher yields make bonds competitive with risk assets. They signal inflation persistence. They reduce the expected probability and timing of Fed cuts. And BTC trades at 84% correlation with the S&P 500 — it cannot escape the macro gravity field, regardless of what happens in Washington.
+      Then Trump announced an Iran deal at 4:30 p.m. on a Saturday and <strong>BTC recovered $3,000 in 90 minutes</strong>. The entire week's price narrative was rewritten in an afternoon.
       <br><br>
-      The honest read: the regulatory thesis is intact and strengthening. The price thesis requires lower yields and/or a macro catalyst that reduces bond attractiveness. <strong>Warsh's June 16–17 FOMC is the next scheduled catalyst.</strong> If he cuts — under political pressure from Trump — rates fall and the dollar weakens. That's the unlock. If he holds or sounds hawkish, the $76,500 support gets tested before anything else.
+      The fundamental tension is this: <strong>Bitcoin's macro headwinds (yields, credit, inflation) are structural and multi-month in nature.</strong> But the Iran deal — if finalized — removes the single largest geopolitical risk premium from oil markets, strengthens risk appetite globally, and removes one of the key arguments for "higher-for-longer" rates. If Hormuz reopens, oil falls, inflation cools, Warsh has cover to cut in June, and BTC's 84% S&P 500 correlation suddenly works in its favor.
+      <br><br>
+      The week ended with everything uncertain and everything potentially about to change simultaneously. The double-bottom technical formation on BTC's weekly chart — with the $80K neckline still intact — argues the lows are in. The macro argues patience. The Iran deal argues the catalyst just arrived.
     </div>
   </div>
 
   <div class="insight-box">
     <div class="insight-label">The signal inside the noise</div>
     <div class="insight-text">
-      Despite $1B in ETF outflows, <strong>Bitcoin ETFs are still absorbing 4,500–5,000 BTC per day against only 450 mined daily — a 10:1 demand-to-supply ratio.</strong> This week's outflows represent profit-taking and yield-chasing, not structural institutional abandonment. The 67M American crypto holders figure and 13F filings showing new institutional entrants confirm the adoption story is still running. The price weakness is a macro side-effect, not a crypto-specific rejection.
+      Despite $2.26B in ETF outflows, <strong>IBIT still holds 4% of Bitcoin's entire circulating supply.</strong> Total ETF net assets remain at $98.9B. Cumulative inflows since launch: $57.1B. The structural institutional position has not been liquidated — it has been paused. The moment yields stabilize or the Iran deal closes the Strait of Hormuz uncertainty, the marginal bid returns to a market where supply is structurally tight. That's not a bear market setup — it's a pause before the next move.
     </div>
   </div>
 </section>
@@ -324,24 +314,24 @@
       <div class="wl-head"><div class="wl-icon">↑</div><div class="wl-htitle">Winners</div></div>
       <div class="wl-items">
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">CLARITY Act / US crypto industry</div>
-          <div class="wl-reason">15–9 bipartisan committee vote is the most significant US crypto legislative advance ever — 309 pages of regulatory clarity now heading to the Senate floor</div>
+          <div class="wl-name">Bitcoin's long-term narrative</div>
+          <div class="wl-reason">Moody's downgrade is bearish short-term but fundamentally confirms why a non-sovereign, fixed-supply asset exists. US debt at 134% GDP by 2035 is BTC's best advertisement.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">DeFi protocols (long term)</div>
-          <div class="wl-reason">CLARITY Act includes legal protections for DeFi developers — the framework they've needed for 4 years to attract institutional capital</div>
+          <div class="wl-name">Iran deal (if finalized)</div>
+          <div class="wl-reason">Polymarket at 62% (May 31 contract). Strait of Hormuz reopening = oil falls, inflation cools, rate-cut path reopens. $75B crypto recovery in 90 minutes shows the market was waiting for this.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">Coinbase, Circle, Stablecoin issuers</div>
-          <div class="wl-reason">Activity-based stablecoin rewards preserved in the CLARITY Act text — the core business model survives intact</div>
+          <div class="wl-name">Morgan Stanley MSBT</div>
+          <div class="wl-reason">Only major Bitcoin ETF to record modest inflows during the two-week $2.26B outflow storm. Low fee (0.14%) is a structural competitive advantage in a yield-sensitive environment.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">Bitwise / Anchorage Digital</div>
-          <div class="wl-reason">BHYP ETF listed on NYSE — first regulated Hyperliquid exposure with staking yield. Product innovation continues regardless of price</div>
+          <div class="wl-name">SEC / Nasdaq Bitcoin options</div>
+          <div class="wl-reason">Greenlit this week pending CFTC sign-off. Expands the institutional derivatives toolkit — creates hedging capacity that makes larger spot positions more manageable for funds.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">Long-term BTC holders</div>
-          <div class="wl-reason">67M Americans now in crypto, 13F filings showing new institutional entrants — the structural accumulation story didn't change this week</div>
+          <div class="wl-name">Polymarket</div>
+          <div class="wl-reason">$154M in Iran peace deal volume this week alone. Real-money prediction markets are becoming the fastest geopolitical pricing mechanism in the world.</div>
         </div></div>
       </div>
     </div>
@@ -349,24 +339,24 @@
       <div class="wl-head"><div class="wl-icon">↓</div><div class="wl-htitle">Losers</div></div>
       <div class="wl-items">
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">BTC ETF inflow streak</div>
-          <div class="wl-reason">$1B in outflows ended six consecutive weeks of net inflows — BlackRock, Fidelity, and Grayscale all hit. Yield-chasing, not structural exit</div>
+          <div class="wl-name">BlackRock IBIT / Fidelity FBTC</div>
+          <div class="wl-reason">IBIT shed $2.1B in five weeks; FBTC lost $954M. Largest ETF products absorbing the bulk of institutional redemptions. The structural bid is paused, not gone.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">THORChain (RUNE)</div>
-          <div class="wl-reason">$10.7M cross-chain exploit across four chains, 12% RUNE price drop, trading halt — second major incident in 12 months damages credibility</div>
+          <div class="wl-name">BTC short sellers (May 23)</div>
+          <div class="wl-reason">$180M in short liquidations in 90 minutes after the Iran announcement. Worst day for BTC shorts in weeks — the price had looked perfect for a continued breakdown.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">Rate-cut bulls</div>
-          <div class="wl-reason">30-year yield at 5% (2007 high), 2-year at 12-month high of 4.05% — the market is repricing rate-cut probability lower, not higher</div>
+          <div class="wl-name">Robinhood Crypto</div>
+          <div class="wl-reason">COO exits amid sharp revenue declines and platform dependency on market cycle volatility. Structural problem: crypto volume is not sticky enough for a public-market business model.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">$80K bulls (short term)</div>
-          <div class="wl-reason">BTC opened at $82K Monday and closed the week at $78K — the 200-DMA at $82,228 remains uncrossed for the third consecutive attempt</div>
+          <div class="wl-name">CLARITY Act 2026 timeline</div>
+          <div class="wl-reason">Galaxy's 50-50 odds reflect the brutal calendar reality. ~12 working Senate weeks remain before midterms. Recess, budget battles, and nominations compete for floor time.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">CLARITY Act timeline (Senate floor)</div>
-          <div class="wl-reason">100+ amendments pending, ethics provision unresolved, 60-vote threshold uncertain — committee passage is necessary but not sufficient</div>
+          <div class="wl-name">US fiscal credibility</div>
+          <div class="wl-reason">Moody's Aaa → Aa1. Federal debt to 134% of GDP by 2035. Third major rating agency downgrade in 15 years. Long-term confidence in dollar-denominated assets structurally weakened.</div>
         </div></div>
       </div>
     </div>
@@ -381,47 +371,47 @@
 <section class="section">
   <div class="sec-header">
     <span class="sec-tag tag-watch">Forward look</span>
-    <h2 class="sec-title">What to watch next week (May 18–24)</h2>
+    <h2 class="sec-title">What to watch next week (May 25–31)</h2>
   </div>
   <div class="watch-list">
 
     <div class="watch-item">
       <div><span class="w-badge b-high">HIGH</span></div>
       <div>
-        <div class="w-title">Warsh's first public statement as Fed Chair</div>
-        <div class="w-body">Warsh took the helm May 15. His first press conference or major speech as Chair is the most market-moving event of next week. <strong>Dovish tone (productivity dividend, rate-cut openness) = dollar weakens, BTC bid returns.</strong> Hawkish tone (inflation discipline first) = yields extend, BTC retests $76,500. Trump has publicly said he expects a June cut — watch whether Warsh signals agreement or pushes back. The June 16–17 FOMC is the next scheduled decision point.</div>
+        <div class="w-title">Iran peace deal finalization — May 26 &amp; May 31 deadlines</div>
+        <div class="w-body">Trump said the deal is "largely negotiated." Polymarket: <strong>56% odds for May 26 deadline, 62% for May 31.</strong> Total $154M in volume. If finalized: Hormuz reopens, oil falls, risk premium evaporates, Warsh has the cover to cut in June, and BTC's 84% S&P 500 correlation works in its favor. A deal could send BTC from $77K back toward $82K+ quickly. If talks collapse: oil spikes, inflation persists, bear case accelerates. This is the single highest-variance catalyst of next week.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-high">HIGH</span></div>
       <div>
-        <div class="w-title">$76,500 BTC support — does it hold?</div>
-        <div class="w-body">BTC closed the week at $78,225, within striking distance of the critical $76,500 Coinbase premium inflection point. <strong>A close below $76,500 with a negative Coinbase premium activates the bear scenario</strong> toward $73K–$75K. Strategy's average buy price ($75,537) sits just below — their buying would be a structural floor. Watch daily IBIT flows for the institutional signal: two consecutive outflow days above $200M = risk escalation; two positive days above $150M = bid has returned.</div>
+        <div class="w-title">UCL Final — May 30 (Budapest): PSG vs Arsenal or Atlético Madrid</div>
+        <div class="w-body">The Champions League Final on <strong>May 30 is the highest single event-driven catalyst for fan tokens before June 11</strong> World Cup kickoff. PSG ($PSG) is confirmed. Arsenal ($AFC) or Atlético Madrid ($ATM) will be the opponent. Winner's fan token spikes 30–60% historically on final night. <strong>CHZ benefits across the board as infrastructure layer.</strong> This is also the 12-day overlap window between UCL and World Cup — peak fan token attention zone. Watch CHZ price action Monday–Wednesday for pre-final accumulation signals.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-high">HIGH</span></div>
       <div>
-        <div class="w-title">UCL Final — May 30 (Budapest) with PSG confirmed</div>
-        <div class="w-body">The UEFA Champions League Final is May 30 — just 13 days away and 12 days before the World Cup kickoff. <strong>PSG ($PSG) is confirmed in the final</strong>. Arsenal ($AFC) or Atlético Madrid ($ATM) will be the opponent. At least one Chiliz fan token club is guaranteed the trophy. PSG winning = PSG fan token spike + CHZ volume surge + World Cup narrative reaches peak intensity. Watch CHZ price action Monday through Wednesday for pre-final accumulation signals.</div>
+        <div class="w-title">Warsh's first major speech &amp; FOMC June preview</div>
+        <div class="w-body">Warsh took office May 15. His June 16–17 FOMC is three weeks away. Any speech or interview between now and then is market-moving. <strong>Trump publicly said he'd be "disappointed" if Warsh doesn't cut in June.</strong> If the Iran deal materializes and oil falls, Warsh has the macro cover. A dovish signal sends BTC toward $82K+. A hawkish hold signal extends the yield pressure and tests $74K–$76K support. Watch Bloomberg/CNBC interview schedules and Hoover Institution events.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-med">MED</span></div>
       <div>
-        <div class="w-title">CLARITY Act Senate floor schedule — 60-vote math</div>
-        <div class="w-body">Committee passage is historic. Floor passage is a different fight. <strong>The bill needs 60 votes to clear the filibuster.</strong> Ethics provision (conflict-of-interest for government officials including Trump) is the sticking point — Democrats won't move without it, White House won't accept language that targets a specific officeholder. Watch for whip counts and whether Senator Gillibrand's floor timeline ("this summer") gets any firmer. Any floor vote date announcement moves DeFi tokens, XRP, ETH, and Coinbase stock.</div>
+        <div class="w-title">IBIT flow reversal — does institutional bid return?</div>
+        <div class="w-body">Six consecutive outflow sessions. The Iran deal bounce on May 23 is the potential catalyst for reversal. <strong>Two consecutive IBIT inflow days above $150M = institutional bid is back.</strong> The structural case (10:1 demand-to-supply ratio, 4% of BTC supply held by ETFs) hasn't changed — only the near-term allocation decision has. If yields stabilize and the Iran deal closes, the allocation logic that drove April's $1.97B inflow month reasserts. Watch Tuesday and Wednesday data specifically as the first full post-Iran-deal trading days.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-watch">WATCH</span></div>
       <div>
-        <div class="w-title">Strategic Bitcoin Reserve update — "within weeks"</div>
-        <div class="w-body">White House officials said a major SBR announcement is coming "within weeks" as of mid-May. Any confirmed government BTC purchase or reserve framework announcement would be the largest single bullish catalyst possible for Bitcoin. <strong>13F filings on May 15 already showed new institutional entrants</strong>. If the SBR announcement lands during a week when yields are also stabilizing, the price impact could be significant and fast. Watch Trump social media and Treasury Department statements specifically.</div>
+        <div class="w-title">SpaceX S-1 pre-IPO noise &amp; competitive capital dynamics</div>
+        <div class="w-body">SpaceX files for June 12 Nasdaq listing at $1.75T–$2T valuation. <strong>The IPO is directly competing with crypto for speculative capital.</strong> Pre-market blockchain derivatives are already drawing millions. After the June 12 listing, that capital either locks up (in IPO shares) or flows back into the market. If SpaceX trades down on listing day, crypto may benefit from capital returning. If it trades well, the competition continues. Also watch: SpaceX disclosed BTC on its balance sheet — the corporate treasury narrative keeps building.  </div>
       </div>
     </div>
 
@@ -431,9 +421,11 @@
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">AI &amp; Crypto Weekly Intelligence &mdash; May 11–17, 2026</div>
-    <div class="footer-src">Sources: CoinDesk · BanklessTimes · CryptoSlate · CoinCentral · CryptoTimes · Yahoo Finance · Fortune · Intellectia · Investing.com · CoinMarketCap</div>
+    <div class="footer-brand">AI &amp; Crypto Weekly Intelligence &mdash; May 18–24, 2026</div>
+    <div class="footer-src">Sources: CoinDesk · BanklessTimes · The Block · Yahoo Finance · Intellectia · CryptoSlate · Bitcoin.com News · BeInCrypto · CoinOtag · CryptoTicker · Polymarket · Crypto.com</div>
   </div>
 </footer>
+</body>
+</html>
 </body>
 </html>
