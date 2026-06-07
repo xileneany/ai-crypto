@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crypto Weekly Intelligence — May 25–31, 2026</title>
+<title>Crypto Weekly Intelligence — June 1–7, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
   :root{
     --navy:#0A1628;--navy2:#111f35;--navy3:#1a2e48;
     --gold:#F0A500;--teal:#0DB87F;--red:#E8404A;
-    --amber:#F5A623;--blue:#2D7DD2;--green:#1CB86A;--purple:#7B6CF6;--chz:#C0392B;
+    --amber:#F5A623;--blue:#2D7DD2;--green:#1CB86A;--purple:#7B6CF6;
     --white:#FFFFFF;--muted:#8FA0B8;--light:#C8D6E8;
     --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);
     --font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'DM Mono',monospace;
@@ -20,16 +20,13 @@
   html{scroll-behavior:smooth}
   body{background:var(--navy);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.65;overflow-x:hidden}
   body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:999}
-
   header{position:sticky;top:0;z-index:100;background:rgba(10,22,40,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:0 2rem}
   .header-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
   .logo{font-family:var(--font-display);font-size:12px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)}
   .date-pill{font-family:var(--font-mono);font-size:11px;color:var(--muted);border:1px solid var(--border2);padding:4px 14px;border-radius:20px;letter-spacing:0.06em}
-
   .hero-wrap{position:relative;overflow:hidden}
   .glow-a{position:absolute;top:-100px;right:-160px;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(232,64,74,0.09) 0%,transparent 68%);pointer-events:none}
-  .glow-b{position:absolute;bottom:-40px;left:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(13,184,127,0.06) 0%,transparent 68%);pointer-events:none}
-  .glow-c{position:absolute;top:40%;left:50%;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(192,57,43,0.05) 0%,transparent 68%);pointer-events:none;transform:translateX(-50%)}
+  .glow-b{position:absolute;bottom:-40px;left:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(13,184,127,0.05) 0%,transparent 68%);pointer-events:none}
   .hero{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:5rem 2rem 3.5rem;animation:fadeUp 0.7s ease both}
   .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:1.4rem}
   .hero-eyebrow::before{content:'';display:block;width:28px;height:1.5px;background:var(--red)}
@@ -38,100 +35,59 @@
   h1.hero-title em{color:var(--red);font-style:normal}
   h1.hero-title .g{color:var(--teal)}
   h1.hero-title .gold{color:var(--gold)}
-  h1.hero-title .chz{color:#E05252}
   .hero-sub{font-size:15px;color:var(--muted);max-width:560px;line-height:1.78;font-weight:300}
-
   .stat-strip{padding:0 2rem 3.5rem;animation:fadeUp 0.7s 0.1s ease both}
-  .stat-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border2);border:1px solid var(--border2);border-radius:14px;overflow:hidden}
-  @media(max-width:800px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:480px){.stat-grid{grid-template-columns:1fr}}
-  .stat-cell{background:var(--navy2);padding:1.4rem 1.6rem;transition:background 0.2s}
+  .stat-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--border2);border:1px solid var(--border2);border-radius:14px;overflow:hidden}
+  @media(max-width:900px){.stat-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:500px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+  .stat-cell{background:var(--navy2);padding:1.2rem 1.3rem;transition:background 0.2s}
   .stat-cell:hover{background:var(--navy3)}
   .stat-label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.45rem}
-  .stat-val{font-family:var(--font-display);font-size:1.85rem;font-weight:700;line-height:1;color:var(--white);margin-bottom:0.25rem}
-  .stat-note{font-size:12px;font-weight:300}
-  .up{color:var(--teal)}.down{color:var(--red)}.neu{color:var(--muted)}.warn{color:var(--amber)}.gold{color:var(--gold)}.chzc{color:#E05252}
-
+  .stat-val{font-family:var(--font-display);font-size:1.65rem;font-weight:700;line-height:1;color:var(--white);margin-bottom:0.25rem}
+  .stat-note{font-size:11px;font-weight:300}
+  .up{color:var(--teal)}.down{color:var(--red)}.neu{color:var(--muted)}.warn{color:var(--amber)}.gold{color:var(--gold)}
   .page{max-width:1080px;margin:0 auto;padding:0 2rem}
   .section{padding-bottom:4rem;animation:fadeUp 0.6s 0.15s ease both}
   .sec-header{display:flex;align-items:center;gap:14px;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--border2)}
   .sec-tag{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;padding:4px 10px;border-radius:20px;font-weight:500}
   .tag-crypto{background:rgba(13,184,127,0.12);color:var(--teal);border:1px solid rgba(13,184,127,0.25)}
-  .tag-macro{background:rgba(232,64,74,0.12);color:var(--red);border:1px solid rgba(232,64,74,0.25)}
+  .tag-tension{background:rgba(232,64,74,0.12);color:var(--red);border:1px solid rgba(232,64,74,0.25)}
   .tag-score{background:rgba(240,165,0,0.12);color:var(--gold);border:1px solid rgba(240,165,0,0.25)}
   .tag-watch{background:rgba(123,108,246,0.12);color:var(--purple);border:1px solid rgba(123,108,246,0.25)}
-  .tag-tension{background:rgba(245,166,35,0.12);color:var(--amber);border:1px solid rgba(245,166,35,0.25)}
-  .tag-fantoken{background:rgba(192,57,43,0.12);color:#E05252;border:1px solid rgba(192,57,43,0.3)}
   .sec-title{font-family:var(--font-display);font-size:1.45rem;font-weight:700;color:var(--white)}
-
   .news-list{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border2);border-radius:14px;overflow:hidden}
   .news-item{background:var(--navy2);padding:1.75rem 2rem;display:grid;grid-template-columns:2.8rem 1fr;gap:1.25rem;border-bottom:1px solid var(--border);transition:background 0.16s;opacity:0;animation:fadeUp 0.5s ease both}
   .news-item:last-child{border-bottom:none}
   .news-item:hover{background:var(--navy3)}
-  .news-item:nth-child(1){animation-delay:.08s}.news-item:nth-child(2){animation-delay:.14s}.news-item:nth-child(3){animation-delay:.20s}.news-item:nth-child(4){animation-delay:.26s}.news-item:nth-child(5){animation-delay:.32s}
+  .news-item:nth-child(1){animation-delay:.08s}.news-item:nth-child(2){animation-delay:.13s}.news-item:nth-child(3){animation-delay:.18s}.news-item:nth-child(4){animation-delay:.23s}.news-item:nth-child(5){animation-delay:.28s}
   .news-num{font-family:var(--font-display);font-size:2.1rem;font-weight:800;line-height:1;margin-top:3px;color:rgba(232,64,74,0.28)}
   .news-meta{display:flex;align-items:center;gap:8px;margin-bottom:0.6rem;flex-wrap:wrap}
   .meta-pill{font-family:var(--font-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;border-radius:20px}
+  .p-btc{background:rgba(240,165,0,0.13);color:var(--gold)}
+  .p-eth{background:rgba(123,108,246,0.13);color:var(--purple)}
+  .p-xrp{background:rgba(45,125,210,0.13);color:var(--blue)}
   .p-macro{background:rgba(232,64,74,0.12);color:var(--red)}
-  .p-etf{background:rgba(13,184,127,0.12);color:var(--teal)}
-  .p-geo{background:rgba(240,165,0,0.12);color:var(--gold)}
-  .p-reg{background:rgba(45,125,210,0.12);color:var(--blue)}
-  .p-mkt{background:rgba(123,108,246,0.12);color:var(--purple)}
-  .p-onchain{background:rgba(13,184,127,0.09);color:#5ECFAB}
-  .p-fantoken{background:rgba(192,57,43,0.12);color:#E05252}
+  .p-sport{background:rgba(13,184,127,0.12);color:var(--teal)}
+  .p-reg{background:rgba(245,166,35,0.12);color:var(--amber)}
   .p-date{background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid var(--border2)}
   .news-headline{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:0.65rem;line-height:1.35}
   .news-body{font-size:13.5px;color:var(--muted);line-height:1.78;font-weight:300}
   .news-body strong{color:var(--light);font-weight:500}
-
+  /* Price grid */
+  .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;border:1px solid var(--border2);border-radius:12px;overflow:hidden;margin-bottom:2rem;background:var(--border2)}
+  .price-card{background:var(--navy2);padding:1.2rem 1.4rem}
+  .price-sym{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.35rem}
+  .price-val{font-family:var(--font-display);font-size:1.55rem;font-weight:700;color:var(--white);margin-bottom:0.2rem}
+  .price-chg{font-size:12px;font-weight:300}
   .divider{max-width:1080px;margin:0 auto 4rem;padding:0 2rem;height:1px;background:var(--border2)}
-
-  .tension-card{background:linear-gradient(135deg,rgba(232,64,74,0.07) 0%,rgba(13,184,127,0.05) 100%);border:1px solid rgba(232,64,74,0.2);border-radius:16px;padding:2.5rem;margin-bottom:1.5rem}
+  .tension-card{background:linear-gradient(135deg,rgba(232,64,74,0.06) 0%,rgba(240,165,0,0.04) 100%);border:1px solid rgba(232,64,74,0.2);border-radius:16px;padding:2.5rem;margin-bottom:1.5rem}
   .tension-title{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:1.2rem;line-height:1.25}
   .tension-body{font-size:14.5px;color:var(--light);line-height:1.85;font-weight:300;max-width:860px}
-  .tension-body strong{color:var(--amber);font-weight:500}
-
+  .tension-body strong{color:var(--red);font-weight:500}
   .insight-box{background:rgba(13,184,127,0.05);border:1px solid rgba(13,184,127,0.18);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;padding:1.5rem 1.75rem}
   .insight-label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:0.6rem}
   .insight-text{font-size:14px;color:var(--light);line-height:1.82;font-weight:300}
   .insight-text strong{color:var(--teal);font-weight:500}
-
-  .fan-insight{background:rgba(192,57,43,0.06);border:1px solid rgba(192,57,43,0.22);border-left:3px solid #E05252;border-radius:0 10px 10px 0;padding:1.5rem 1.75rem;margin-top:1.5rem}
-  .fan-insight .insight-label{color:#E05252}
-  .fan-insight .insight-text strong{color:#E05252}
-
-  /* Fan token grid */
-  .token-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border2);border:1px solid var(--border2);border-radius:14px;overflow:hidden;margin-bottom:1.5rem}
-  @media(max-width:640px){.token-grid{grid-template-columns:repeat(2,1fr)}}
-  .token-cell{background:var(--navy2);padding:1.3rem 1.5rem;transition:background 0.2s}
-  .token-cell:hover{background:var(--navy3)}
-  .token-cell.featured{background:rgba(192,57,43,0.07)}
-  .token-ticker{font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;font-weight:500;color:#E05252;margin-bottom:3px}
-  .token-name{font-size:12px;color:var(--muted);margin-bottom:10px;font-weight:300}
-  .token-price{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:4px}
-  .token-badge{display:inline-block;font-family:var(--font-mono);font-size:9px;padding:2px 8px;border-radius:20px;letter-spacing:0.08em;text-transform:uppercase}
-  .tb-up{background:rgba(13,184,127,0.12);color:var(--teal);border:1px solid rgba(13,184,127,0.25)}
-  .tb-warn{background:rgba(245,166,35,0.12);color:var(--amber);border:1px solid rgba(245,166,35,0.25)}
-  .tb-exit{background:rgba(232,64,74,0.14);color:var(--red);border:1px solid rgba(232,64,74,0.28)}
-
-  /* CHZ chart */
-  .chart-box{background:var(--navy2);border:1px solid var(--border2);border-radius:14px;padding:1.75rem;margin-bottom:1.5rem}
-  .chart-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem}
-  .chart-label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
-  .chart-legend{display:flex;gap:16px;flex-wrap:wrap}
-  .legend-item{display:flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10px;color:var(--muted)}
-  .legend-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
-
-  /* Probability bars */
-  .prob-container{background:var(--navy2);border:1px solid var(--border2);border-radius:14px;padding:1.75rem;margin-bottom:1.5rem}
-  .prob-label-top{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
-  .prob-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-  .prob-name{font-size:13px;min-width:210px;color:var(--light);font-weight:300}
-  .prob-track{flex:1;height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden}
-  .prob-fill{height:100%;border-radius:3px}
-  .prob-pct{font-family:var(--font-mono);font-size:11px;min-width:32px;text-align:right}
-
-  /* W/L */
   .wl-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   @media(max-width:600px){.wl-grid{grid-template-columns:1fr}}
   .wl-card{background:var(--navy2);border-radius:14px;overflow:hidden;border:1px solid var(--border2)}
@@ -149,8 +105,6 @@
   .win .wl-dot{background:var(--teal)}.lose .wl-dot{background:var(--red)}
   .wl-name{font-size:13.5px;font-weight:500;color:var(--white);margin-bottom:2px}
   .wl-reason{font-size:12.5px;color:var(--muted);font-weight:300;line-height:1.5}
-
-  /* Watchlist */
   .watch-list{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border2);border-radius:14px;overflow:hidden}
   .watch-item{background:var(--navy2);padding:1.4rem 1.75rem;display:grid;grid-template-columns:68px 1fr;gap:1.25rem;align-items:start;border-bottom:1px solid var(--border);transition:background 0.16s}
   .watch-item:last-child{border-bottom:none}
@@ -160,25 +114,14 @@
   .b-high{background:rgba(232,64,74,0.14);color:var(--red);border:1px solid rgba(232,64,74,0.28)}
   .b-med{background:rgba(245,166,35,0.12);color:var(--amber);border:1px solid rgba(245,166,35,0.28)}
   .b-watch{background:rgba(255,255,255,0.04);color:var(--muted);border:1px solid var(--border2)}
-  .b-exit{background:rgba(192,57,43,0.16);color:#E05252;border:1px solid rgba(192,57,43,0.32)}
   .w-title{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:0.35rem}
   .w-body{font-size:13.5px;color:var(--muted);line-height:1.72;font-weight:300}
   .w-body strong{color:var(--light);font-weight:500}
-
-  /* Key levels table */
-  .levels-table{width:100%;border:1px solid var(--border2);border-radius:14px;overflow:hidden;border-collapse:collapse}
-  .levels-table th{background:rgba(255,255,255,0.04);font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);padding:0.9rem 1.25rem;text-align:left;border-bottom:1px solid var(--border2)}
-  .levels-table td{padding:0.9rem 1.25rem;font-size:13.5px;color:var(--light);border-bottom:1px solid var(--border);vertical-align:top;font-weight:300}
-  .levels-table tr:last-child td{border-bottom:none}
-  .levels-table tr:hover td{background:rgba(255,255,255,0.02)}
-  .levels-table .lv-price{font-family:var(--font-display);font-weight:700;color:var(--white);font-size:15px}
-
   footer{border-top:1px solid var(--border2);padding:2.5rem 2rem;margin-top:2rem}
   .footer-inner{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
   .footer-brand{font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:0.07em}
   .footer-src{font-family:var(--font-mono);font-size:10px;color:rgba(143,160,184,0.55);letter-spacing:0.04em;line-height:1.6;text-align:right;max-width:580px}
   @media(max-width:600px){.footer-src{text-align:left;max-width:100%}.footer-inner{flex-direction:column;align-items:flex-start}}
-
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
   @media(max-width:680px){.news-item{grid-template-columns:1.8rem 1fr;gap:.75rem;padding:1.25rem}.news-num{font-size:1.4rem}.hero{padding:3rem 0 2.5rem}.tension-card{padding:1.5rem}}
 </style>
@@ -188,64 +131,108 @@
 <header>
   <div class="header-inner">
     <div class="logo">AI &amp; Crypto Weekly</div>
-    <div class="date-pill">May 25–31, 2026</div>
+    <div class="date-pill">June 1–7, 2026</div>
   </div>
 </header>
 
-<!-- HERO -->
 <div class="hero-wrap">
   <div class="glow-a"></div>
   <div class="glow-b"></div>
-  <div class="glow-c"></div>
   <div class="hero page">
-    <div class="hero-eyebrow"><span class="eyebrow-text">Crypto weekly intelligence · Report #3</span></div>
+    <div class="hero-eyebrow"><span class="eyebrow-text">Crypto weekly intelligence</span></div>
     <h1 class="hero-title">
-      BTC dropped<br>
-      <em>$3,100</em> in a week.<br>
-      <span class="chz">CHZ gained</span><br>
-      <span class="g">+46% in a month.</span>
+      BTC hit <em>$59,100</em>.<br>
+      $8.7B liquidated<br>
+      in <em>five days</em>.<br>
+      <span class="g">Then the streak ended.</span>
     </h1>
-    <p class="hero-sub">The worst weekly BTC close since April. A record 9th consecutive day of ETF outflows. IBIT's second-largest single-day exit ever at $528M. And through all of it, Chiliz quietly decoupled — up 46% in 30 days while Bitcoin bleeds. The World Cup window is open. 11 days to kickoff.</p>
+    <p class="hero-sub">The longest ETF outflow streak since launch (13 days, $4.4B). Strategy's first Bitcoin sale in four years. Iran re-escalation. A jobs report that killed June rate-cut hopes. And then on Friday — a $3M ETF inflow ended the bleeding. 4 days to World Cup kickoff.</p>
   </div>
 </div>
 
-<!-- STAT STRIP -->
 <div class="stat-strip">
   <div class="stat-grid">
     <div class="stat-cell">
-      <div class="stat-label">BTC close (May 31)</div>
-      <div class="stat-val">$73,751</div>
-      <div class="stat-note down">−8.7% on the week</div>
+      <div class="stat-label">BTC low (Jun 5)</div>
+      <div class="stat-val">$59,100</div>
+      <div class="stat-note down">2026 yearly low</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">IBIT peak daily outflow</div>
-      <div class="stat-val">−$528M</div>
-      <div class="stat-note down">2nd largest day ever · May 28</div>
+      <div class="stat-label">BTC (Jun 7)</div>
+      <div class="stat-val">~$61,700</div>
+      <div class="stat-note warn">Recovering from lows</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">Total weekly ETF exit</div>
-      <div class="stat-val">−$1.47B</div>
-      <div class="stat-note down">3rd largest week of 2026</div>
+      <div class="stat-label">ETH (Jun 7)</div>
+      <div class="stat-val">~$1,615</div>
+      <div class="stat-note down">–21% on the week</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">CHZ / USD</div>
-      <div class="stat-val">$0.0527</div>
-      <div class="stat-note up">+46% in 30 days</div>
+      <div class="stat-label">XRP (Jun 7)</div>
+      <div class="stat-val">~$1.10</div>
+      <div class="stat-note down">–15% on the week</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">World Cup kickoff</div>
-      <div class="stat-val">11 days</div>
-      <div class="stat-note gold">Jun 11 · Mexico City</div>
+      <div class="stat-label">13-day ETF outflows</div>
+      <div class="stat-val">$4.4B</div>
+      <div class="stat-note down">Longest streak ever</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-label">Total liquidations</div>
+      <div class="stat-val">~$8.7B</div>
+      <div class="stat-note down">Over 5 days</div>
     </div>
   </div>
+</div>
+
+<!-- PRICE SNAPSHOT -->
+<div class="page">
+<section class="section" style="padding-bottom:2rem">
+  <div class="sec-header">
+    <span class="sec-tag tag-crypto">Price snapshot — Jun 7, 2026</span>
+    <h2 class="sec-title">Market-wide damage assessment</h2>
+  </div>
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="price-sym">BTC</div>
+      <div class="price-val">$61,700</div>
+      <div class="price-chg down">–14% on the week · 2026 low $59,100</div>
+    </div>
+    <div class="price-card">
+      <div class="price-sym">ETH</div>
+      <div class="price-val">$1,615</div>
+      <div class="price-chg down">–21% on the week · Below $1,900 support broken</div>
+    </div>
+    <div class="price-card">
+      <div class="price-sym">XRP</div>
+      <div class="price-val">$1.10</div>
+      <div class="price-chg down">–15% on the week · But +$131M May ETF inflows</div>
+    </div>
+    <div class="price-card">
+      <div class="price-sym">SOL</div>
+      <div class="price-val">$64</div>
+      <div class="price-chg down">–10% · Record OI surge while prices fell</div>
+    </div>
+    <div class="price-card">
+      <div class="price-sym">BNB</div>
+      <div class="price-val">~$560</div>
+      <div class="price-chg down">–5.3% · Relative outperformer</div>
+    </div>
+    <div class="price-card">
+      <div class="price-sym">CHZ</div>
+      <div class="price-val">~$0.028</div>
+      <div class="price-chg down">–36% from April high · WC in 4 days</div>
+    </div>
+  </div>
+</section>
 </div>
 
 <!-- TOP 5 STORIES -->
 <div class="page">
 <section class="section">
   <div class="sec-header">
-    <span class="sec-tag tag-crypto">Crypto &amp; digital assets</span>
-    <h2 class="sec-title">Top 5 stories of the week</h2>
+    <span class="sec-tag tag-crypto">Crypto &amp; Digital assets</span>
+    <h2 class="sec-title">Top 5 stories</h2>
   </div>
   <div class="news-list">
 
@@ -253,12 +240,12 @@
       <div class="news-num">01</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-etf">ETF flows</span>
-          <span class="meta-pill p-date">May 25–29</span>
+          <span class="meta-pill p-btc">BTC + ETF</span>
+          <span class="meta-pill p-date">Jun 1–6</span>
         </div>
-        <div class="news-headline">$1.47B pulled from crypto ETFs — IBIT records its 2nd-largest single-day outflow ever at $528M</div>
+        <div class="news-headline">Bitcoin hits $59,100 — 2026 low — as ETF outflows reach 13 consecutive days and $4.4B total</div>
         <div class="news-body">
-          Digital asset investment products recorded <strong>$1.47B in net outflows</strong> for the week — the third-largest weekly exit of all of 2026, according to CoinShares. Bitcoin funds alone shed <strong>$1.32B</strong>, the largest single-week BTC ETF outflow of the year. The 11 US-listed spot funds saw <strong>$1.26B depart</strong> — following the prior week's $1B exodus. The worst single day came on <strong>May 28: BlackRock IBIT recorded $528M in outflows — the second-largest daily outflow in the fund's history.</strong> A confirmed $1.29B block trade in IBIT at 10:30am drew widespread attention, though price absorbed it without a cascade. XRP ETFs bucked the trend completely, posting <strong>$35M in inflows</strong> while BTC and ETH funds lost $2B combined over the two weeks. Cumulative 2026 net inflows across all Bitcoin ETFs have now shrunk to just <strong>$536M</strong> — from roughly $2.1B a month ago. Jane Street and Goldman Sachs both reduced BTC ETF exposure in Q1. The institutional bid that drove BTC to $81K in early May has paused.
+          The most severe institutional selling streak in the ETF era. <strong>From May 15 to June 3, US spot Bitcoin ETFs bled $4.37B across 13 consecutive sessions</strong> — the longest streak since the products launched in January 2024. BlackRock's IBIT absorbed $3.3B of the total damage. Total ETF AUM collapsed from <strong>$104.3B to $82.8B</strong> in three weeks — a 22% decline. Bitcoin tracked every dollar of the outflows: BTC fell from ~$79K to a <strong>2026 low of $59,100 on June 5</strong> before recovering to ~$61,700. Drivers: 13 consecutive days of Iran re-escalation, persistent inflation, capital rotating to AI stocks and gold, and — crucially — <strong>Strategy's first Bitcoin sale in nearly four years</strong> (a small dividend-related disposal that was symbolically devastating for sentiment). Long-term holders now control <strong>5.3M BTC at a loss</strong> — the largest amount of underwater long-term supply since the COVID crash. But on June 4, the streak broke: <strong>$3M in net ETF inflows</strong> ended the run. Then June 5's hot jobs report triggered another $1.7B in liquidations before the weekend recovery.
         </div>
       </div>
     </div>
@@ -267,12 +254,12 @@
       <div class="news-num">02</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-macro">Macro pressure</span>
-          <span class="meta-pill p-date">Week of May 25</span>
+          <span class="meta-pill p-eth">ETH</span>
+          <span class="meta-pill p-date">Jun 1–7</span>
         </div>
-        <div class="news-headline">Treasuries signal "higher for longer" — US-Iran Strait of Hormuz escalation hits risk appetite</div>
+        <div class="news-headline">Ethereum falls 21% on the week — 17 consecutive ETF outflow days, $1,900 support broken, Polymarket prices $1,500 risk</div>
         <div class="news-body">
-          The double pressure on crypto this week came from two directions. First: the bond market. Following <strong>Moody's May 16 downgrade of US sovereign credit from Aaa to Aa1</strong> — the first in 109 years — rising Treasury yields sent the signal that rate cuts are further away than hoped. When Treasuries compete for capital at higher yields, leveraged risk assets suffer most. Second: geopolitical escalation. <strong>US-Iran tensions over the Strait of Hormuz</strong> — the chokepoint through which 20% of global oil flows — spiked oil prices and crushed risk appetite. The combination pushed BTC to <strong>$74,192 intraday on May 23</strong> before the Iran deal bounce. Bitcoin's weakness this week was notably <strong>crypto-specific</strong>: the S&P 500 held up far better on a relative basis, suggesting the institutional exit was BTC-targeted, not a broad risk-off rotation. BTC's 84% correlation to equities is only hurting it when the correlation runs negative — and this week, equities outperformed.
+          Ethereum suffered its worst week of 2026. ETH fell from ~$2,040 to <strong>$1,615 by Saturday June 7</strong> — a 21% weekly drop — while breaking below the critical $1,900 support that analysts had identified as the line between "bullish structure" and "medium-term breakdown." <strong>ETH ETFs posted 17 consecutive outflow days</strong> — their longest streak on record — with cumulative net inflows shrinking to just $11.24B. In 24 hours on June 3 alone, <strong>$475M in ETH long positions were liquidated</strong>. Solana open interest surged to a record even as SOL prices fell — a technical signal that aggressive short accumulation is underway. The $60,000 BTC strike put on Deribit carries over <strong>$1B in notional open interest</strong>, signaling institutional hedging against a further leg lower. Standard Chartered head of digital assets Geoff Kendrick told clients BTC's buying zone is <strong>$62,000–$64,000</strong> and the "bottom is almost in." Polymarket separately priced an <strong>ETH dip to $1,500 at elevated probability</strong>.
         </div>
       </div>
     </div>
@@ -281,12 +268,12 @@
       <div class="news-num">03</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-onchain">On-chain signal</span>
-          <span class="meta-pill p-date">May 29–31</span>
+          <span class="meta-pill p-xrp">XRP</span>
+          <span class="meta-pill p-date">Jun 1–7</span>
         </div>
-        <div class="news-headline">Record 15.8M BTC in long-term holder wallets — RSI hits 27.93, deepest oversold since January</div>
+        <div class="news-headline">XRP outperforms — $131M in May ETF inflows, second straight week of positive ETF flows while BTC/ETH bled $2B</div>
         <div class="news-body">
-          While ETF investors sold aggressively, on-chain data told the opposite story. <strong>Long-term holder supply reached a record 15.8 million BTC</strong> according to CryptoQuant — coins not moved in 155+ days. This metric historically peaks before recoveries, not before structural crashes. The RSI hit <strong>27.93 on May 29 — the deepest oversold reading in four months.</strong> The last comparable print in late January 2026 preceded a <strong>+11% bounce over the following 6 sessions.</strong> Order book data reveals a <strong>$443M buy wall of limit orders near $70,000</strong> — the realized price for the 1–3 month cohort, a psychologically loaded level where recent buyers begin to feel real pain. Adam Back flagged Bitcoin's <strong>200-week moving average crossing $61,000</strong> as "a structural bull signal" — citing historical precedent where BTC trading above this level has always preceded recovery. The data is bullish long-term even when the price action is not.
+          XRP was the clearest relative winner of the week. While BTC and ETH bled billions, <strong>XRP ETFs absorbed $131M in net inflows in May</strong> — the second consecutive week of positive XRP ETF flows despite the broader outflow storm. In the week of May 20–29, <strong>XRP ETFs attracted $35M while BTC and ETH lost $2B combined</strong>. By June 7, XRP traded at ~$1.10 — down 15% on the week but significantly outperforming ETH (–21%) and BTC (–14%). Technical picture: <strong>XRP remains above its 200-day MA at $1.1230</strong>; the MACD is positive; RSI at 74.01 signals overbought but sustained. Brad Garlinghouse praised SEC Chair Atkins as a "breath of fresh air," and Ripple stated it is <strong>"closer than ever to CLARITY Act passage."</strong> If the CLARITY Act passes, XRP and the XRPL ecosystem benefit most directly from commodity/payment-stablecoin classification. XRP's quantum resistance roadmap (targeting 2028) also continues to attract security-focused institutions.
         </div>
       </div>
     </div>
@@ -295,12 +282,12 @@
       <div class="news-num">04</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-reg">Regulation</span>
-          <span class="meta-pill p-date">May 29</span>
+          <span class="meta-pill p-macro">Macro</span>
+          <span class="meta-pill p-date">Jun 5</span>
         </div>
-        <div class="news-headline">CFTC approves the first US-regulated Bitcoin perpetual futures — Coinbase and Robinhood stocks surge</div>
+        <div class="news-headline">Strongest jobs report in 13 months kills June rate-cut hopes — BNP Paribas now forecasts three rate hikes by year-end</div>
         <div class="news-body">
-          In the middle of a brutal week for prices, <strong>the CFTC greenlit the first ever regulated Bitcoin perpetual futures contract in the US</strong>, to be listed by KalshiEX LLC. Coinbase and Robinhood stocks surged on the news — a reminder that the regulatory infrastructure for crypto continues to be built even when prices are falling. Bitcoin perpetual futures are the most-traded crypto instrument globally, but have historically operated offshore or in grey zones. A <strong>US-regulated perp creates a compliant on-ramp for institutions and hedge funds</strong> that previously couldn't access the instrument without compliance risk. This is a slow-burn catalyst, not an immediate price driver. But combined with the CLARITY Act targeting a June–July floor vote and GENIUS Act implementation rules due July 18, the <strong>regulatory stack for the next cycle is being assembled while prices fall.</strong>
+          The May nonfarm payrolls report, released June 5, was the <strong>second-strongest US jobs print in 13 months</strong>. The reaction was immediate: crypto long positions worth <strong>$1.7B were liquidated in 24 hours</strong>. The Nasdaq fell ~5% — its steepest drop since April 2025. Treasury yields surged again. BNP Paribas abandoned its rate-hold forecast and now projects <strong>three Federal Reserve rate hikes beginning in December 2026</strong>. <strong>Polymarket assigns 52% probability to a rate increase before year-end</strong>; CME FedWatch shows 42.7% chance of higher rates by December. Analysts at Presto Research said BTC's slump reflects competition from AI stocks and gold as investors reassess Fed cut prospects. Saylor's Strategy made a <strong>small BTC sale to fund dividend obligations</strong> — the symbolism was far larger than the amount; "if even Saylor is selling" was the sentiment. Short-term BTC holders are now realizing losses at record levels; the 30-day realized P&L ratio hit an all-time low.
         </div>
       </div>
     </div>
@@ -309,12 +296,12 @@
       <div class="news-num">05</div>
       <div>
         <div class="news-meta">
-          <span class="meta-pill p-mkt">Market structure</span>
-          <span class="meta-pill p-date">May 31</span>
+          <span class="meta-pill p-sport">Fan tokens · CHZ</span>
+          <span class="meta-pill p-date">Jun 1–7</span>
         </div>
-        <div class="news-headline">CME's first gap-free Monday arrives June 1 — a decade-long trading signal just went silent forever</div>
+        <div class="news-headline">CHZ collapses to $0.028 — Belgium BELG fan token launches June 3, buyback burns 4.66M tokens, World Cup 4 days away</div>
         <div class="news-body">
-          Bitcoin entered June 2026 with a structural change: <strong>CME launched 24/7 Bitcoin futures trading, permanently eliminating weekend price gaps.</strong> For years, "CME gap fills" were one of the most reliable short-term trading signals in crypto — prices almost always returned to close the voids left by weekend moves. That signal is now structurally gone. The first gap-free Monday in history arrives <strong>June 1</strong>. Traders who leaned on gap-fills for entries and confirmations must adapt. In a bearish environment, the loss of a reliable technical signal adds uncertainty. Bitcoin closes May at <strong>$73,751</strong> — its lowest monthly close since February. The weekly chart shows a broken consolidation below all major moving averages. Market structure is bearish. The longs need a catalyst; the shorts need the $70K wall to crack.
+          The fan token market suffered a brutal collision between its strongest catalysts and the worst macro environment of the year. On June 1, Chiliz executed a <strong>4.66M CHZ buyback and burn</strong> under its Vision 2030 program. On June 2, Chiliz announced the official <strong>Belgium national team ($BELG) fan token partnership</strong> with the RBFA — 2M tokens at $1.00 each launching June 3. The news moved CHZ <strong>+7% in a single session</strong>. Then Bitcoin collapsed below $62,000 on June 4, contributing to <strong>$623M in BTC long liquidations alone</strong>. The macro selling overwhelmed the fan token narrative entirely. CHZ dropped from the $0.044 level to approximately <strong>$0.028</strong> — its lowest since early 2026 and well below RSI 21.48 (deeply oversold). Despite this, the <strong>World Cup kicks off June 11 in Mexico City</strong> — just 4 days from today. PSG won the UCL. Belgium, Argentina, and Portugal fan tokens are live. Chiliz holds MiCA authorization in Europe (450M+ users). The structural case is intact; the macro timing was maximally bad.
         </div>
       </div>
     </div>
@@ -330,177 +317,28 @@
 <section class="section">
   <div class="sec-header">
     <span class="sec-tag tag-tension">Key tension</span>
-    <h2 class="sec-title">Oversold on-chain vs. persistent institutional exit — the BTC paradox of May 2026</h2>
+    <h2 class="sec-title">The worst week of 2026 — and the most important structural signal is the streak ending</h2>
   </div>
 
   <div class="tension-card">
-    <div class="tension-title">The bear case and the bull case are both backed by real data — simultaneously</div>
+    <div class="tension-title">$4.4B out in 13 days. Then $3M in. The bleeding stopped.</div>
     <div class="tension-body">
-      Here is the honest read of this week: <strong>two opposing forces have never been more clearly at war in Bitcoin's market structure.</strong>
+      The numbers are stark: 13 consecutive ETF outflow days. 17 consecutive ETH ETF outflows. $8.7B in liquidations across five trading days. BTC's 2026 low at $59,100. ETH down 21% in a week. Strategy selling BTC for the first time in four years.
       <br><br>
-      The bear case is ETF flows. Nine consecutive days of outflows. $1.47B in a single week. BlackRock's $528M single-day exit. The institutional demand that drove BTC from $65K to $81K in April and early May has visibly paused. The macro backdrop — rising yields, Moody's downgrade, geopolitical risk premium — is not supportive of new institutional allocations. Without the bid, BTC can't sustain a rally. And the S&P 500 is outperforming BTC on a week-to-week basis, which means the "digital gold" narrative isn't yet capturing mainstream flight capital.
+      <strong>And then on June 4, the ETF outflow streak ended. $3M in. The bleeding stopped.</strong>
       <br><br>
-      The bull case is on-chain. <strong>15.8M BTC in long-term holder wallets — a record.</strong> RSI at 27.93 — deepest oversold since January (which preceded +11% bounce). $443M buy wall at $70K. The 200-week SMA holding at $61K. CoinLore's composite of 23 indicators tilts bearish short-term but bullish over 30–60 days. And Fidelity's Jurrien Timmer's model explicitly calls 2026 an "off year" with support in the $65K–$75K range — before the next leg.
+      This is the most important single data point of the week. Standard Chartered's Geoff Kendrick called the $62K–$64K zone "the buying zone we all wanted." Glassnode noted that ETF holdings have been stable since February despite the dollar outflows — because BTC price fell, not because coins were actually liquidated. The structural position of 4% of all BTC supply held in ETFs is intact.
       <br><br>
-      <strong>The resolution likely comes from outside crypto</strong>: the CLARITY Act floor vote, a Warsh June FOMC signal, or Iran deal finalization will be the catalyst that breaks the standoff. Until then, the range is $70K–$78K, and the winner is whoever can wait longest.
+      The macro headwinds are real: jobs data that kills June cut hopes, BNP Paribas forecasting rate hikes, Iran re-escalation. But the sell-the-rally phase may be over. The question for the week of June 8–14 is whether the <strong>June 16–17 FOMC can deliver any relief</strong> — and whether the World Cup fan token narrative survives the macro damage to CHZ.
     </div>
   </div>
 
   <div class="insight-box">
-    <div class="insight-label">The structural read</div>
+    <div class="insight-label">The XRP signal the market missed</div>
     <div class="insight-text">
-      Despite this week's carnage, cumulative ETF net inflows since launch sit at <strong>$57.1B across all funds</strong>. Total net assets: $98.9B. IBIT holds <strong>4% of Bitcoin's entire circulating supply.</strong> The institutional position has not been liquidated — it has been paused. The moment yields stabilize or a macro catalyst arrives, the marginal bid returns to a market where supply is structurally tight. Long-term holders holding a record 15.8M BTC means <strong>the float available to new buyers is historically small.</strong> When the bid returns, there is very little to buy.
+      While BTC and ETH bled $2B in ETF outflows in the same week, <strong>XRP ETFs were net positive for the second consecutive week.</strong> This is a relative strength signal that institutional allocators are differentiating within crypto. XRP's regulatory tailwind (commodity classification likely under CLARITY Act), Ripple's XRPL quantum resistance roadmap, and Garlinghouse's "closer than ever" CLARITY Act comments suggest XRP is the first beneficiary when US crypto regulation clarifies. In a market this risk-off, holding the one token with a regulatory catalyst and positive ETF flows is not a coincidence.
     </div>
   </div>
-</section>
-</div>
-
-<div class="divider"></div>
-
-<!-- FAN TOKENS -->
-<div class="page">
-<section class="section">
-  <div class="sec-header">
-    <span class="sec-tag tag-fantoken">World Cup fan tokens</span>
-    <h2 class="sec-title">CHZ +46% in 30 days while BTC bleeds — the decoupling is real</h2>
-  </div>
-
-  <div class="token-grid">
-    <div class="token-cell featured">
-      <div class="token-ticker">$CHZ</div>
-      <div class="token-name">Chiliz · infrastructure layer</div>
-      <div class="token-price">$0.0527</div>
-      <span class="token-badge tb-up">+46% / 30d · Breaking out</span>
-    </div>
-    <div class="token-cell">
-      <div class="token-ticker">$PSG</div>
-      <div class="token-name">Paris Saint-Germain</div>
-      <div class="token-price">Active</div>
-      <span class="token-badge tb-up">UCL contender</span>
-    </div>
-    <div class="token-cell">
-      <div class="token-ticker">$ARG</div>
-      <div class="token-name">Argentina · national token</div>
-      <div class="token-price">Live</div>
-      <span class="token-badge tb-up">World Cup favourite</span>
-    </div>
-    <div class="token-cell">
-      <div class="token-ticker">$POR</div>
-      <div class="token-name">Portugal · national token</div>
-      <div class="token-price">Live</div>
-      <span class="token-badge tb-up">Ronaldo narrative</span>
-    </div>
-    <div class="token-cell">
-      <div class="token-ticker">$ITA</div>
-      <div class="token-name">Italy · 4th national token</div>
-      <div class="token-price">Live</div>
-      <span class="token-badge tb-warn">Just launched</span>
-    </div>
-    <div class="token-cell">
-      <div class="token-ticker">EXIT</div>
-      <div class="token-name">2022 precedent</div>
-      <div class="token-price">Jun 10</div>
-      <span class="token-badge tb-exit">Sell before kickoff</span>
-    </div>
-  </div>
-
-  <div class="chart-box">
-    <div class="chart-header">
-      <div class="chart-label">CHZ indexed trajectory — Nov 2025 → Jun 11 kickoff (base = $0.0328)</div>
-      <div class="chart-legend">
-        <div class="legend-item"><div class="legend-dot" style="background:#E05252"></div>CHZ 2026 actual</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#E05252;opacity:0.4"></div>Projected</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#8FA0B8"></div>2022 pattern</div>
-      </div>
-    </div>
-    <div style="position:relative;width:100%;height:220px">
-      <canvas id="chzChart" role="img" aria-label="CHZ price trajectory chart comparing 2026 actual vs 2022 World Cup pattern. 2026 shows strong accumulation phase with breakout at $0.0527 in late May. Exit signal: June 10 per 2022 precedent."></canvas>
-    </div>
-  </div>
-
-  <div class="prob-container">
-    <div class="prob-label-top">CHZ scenario probability — June 2026 window</div>
-    <div class="prob-row">
-      <div class="prob-name">Bull: break $0.078+ before Jun 11</div>
-      <div class="prob-track"><div class="prob-fill" style="width:38%;background:#0DB87F"></div></div>
-      <div class="prob-pct up">38%</div>
-    </div>
-    <div class="prob-row">
-      <div class="prob-name">Base: consolidate $0.05–$0.07</div>
-      <div class="prob-track"><div class="prob-fill" style="width:42%;background:#F5A623"></div></div>
-      <div class="prob-pct warn">42%</div>
-    </div>
-    <div class="prob-row">
-      <div class="prob-name">Bear: lose $0.044 → retest $0.031</div>
-      <div class="prob-track"><div class="prob-fill" style="width:20%;background:#E8404A"></div></div>
-      <div class="prob-pct down">20%</div>
-    </div>
-  </div>
-
-  <div class="fan-insight">
-    <div class="insight-label">The 2022 exit signal — and why it applies in 2026</div>
-    <div class="insight-text">
-      In 2022, CHZ climbed from $0.10 to $0.44 — a 380% gain in five months — while crypto was deep in a bear market. It peaked on <strong>November 19</strong>. The Qatar World Cup opened on <strong>November 20</strong>. CHZ then dropped <strong>40% through December</strong> while the tournament was being played. Fan tokens trade on anticipation, not the event itself. The 2026 setup is structurally stronger: MiCA license (450M EU users), US re-entry with $50–100M, buyback-and-burn mechanism firing at peak demand, and 70+ fan tokens on Solana and Base. <strong>But the exit signal is the same: June 10 — the day before the opening match.</strong>
-    </div>
-  </div>
-</section>
-</div>
-
-<div class="divider"></div>
-
-<!-- BTC KEY LEVELS -->
-<div class="page">
-<section class="section">
-  <div class="sec-header">
-    <span class="sec-tag tag-macro">BTC price structure</span>
-    <h2 class="sec-title">Key levels entering June — the battlefield map</h2>
-  </div>
-  <table class="levels-table">
-    <thead>
-      <tr>
-        <th>Level</th>
-        <th>Price</th>
-        <th>Significance</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Bull target</td>
-        <td><span class="lv-price up">$81,000</span></td>
-        <td>Monthly high — full reversal of May drawdown. Requires sustained ETF inflows to return.</td>
-      </tr>
-      <tr>
-        <td>Key resistance</td>
-        <td><span class="lv-price warn">$78,000–$80,000</span></td>
-        <td>EMA cluster (20, 50, 100-day). Must break and hold for any bullish continuation.</td>
-      </tr>
-      <tr>
-        <td>Current price</td>
-        <td><span class="lv-price" style="color:var(--light)">$73,751</span></td>
-        <td>May 31 close. CoinLore 24h range: $72,289–$75,523. Below all major moving averages.</td>
-      </tr>
-      <tr>
-        <td>Critical support</td>
-        <td><span class="lv-price warn">$74,000–$75,000</span></td>
-        <td>Order block. Holding here allows recovery attempt toward $78K–$80K.</td>
-      </tr>
-      <tr>
-        <td>The battle zone</td>
-        <td><span class="lv-price down">$70,000–$72,000</span></td>
-        <td>$443M buy wall. Realized price for 1–3M cohort. If broken, structural support fails.</td>
-      </tr>
-      <tr>
-        <td>Bear extension</td>
-        <td><span class="lv-price down">$65,000–$66,000</span></td>
-        <td>If $70K breaks. Next structural demand zone per multiple technical models.</td>
-      </tr>
-      <tr>
-        <td>Long-term floor</td>
-        <td><span class="lv-price" style="color:var(--muted)">$61,000</span></td>
-        <td>200-week SMA. Adam Back's structural bull signal. Fidelity's Timmer: "support in $65K–$75K range."</td>
-      </tr>
-    </tbody>
-  </table>
 </section>
 </div>
 
@@ -518,24 +356,24 @@
       <div class="wl-head"><div class="wl-icon">↑</div><div class="wl-htitle">Winners</div></div>
       <div class="wl-items">
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">Chiliz / CHZ</div>
-          <div class="wl-reason">+46% in 30 days while Bitcoin drops 8.7% in a week. Arsenal proved fan tokens decouple from crypto markets on event-driven demand. The World Cup window is now open at full intensity.</div>
+          <div class="wl-name">XRP / Ripple</div>
+          <div class="wl-reason">+$131M May ETF inflows. Second straight week positive while BTC/ETH bled billions. Ripple "closer than ever" to CLARITY Act passage. Relative outperformer in a brutal week.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">Long-term Bitcoin holders</div>
-          <div class="wl-reason">Record 15.8M BTC held off-market. These investors have survived every correction cycle. Their refusal to sell into weakness is the single most structurally bullish on-chain signal available.</div>
+          <div class="wl-name">Standard Chartered (call)</div>
+          <div class="wl-reason">Geoff Kendrick told clients $62K–$64K is "the buying zone we all wanted" and the bottom is "almost in." If correct, this was the week to deploy. One of the most public bottom calls of 2026.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">XRP / Ripple ETFs</div>
-          <div class="wl-reason">+$35M in inflows during the week BTC and ETH lost $2B combined. XRP's regulatory clarity from its SEC victory continues to attract capital that avoids BTC's institutional volatility.</div>
+          <div class="wl-name">Gold &amp; AI stocks</div>
+          <div class="wl-reason">Capital explicitly rotating from crypto to gold and AI stocks. Both outperformed BTC YTD by wide margins as inflation persists and risk-off dominates 2026 allocations.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">KalshiEX / Regulated perps</div>
-          <div class="wl-reason">CFTC-approved Bitcoin perpetual futures go live — the most important new institutional infrastructure launched in US crypto markets since spot ETFs. Slow burn, long-term impact.</div>
+          <div class="wl-name">BTC long-term buyers (if Kendrick is right)</div>
+          <div class="wl-reason">5.3M BTC underwater at long-term holders. Historically, this level of capitulation precedes major recoveries. The $60K support test attracted real buying — 291K liquidations did not cascade further.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">Dip buyers at $70K–$72K</div>
-          <div class="wl-reason">$443M in limit orders waiting at the realized price band for the most recent cohort. If that level holds, these are the buyers who define the cycle's floor. High conviction, structural position.</div>
+          <div class="wl-name">CLARITY Act (structurally)</div>
+          <div class="wl-reason">Galaxy Research raised odds to 75% post-committee. Polymarket at 61%. The macro sell-off doesn't affect legislative progress — and CLARITY Act passage is the unlock that changes everything for XRP, ETH, DeFi.</div>
         </div></div>
       </div>
     </div>
@@ -543,24 +381,24 @@
       <div class="wl-head"><div class="wl-icon">↓</div><div class="wl-htitle">Losers</div></div>
       <div class="wl-items">
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">BlackRock IBIT / Fidelity FBTC</div>
-          <div class="wl-reason">IBIT's $528M single-day outflow is the 2nd worst day in its history. Fidelity lost $36.3M on Friday alone. The flagship products are absorbing the bulk of institutional redemptions.</div>
+          <div class="wl-name">ETH holders (worst week of 2026)</div>
+          <div class="wl-reason">–21% in a week. 17 consecutive ETF outflow days. Below $1,900 structural support. Polymarket pricing $1,500 risk. The Pectra upgrade narrative has been entirely overwhelmed by macro.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">BTC short-term momentum</div>
-          <div class="wl-reason">All major moving averages broken. Monthly close bearish. First CME gap-free Monday removes a key signal. RSI 38 — oversold but not yet at capitulation levels that historically trigger bounces.</div>
+          <div class="wl-name">CHZ / fan token holders</div>
+          <div class="wl-reason">$0.044 to $0.028 in days — down 36% from April high. BELG launch and 4.66M buyback burn couldn't offset the macro collapse. World Cup 4 days away — the pre-kickoff rally never happened at the expected scale.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">CLARITY Act 2026 timeline</div>
-          <div class="wl-reason">With only ~12 Senate working weeks before midterms and August recess ahead, the "roughly 50-50" odds from Galaxy Research reflect brutal calendar reality. July is the last viable window.</div>
+          <div class="wl-name">Leveraged long traders</div>
+          <div class="wl-reason">$8.7B liquidated across five days. 85%+ were longs. Single largest order: $59.67M BTC-USDT long on Hyperliquid. The most painful liquidation event since February 2026.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">CME gap traders</div>
-          <div class="wl-reason">A decade-long reliable signal eliminated in one structural change. Traders built strategies, bots, and entire playbooks around CME weekend gaps. All of it is now obsolete.</div>
+          <div class="wl-name">June rate-cut expectations</div>
+          <div class="wl-reason">Jobs report killed them. BNP Paribas now forecasts three rate hikes. CME FedWatch: 42.7% chance rates are HIGHER by December. Warsh has no cover to cut June 16–17 unless Iran/oil change the data fast.</div>
         </div></div>
         <div class="wl-row"><div class="wl-dot"></div><div>
-          <div class="wl-name">Fan token holders past June 10</div>
-          <div class="wl-reason">In 2022 CHZ dropped 40% after kickoff. The anticipation trade closes June 10. Holding into the tournament is a structurally different and higher-risk position than the pre-kickoff accumulation play.</div>
+          <div class="wl-name">Strategy (symbolically)</div>
+          <div class="wl-reason">First BTC sale in four years, even if small, shattered a core narrative. "If even Saylor is selling" was the dominant sentiment that amplified the cascade. The symbolic damage exceeded the actual amount sold.</div>
         </div></div>
       </div>
     </div>
@@ -570,60 +408,52 @@
 
 <div class="divider"></div>
 
-<!-- WATCHLIST FOR JUNE -->
+<!-- WATCHLIST -->
 <div class="page">
 <section class="section">
   <div class="sec-header">
     <span class="sec-tag tag-watch">Forward look</span>
-    <h2 class="sec-title">What to watch entering June 2026</h2>
+    <h2 class="sec-title">What to watch next week (Jun 8–14) — the World Cup opens Jun 11</h2>
   </div>
   <div class="watch-list">
 
     <div class="watch-item">
-      <div><span class="w-badge b-exit">EXIT</span></div>
+      <div><span class="w-badge b-high">HIGH</span></div>
       <div>
-        <div class="w-title">Fan token optimal exit — June 10, day before World Cup kickoff</div>
-        <div class="w-body">CHZ peaked the day before the 2022 Qatar opening match, then dropped 40% through December. <strong>June 10 is the 2022-derived exit signal for anyone in the anticipation trade.</strong> The bull thesis is fully intact through June 10 — 4 national tokens live, buyback mechanism at peak demand, UCL Final fresh in memory. On June 11, the tournament begins and the playbook says the setup changes. Watch CHZ price action the morning of June 10 specifically.</div>
+        <div class="w-title">$60,000 BTC support — does the double bottom hold?</div>
+        <div class="w-body">BTC hit $59,100 on June 5. <strong>$60,000 strike put on Deribit carries over $1B in notional open interest.</strong> A weekly close below $60K activates the bearish consensus toward $50K–$55K. Standard Chartered says $62K–$64K is the buying zone. The double-bottom pattern from February ($60K) is being retested. If it holds, the technical setup remains intact. If it breaks with volume, the Feb low at $59K is the last structural floor before a deeper correction. Watch Monday's open as the first signal.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-high">HIGH</span></div>
       <div>
-        <div class="w-title">UCL Final — May 30, Budapest: PSG vs Arsenal or Atlético Madrid</div>
-        <div class="w-body">The Champions League Final is the <strong>highest single event-driven catalyst for fan tokens before June 11.</strong> PSG ($PSG) is confirmed. The winning club's fan token spikes 30–60% historically on final night. CHZ benefits across the board as infrastructure. This is the 12-day overlap window between UCL and World Cup — <strong>peak fan token attention zone.</strong> Watch CHZ Monday–Wednesday for pre-final accumulation signals.</div>
+        <div class="w-title">ETF inflow reversal — does Friday's $3M become $300M?</div>
+        <div class="w-body">The 13-day outflow streak ended with just $3M on June 4. <strong>Two consecutive IBIT inflow days above $150M = institutional bid genuinely returned.</strong> One day of tiny inflows after 13 days of outflows is not confirmation — it's a pause. Kendrick's "buying zone" call will be validated or invalidated by the ETF flow data in the first three days of next week. Watch Farside Investors data by 5pm ET Mon–Wed specifically. BTC can't sustain above $64K without institutional re-entry.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-high">HIGH</span></div>
       <div>
-        <div class="w-title">Warsh June FOMC — June 16–17: first rate decision of the new era</div>
-        <div class="w-body">Warsh's first FOMC meeting. Trump publicly said he'd be "disappointed" if Warsh doesn't cut in June. If the Iran deal materializes and oil falls, Warsh has macro cover. <strong>A dovish signal sends BTC toward $82K+. A hawkish hold extends yield pressure and tests $74K–$76K support.</strong> Watch Bloomberg/CNBC interview schedules and any pre-FOMC Fed communications for signals.</div>
-      </div>
-    </div>
-
-    <div class="watch-item">
-      <div><span class="w-badge b-high">HIGH</span></div>
-      <div>
-        <div class="w-title">IBIT flow reversal — does the institutional bid return?</div>
-        <div class="w-body">Nine consecutive outflow sessions. <strong>Two consecutive IBIT inflow days above $150M = institutional bid is back.</strong> The structural case hasn't changed — 4% of BTC supply held by ETFs, $57.1B in cumulative net inflows, 10:1 demand-to-supply ratio. Only the near-term allocation decision has paused. If yields stabilize post-Iran deal, the allocation logic reasserts. Watch Tuesday and Wednesday data after any macro catalyst as the fastest-responding institutional signal.</div>
+        <div class="w-title">Warsh June 16–17 FOMC — last chance for a 2026 rate cut</div>
+        <div class="w-body">Jobs data killed the June cut thesis. BNP Paribas is forecasting rate hikes. Warsh meets June 16–17. Any pre-FOMC signal this week of <strong>"progress on disinflation"</strong> or openness to a July cut rekindles risk appetite. A hold with hawkish language extends the sell-off. Iran remains the only variable that could change the data fast enough to matter — Hormuz reopening would drop oil, cool inflation, and give Warsh cover. Watch Warsh speeches Mon–Wed as the pre-meeting signal window.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-med">MED</span></div>
       <div>
-        <div class="w-title">CLARITY Act floor vote — June–July is the last viable Senate window</div>
-        <div class="w-body">The bill passed committee 15–9 on May 14. Still needs: Senate Agriculture Committee text merger, Trump ethics clause resolution, floor scheduling, 60-vote filibuster clearance. <strong>Galaxy puts odds at roughly 50-50.</strong> Any floor date announcement is a major catalyst for DeFi tokens, stablecoins, Coinbase, and Circle. Watch Senator Lummis and Senate Majority Leader Thune for floor scheduling signals. August recess is the hard deadline.</div>
+        <div class="w-title">World Cup opens June 11 — CHZ and fan token final chapter</div>
+        <div class="w-body">CHZ at $0.028 is 36% below the April high and deeply oversold (RSI 21.48). The 2022 playbook said exit before kickoff — but the macro collapse means the pre-kickoff peak never materialized at scale. The question is whether <strong>the World Cup opening generates enough casual-fan attention</strong> to drive a post-kickoff recovery in CHZ despite historical patterns. Belgium, Argentina, Portugal fan tokens are live. Monitor CHZ volume and MVRV on Santiment. If vol spikes above $175M and MVRV approaches 20%, a bounce toward $0.034–$0.040 is possible before June 15.</div>
       </div>
     </div>
 
     <div class="watch-item">
       <div><span class="w-badge b-watch">WATCH</span></div>
       <div>
-        <div class="w-title">SpaceX Nasdaq listing — June 12 IPO competes for speculative capital</div>
-        <div class="w-body">SpaceX files for June 12 listing at $1.75T–$2T valuation. <strong>The IPO directly competes with crypto for speculative capital</strong> — and its balance sheet discloses Bitcoin holdings, adding to the corporate treasury narrative. If SpaceX trades down on listing day, capital may flow back toward crypto. If it trades well, the competition continues through Q3. Also note: the SpaceX listing is the day after World Cup kickoff — June 12 is a structurally loaded date for capital allocation decisions.</div>
+        <div class="w-title">CLARITY Act floor vote progress — Senate calendar</div>
+        <div class="w-body">Galaxy Research raised odds to 75% (up from 50%) post-committee. Polymarket at 61%. The bill needs a floor vote before August recess. <strong>XRP, ETH, DeFi tokens, and Coinbase stock</strong> are the direct beneficiaries. Dimon's opposition is the remaining obstacle. Any Senate Majority Leader scheduling announcement for floor debate is actionable. The combination of CLARITY Act + Iran deal + Warsh dovish = the macro catalyst stack that reverses the current downtrend. Watch all three simultaneously.</div>
       </div>
     </div>
 
@@ -633,38 +463,9 @@
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">AI &amp; Crypto Weekly Intelligence &mdash; May 25–31, 2026</div>
-    <div class="footer-src">Sources: CoinDesk Daybook · CoinShares · CryptoPotato · Phemex · CoinMarketCap · CryptoQuant · SoSoValue · Bitget News · Coinbase · Changelly · CoinGecko · CCN · BeInCrypto · Grafa · Farside Investors · KalshiEX / CFTC · Statista · Adam Back / BeInCrypto · CoinLore · Cryptopolitan</div>
+    <div class="footer-brand">AI &amp; Crypto Weekly Intelligence &mdash; June 1–7, 2026</div>
+    <div class="footer-src">Sources: CoinDesk · The Block · Bitcoin Foundation · BeInCrypto · CryptoTicker · Investing.com · 247WallSt · Metamask · CoinMarketCap · CoinDCX · InteractiveCrypto · Standard Chartered · Galaxy Research</div>
   </div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script>
-(function(){
-  const labels = ['Nov','Dec','Jan','Feb','Mar','Apr','May 1','May 25\n$0.0527','Jun 1','Jun 10\nExit','Jun 11\nKickoff'];
-  const actual  = [100,110,126,142,178,206,210,161,null,null,null];
-  const proj    = [null,null,null,null,null,null,null,161,172,192,185];
-  const pat22   = [100,132,174,224,294,354,404,432,458,462,440];
-  new Chart(document.getElementById('chzChart'),{
-    type:'line',
-    data:{
-      labels,
-      datasets:[
-        {label:'CHZ 2026',data:actual,borderColor:'#E05252',backgroundColor:'rgba(224,82,82,0.08)',borderWidth:2.5,pointRadius:4,pointBackgroundColor:'#E05252',tension:0.4,fill:true,spanGaps:false},
-        {label:'Projected',data:proj,borderColor:'#E05252',borderWidth:1.8,borderDash:[5,4],pointRadius:3,pointBackgroundColor:'rgba(224,82,82,0.5)',tension:0.4,fill:false,spanGaps:false},
-        {label:'2022 pattern',data:pat22,borderColor:'rgba(143,160,184,0.5)',borderWidth:1.5,borderDash:[4,4],pointRadius:0,tension:0.4,fill:false},
-      ]
-    },
-    options:{
-      responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.raw+'x'}}},
-      scales:{
-        x:{ticks:{color:'#8FA0B8',font:{size:10}},grid:{color:'rgba(255,255,255,0.05)'}},
-        y:{ticks:{color:'#8FA0B8',font:{size:10},callback:v=>v+'x'},grid:{color:'rgba(255,255,255,0.05)'}}
-      }
-    }
-  });
-})();
-</script>
 </body>
 </html>
